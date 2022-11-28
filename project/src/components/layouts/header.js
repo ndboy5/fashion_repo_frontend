@@ -9,7 +9,7 @@ function Header() {
       </div>
       <div className={styles.search}>
         <input type="text" className={styles.input} placeholder="search..." />
-        <button className={styles.btn}>
+        <button>
           <a href="">
             {" "}
             <i class="fa fa-search"></i>
