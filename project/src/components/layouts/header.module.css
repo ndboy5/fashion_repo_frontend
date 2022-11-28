@@ -12,7 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  margin-top: -20px;
+  margin-top: -4rem;
   width: 100vw;
 }
 
@@ -35,7 +35,7 @@ header {
   width: 50px;
 }
 
-.btn h3 {
+.btn i {
   color: rgb(29, 7, 7);
   font-size: 15px;
 }

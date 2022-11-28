@@ -13,11 +13,9 @@ function Header() {
 
         <button className={styles.btn}>
           <a href="">
-            {" "}
-            <h3 className={styles.btn.i}>
-              {" "}
-              <FaSearch />{" "}
-            </h3>
+            <i className={styles.i}>
+              <FaSearch />
+            </i>
           </a>
         </button>
       </div>
