@@ -37,8 +37,9 @@ hr{
   color: blue;
 }
 
-.contactMedia img{
+.contactMedia a{
   height: 40px;
   width: 40px;
   margin: 20px;
+  color: blue;
 }
