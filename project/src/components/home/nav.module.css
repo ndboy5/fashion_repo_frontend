@@ -1,0 +1,11 @@
+.home {
+  background-color: aquamarine;
+  height: 50rem;
+  width: 100vw;
+}
+
+.nav {
+  background-color: brown;
+  width: 3rem;
+  height: 4rem;
+}
