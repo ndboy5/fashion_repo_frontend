@@ -1,0 +1,58 @@
+body {
+  background-color: #000;
+  box-sizing: border-box;
+  font-family: cooper hewitt;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #fff;
+  border-top: 2px solid rgb(252, 235, 4);
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+}
+
+.logo h2 {
+  border-radius: 20px;
+  height: 100px;
+  color: #000;
+  margin-left: 15px;
+  margin-top: 2px;
+  width: 100px;
+}
+
+.btn {
+  background-color: rgba(10, 10, 10, 0.486);
+  border: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 40px;
+  margin-right: 25px;
+  width: 50px;
+}
+
+.btn i {
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.input {
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  border: 1px solid rgb(235, 174, 8);
+  font-size: 14px;
+  height: 2px;
+  margin-top: 25px;
+  padding: 15px;
+  transition: width 0.3s ease;
+  width: 30vw;
+}

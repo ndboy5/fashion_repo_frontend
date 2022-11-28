@@ -1,9 +1,22 @@
+import styles from "./header.module.css";
+
 function Header() {
   return (
-    <div>
-      <h1>HEADER</h1>
-      <p>Nduka bu ezigbo mmadu</p>
-    </div>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <img src="" alt="" />
+        <h2>LOGO</h2>
+      </div>
+      <div className={styles.search}>
+        <input type="text" className={styles.input} placeholder="search..." />
+        <button className={styles.btn}>
+          <a href="">
+            {" "}
+            <i class="fa fa-search"></i>
+          </a>
+        </button>
+      </div>
+    </header>
   );
 }
 

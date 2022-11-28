@@ -6,15 +6,10 @@ import Footer from "./components/layouts/footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header/>
-      </header>
-      <Footer/>
+    <div>
+      <Header />
     </div>
   );
 }
 
 export default App;
-
-
