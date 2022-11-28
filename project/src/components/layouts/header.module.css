@@ -26,7 +26,7 @@ header {
 }
 
 .btn {
-  background-color: rgba(10, 10, 10, 0.486);
+  background: none;
   border: 0;
   border-radius: 10px;
   font-size: 20px;
@@ -35,8 +35,8 @@ header {
   width: 50px;
 }
 
-.btn i {
-  color: #fff;
+.btn h3 {
+  color: rgb(29, 7, 7);
   font-size: 15px;
 }
 
@@ -49,7 +49,7 @@ header {
   background-color: #fff;
   border: 0;
   border-radius: 10px;
-  border: 1px solid rgb(235, 174, 8);
+  border: 1px solid rgb(221, 218, 218);
   font-size: 14px;
   height: 2px;
   margin-top: 25px;

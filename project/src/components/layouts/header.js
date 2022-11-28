@@ -1,4 +1,5 @@
 import styles from "./header.module.css";
+import { FaSearch } from "react-icons/fa";
 
 function Header() {
   return (
@@ -9,10 +10,14 @@ function Header() {
       </div>
       <div className={styles.search}>
         <input type="text" className={styles.input} placeholder="search..." />
-        <button>
+
+        <button className={styles.btn}>
           <a href="">
             {" "}
-            <i class="fa fa-search"></i>
+            <h3 className={styles.btn.i}>
+              {" "}
+              <FaSearch />{" "}
+            </h3>
           </a>
         </button>
       </div>
