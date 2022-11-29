@@ -6,17 +6,16 @@
   justify-content: flex-start;
 }
 nav {
-  background-color: #fff;
   color: white;
   height: 2rem;
   margin-top: 2px;
-  padding-left: 5px;
+  padding-left: 25px;
   padding-top: 1rem;
   width: 10rem;
 }
 
 nav a {
-  color: rgb(182, 180, 180);
+  color: #000;
   font-size: 12px;
   font-weight: 600;
   margin: auto;
@@ -24,8 +23,9 @@ nav a {
 }
 
 nav i {
-  color: rgb(168, 132, 12);
+  color: rgb(209, 209, 206);
   font-size: 12px;
   font-weight: 600;
   margin-right: 3px;
+  margin-left: 3px;
 }

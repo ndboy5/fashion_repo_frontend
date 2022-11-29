@@ -1,6 +1,6 @@
 import styles from "./footer.module.css";
-import {FaInstagram, FaLinkedinIn, FaTwitter} from 'react-icons/fa';
-import {FaWhatsapp} from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 function Footer() {
   return (
     <div className={styles.footerContainer}>
@@ -22,16 +22,27 @@ function Footer() {
         <div className={styles.contactMedia}>
           <ul>
             <a href="">
-              <FaLinkedinIn/>
+              <i className={styles.i}>
+                <FaLinkedinIn />
+              </i>
             </a>
+
             <a href="">
-              <FaInstagram/>
+              <i className={styles.i}>
+                <FaInstagram />
+              </i>
             </a>
+
             <a href="">
-              <FaWhatsapp/>
+              <i className={styles.i}>
+                <FaWhatsapp />
+              </i>
             </a>
+
             <a href="">
-              <FaTwitter/>
+              <i className={styles.i}>
+                <FaTwitter />
+              </i>
             </a>
           </ul>
         </div>
