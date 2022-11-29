@@ -4,4 +4,24 @@
   height: 25rem;
   margin: auto;
   margin-top: 10rem;
+  text-align: center;
 }
+
+.carousel .btn {
+  background-color: rgba(0, 0, 0, 0.062);
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  margin-top: 17rem;
+  width: 200px;
+}
+
+.carousel h1 {
+  color: white;
+  font-family: cooper hewitt;
+  font-size: 30px;
+}
+
+/* .carousel p {
+  color: white;
+} */

@@ -8,7 +8,7 @@ import styles from "./slides.module.css";
 function Slides() {
   return (
     <div className={styles.slides}>
-      <h4>SLIDES</h4>
+      <h4>TRENDING STYLES SLIDES</h4>
       <div className={styles.container}>
         <button className={styles.btn}>
           <i className={styles.i}>
