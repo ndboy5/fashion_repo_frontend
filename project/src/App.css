@@ -1,1 +1,7 @@
-
+body {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: cooper hewitt;
+  margin: 0;
+  padding: 0;
+}

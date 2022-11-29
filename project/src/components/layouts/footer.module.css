@@ -3,7 +3,7 @@ footer {
   padding: 40px;
 }
 
-.footerContainer {
+.footer {
   background-color: #000;
   margin: "0px";
   color: white;
@@ -11,37 +11,29 @@ footer {
   text-align: center;
 }
 
-hr {
-  color: white;
-  margin: 20px;
-}
-
-.logo img {
-  height: 100px;
-  width: 100px;
-}
-
 .footerItems {
   display: flex;
   flex-direction: row;
+  font-size: 14px;
+  margin-top: 2rem;
   justify-content: center;
 }
 
 .footerItems a {
-  margin: 10px;
+  margin: 8px;
   text-decoration: none;
   color: white;
 }
 
 .footerItems a:hover {
-  color: blue;
+  color: white;
 }
 
 .contactMedia a {
   height: 40px;
   width: 40px;
-  margin: 20px;
-  color: blue;
+  margin-top: 3rem;
+  margin: 10px;
 }
 
 i {

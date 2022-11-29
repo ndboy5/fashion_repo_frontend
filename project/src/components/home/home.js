@@ -1,12 +1,12 @@
-import Layout from "../layouts/layout";
-
+import styles from "./home.module.css";
+import Topic from "./topic";
+import Slides from "./slides";
 function Home() {
-  //Todo: the home page would be built here.
   return (
-    <>
-      <Layout>
-        {/* The carousel trending topics and styles come in here */}
-      </Layout>
-    </>
+    <main className={styles.main}>
+      <Topic />
+      <Slides />
+    </main>
   );
 }
+export default Home;

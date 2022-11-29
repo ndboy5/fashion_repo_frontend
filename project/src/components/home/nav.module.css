@@ -1,23 +1,29 @@
 .home {
-  background-color: #fff;
+  background-color: white;
   display: flex;
-  height: 3.2rem;
-  margin-top: 4rem;
+  height: 64px;
+  margin-top: -4rem;
+  position: fixed;
   justify-content: flex-start;
+  width: 100vw;
 }
 nav {
+  background-color: white;
   color: white;
-  height: 2rem;
-  margin-top: 2px;
-  padding-left: 25px;
-  padding-top: 1rem;
+  height: 25px;
+  margin-top: -1px;
+  padding: 1.5rem 0 1rem 25px;
+
+  margin-bottom: 2rem;
   width: 10rem;
 }
 
 nav a {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: #000;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   margin: auto;
   text-decoration: none;
 }

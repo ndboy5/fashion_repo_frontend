@@ -1,0 +1,27 @@
+.slides {
+  font-size: 26px;
+  font-weight: 700;
+  height: 400px;
+  margin: auto;
+  padding-top: 3rem;
+  width: 90.7vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  background-color: orange;
+  border-radius: 8px;
+  height: 300px;
+  justify-content: center;
+  margin-left: 5px;
+  width: 270px;
+}
+
+.slides h4 {
+  text-align: center;
+  margin-top: -3rem;
+}
