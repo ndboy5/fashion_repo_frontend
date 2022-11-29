@@ -13,7 +13,6 @@ nav {
   height: 25px;
   margin-top: -1px;
   padding: 1.5rem 0 1rem 25px;
-
   margin-bottom: 2rem;
   width: 10rem;
 }
@@ -29,9 +28,9 @@ nav a {
 }
 
 nav i {
-  color: rgb(209, 209, 206);
+  color: rgb(179, 179, 175);
   font-size: 12px;
   font-weight: 600;
   margin-right: 3px;
-  margin-left: 3px;
+  margin-left: 5px;
 }

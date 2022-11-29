@@ -10,34 +10,34 @@ function Footer() {
           <a href="#">Contacts</a>
           <a href="#">Location</a>
         </ul>
-      </div>
 
-      <div className={styles.contactMedia}>
-        <ul>
-          <a href="">
-            <i className={styles.i}>
-              <FaLinkedinIn />
-            </i>
-          </a>
+        <div className={styles.contactMedia}>
+          <ul>
+            <a href="">
+              <i className={styles.i}>
+                <FaLinkedinIn />
+              </i>
+            </a>
 
-          <a href="">
-            <i className={styles.i}>
-              <FaInstagram />
-            </i>
-          </a>
+            <a href="">
+              <i className={styles.i}>
+                <FaInstagram />
+              </i>
+            </a>
 
-          <a href="">
-            <i className={styles.i}>
-              <FaWhatsapp />
-            </i>
-          </a>
+            <a href="">
+              <i className={styles.i}>
+                <FaWhatsapp />
+              </i>
+            </a>
 
-          <a href="">
-            <i className={styles.i}>
-              <FaTwitter />
-            </i>
-          </a>
-        </ul>
+            <a href="">
+              <i className={styles.i}>
+                <FaTwitter />
+              </i>
+            </a>
+          </ul>
+        </div>
       </div>
     </footer>
   );

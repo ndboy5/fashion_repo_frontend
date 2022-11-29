@@ -8,6 +8,7 @@ footer {
   margin: "0px";
   color: white;
   font-family: "Graphik Regular", "Arial", sans-serif;
+  height: 80px;
   text-align: center;
 }
 
@@ -15,27 +16,28 @@ footer {
   display: flex;
   flex-direction: row;
   font-size: 14px;
-  margin-top: 2rem;
-  justify-content: center;
+  margin-top: 4.5rem;
+  justify-content: space-between;
 }
 
 .footerItems a {
-  margin: 8px;
   text-decoration: none;
   color: white;
+  margin-right: 20px;
 }
 
 .footerItems a:hover {
   color: white;
+  text-decoration: underline;
 }
 
 .contactMedia a {
   height: 40px;
   width: 40px;
   margin-top: 3rem;
-  margin: 10px;
 }
 
-i {
+.contactMedia i {
   color: white;
+  margin: 5px;
 }
