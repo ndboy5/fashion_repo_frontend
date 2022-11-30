@@ -31,12 +31,16 @@
   border-radius: 10px;
   border: 0;
   display: flex;
-  margin-top: 9rem;
+  margin-top: 8rem;
   cursor: pointer;
 }
 
 .slides i {
-  color: black;
-  font-size: 36px;
-  font-weight: 100;
+  color: rgb(219, 217, 217);
+  font-size: 50px;
+}
+
+.slides i:hover {
+  color: rgb(51, 49, 49);
+  font-size: 50px;
 }
