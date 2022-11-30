@@ -16,7 +16,7 @@ footer {
   display: flex;
   flex-direction: row;
   font-size: 14px;
-  margin-top: 4.5rem;
+  margin-top: 4.3rem;
   justify-content: space-between;
 }
 
@@ -44,4 +44,9 @@ footer {
 .contactMedia i:hover {
   color: white;
   margin: 5px;
+}
+p {
+  color: rgb(206, 206, 180);
+  font-size: 10px;
+  margin-top: 1rem;
 }

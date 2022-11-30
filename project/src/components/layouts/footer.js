@@ -10,7 +10,7 @@ function Footer() {
           <a href="#">Contacts</a>
           <a href="#">Location</a>
         </ul>
-
+        <p>Copy &copy; 2022</p>
         <div className={styles.contactMedia}>
           <ul>
             <a href="">
