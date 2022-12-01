@@ -1,23 +1,20 @@
 footer {
-  color: white;
-  padding: 40px;
-}
-
-.footer {
   background-color: rgb(34, 33, 33);
-  margin: "0px";
   color: white;
-  font-family: "Graphik Regular", "Arial", sans-serif;
-  height: 80px;
-  text-align: center;
+  display: flex;
+  height: 10rem;
+  margin: auto;
 }
 
 .footerItems {
   display: flex;
   flex-direction: row;
   font-size: 14px;
-  margin-top: 4rem;
+  height: 2rem;
+  margin-top: 7rem;
+  margin-left: 3rem;
   justify-content: space-between;
+  width: 90vw;
 }
 
 .footerItems a {
@@ -34,7 +31,6 @@ footer {
 .contactMedia a {
   height: 40px;
   width: 40px;
-  margin-top: 3rem;
 }
 
 .contactMedia i {
@@ -49,9 +45,4 @@ footer {
 p {
   color: rgb(206, 206, 180);
   font-size: 10px;
-}
-
-hr {
-  margin-top: 10px;
-  width: 30rem;
 }

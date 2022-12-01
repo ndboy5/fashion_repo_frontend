@@ -17,7 +17,7 @@ import {
 
 function Nav() {
   return (
-    <home className={styles.home}>
+    <div className={styles.home}>
       <nav className={styles.nav}>
         <a href="#" className={styles.a}>
           <i className={styles.i}>
@@ -62,7 +62,7 @@ function Nav() {
           Gallery
         </a>
       </nav>
-    </home>
+    </div>
   );
 }
 

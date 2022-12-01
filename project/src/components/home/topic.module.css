@@ -1,15 +1,13 @@
 .topic {
-  background-color: rgba(202, 248, 238, 0.377);
+  background-color: rgba(235, 252, 248, 0.377);
   font-size: 26px;
   font-weight: 700;
   height: 400px;
   margin: auto;
   overflow: hidden;
-  /* padding-left: 3rem; */
 }
 
 .rows {
-  /* background-color: rgb(114, 111, 111); */
   color: rgb(121, 118, 118);
   display: flex;
   border-radius: 18px;
@@ -24,6 +22,6 @@
 h4 {
   margin: 0;
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   text-align: center;
 }
