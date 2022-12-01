@@ -1,7 +1,7 @@
 .home {
   background-color: white;
   display: flex;
-  height: 64px;
+  height: 50px;
   margin-top: -4rem;
   position: fixed;
   justify-content: flex-start;
@@ -10,9 +10,9 @@
 nav {
   background-color: white;
   color: white;
-  height: 25px;
-  margin-top: -1px;
-  padding: 1.5rem 0 1rem 25px;
+  height: 18px;
+  /* margin-top: -1px; */
+  padding: 1rem 0 1rem 25px;
   margin-bottom: 2rem;
   width: 10rem;
 }

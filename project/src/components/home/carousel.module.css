@@ -1,9 +1,10 @@
 .carousel {
-  background-color: rgb(186, 222, 253);
+  background-color: rgb(207, 184, 54);
   color: black;
-  height: 25rem;
+  display: flex;
+  height: 26rem;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 9rem;
   text-align: center;
 }
 
@@ -25,4 +26,11 @@
 .carousel p {
   color: rgb(63, 61, 61);
   font-size: 14px;
+}
+
+.pics {
+  background-color: rgb(200, 206, 206);
+  height: 26rem;
+  margin-left: 2px;
+  width: 28.5rem;
 }

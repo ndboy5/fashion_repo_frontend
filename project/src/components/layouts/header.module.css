@@ -1,6 +1,5 @@
 header {
-  background-color: white;
-  border-top: 2px solid rgb(252, 235, 4);
+  background-color: rgb(34, 33, 33);
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -13,9 +12,9 @@ header {
 .logo h2 {
   border-radius: 20px;
   height: 200px;
-  color: #000;
+  color: #fff;
   margin-left: 25px;
-  margin-top: 2px;
+  margin-top: 2rem;
   width: 100px;
 }
 
@@ -30,7 +29,12 @@ header {
 }
 
 .btn i {
-  color: rgb(29, 7, 7);
+  color: rgb(155, 153, 153);
+  font-size: 15px;
+}
+
+.btn i :hover {
+  color: rgb(250, 249, 249);
   font-size: 15px;
 }
 
@@ -46,7 +50,7 @@ header {
   border: 1px solid rgb(221, 218, 218);
   font-size: 14px;
   height: 2px;
-  margin-top: 50px;
+  margin-top: 3.5rem;
   padding: 15px;
   transition: width 0.3s ease;
   width: 20vw;
