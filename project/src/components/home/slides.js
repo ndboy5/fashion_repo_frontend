@@ -7,6 +7,13 @@ import {
 } from "react-icons/fa";
 import styles from "./slides.module.css";
 
+/**
+ * 
+ * @param {*} props Receives the slide image url from the Home component.
+ * This slide is for the Trend Styles component
+ * TODO: Review image adjustment styling on the slide class 
+ * @returns 
+ */
 function Slides(props) {
 
   const [pos, setPosition] = useState([0,1,2,3])
