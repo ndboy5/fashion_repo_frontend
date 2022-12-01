@@ -15,7 +15,9 @@
 
 .slide {
   /* background-color: orange; */
- background-size: 270px 300px; 
+  /* background-size: 280px 300px; */
+  background-repeat: no-repeat;
+  background-position: top center;
   border-radius: 8px;
   height: 300px;
   justify-content: center;
