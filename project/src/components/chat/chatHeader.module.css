@@ -6,7 +6,8 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 10px, 5px, 5px, red;
-    
+    background-color: rgb(12, 11, 11);
+    color: white;
 }
 
 .btn{
@@ -19,9 +20,19 @@
 
 .btn i{
     font-size: 25px;
-    color: rgb(94, 94, 199);
+    color: white
 }
 
 .btn i:hover{
+    color: blue;
+}
+
+.headerIcon{
+    border: none;
+    background-color: rgb(12, 11, 11);
+    color: white;
+}
+
+.headerIcon :hover{
     color: blue;
 }
