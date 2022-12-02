@@ -1,0 +1,8 @@
+.chatBody{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(12, 11, 11);
+    height: 50rem;
+    overflow: hidden;
+
+}

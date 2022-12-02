@@ -1,0 +1,38 @@
+.container{
+    height: 5rem;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(172, 171, 171);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px, 5px, 5px, red;
+    background-color: rgb(12, 11, 11);
+    color: white;
+}
+
+.btn{
+    height: 50px;
+    background: none;
+    color: black;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn i{
+    font-size: 25px;
+    color: white
+}
+
+.btn i:hover{
+    color: blue;
+}
+
+.headerIcon{
+    border: none;
+    background-color: rgb(12, 11, 11);
+    color: white;
+}
+
+.headerIcon :hover{
+    color: blue;
+}
