@@ -4,16 +4,11 @@ import styles from "./carousel.module.css";
 function Carousel() {
   return (
     <div className={styles.carousel}>
-      <div className={styles.pics}>
-        {/* return <img src={images} alt="sketches.jpg" />; */}
+      <div className={styles.btns}>
+        <button className={styles.btn}></button>
+        <button className={styles.btn}></button>
+        <button className={styles.btn}></button>
       </div>
-      <div className={styles.pics}>
-        <button className={styles.btn}>
-          <p> Trending Topics Shows on</p>
-          <h1>CLICK</h1>
-        </button>
-      </div>
-      <div className={styles.pics}></div>
     </div>
   );
 }
