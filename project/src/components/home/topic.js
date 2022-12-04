@@ -1,4 +1,4 @@
-import trending_topics_data from "../../data/trend_topic_data";
+// import trending_topics_data from "../../data/trend_topic_data";
 import styles from "./topic.module.css";
 
 function Topic(props) {
