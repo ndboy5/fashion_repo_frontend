@@ -2,11 +2,17 @@ import styles from "./chatMessage.module.css";
 import {IoIosAddCircle, IoMdAddCircleOutline, IoMdSend} from 'react-icons/io';
 import {GrEmoji} from 'react-icons/gr';
 import {BiMicrophone} from 'react-icons/bi';
-function ChatMessage(){
+import { useState } from "react";
+function ChatMessage(props){
+    const [message, setMessage] = useState("");
+
+    function onMessageChanged(event){
+        setMessage(event.target.value);
+    }
     return(
         <div className={styles.container}>
             <div className={styles.messageBox}>
-            <input type="text" className={styles.message} placeHolder="Message"/>
+            <input type="text" className={styles.message} placeholder="Message" onChange={onMessageChanged}/>
             </div>
             <div>
             <button className={styles.btn}>
@@ -14,7 +20,7 @@ function ChatMessage(){
                     <IoIosAddCircle/>
                 </i>
             </button>
-            <button className={styles.btn}>
+            <button className={styles.btn} onClick={props.onMessageChange(message)}>
                 <i>
                     <IoMdSend/>
                 </i>
