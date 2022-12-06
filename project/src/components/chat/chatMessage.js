@@ -3,6 +3,13 @@ import { IoIosAddCircle, IoMdAddCircleOutline, IoMdSend } from "react-icons/io";
 import { GrEmoji } from "react-icons/gr";
 import { BiMicrophone } from "react-icons/bi";
 import { useState } from "react";
+/**
+ * This component returns JSX code where the user types in content into the forum.
+ * React icons are used to allow for reactions and other contents.
+ * TODO:
+ * @param {*} props:  onMessageChange and onButtonClick handlers functions
+ * @returns JSX
+ */
 function ChatMessage(props) {
   return (
     <div className={styles.container}>
