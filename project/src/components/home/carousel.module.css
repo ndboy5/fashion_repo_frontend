@@ -9,21 +9,19 @@
 }
 
 .container {
-  background-color: aqua;
   height: 32rem;
   width: 90rem;
 }
 
 .container img {
   height: 32rem;
-  width: 90rem;
+  width: 84.2rem;
   object-fit: cover;
   background-position: bottom center;
 }
 
 .btns {
   margin: auto;
-  margin-left: -5rem;
   margin-top: -3rem;
 }
 
