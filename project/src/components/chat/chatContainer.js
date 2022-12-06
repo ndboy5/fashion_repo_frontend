@@ -3,36 +3,42 @@ import ChatBody from "./chatBody";
 import ChatHeader from "./chatHeader";
 import ChatMessage from "./chatMessage";
 
-class ChatContainer extends React.Component{
-    message = "";
+class ChatContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: "",
+    };
+    this.changeMessage = this.changeMessage.bind(this);
+    this.onButtonClick = this.onButtonClick.bind(this);
+  }
 
-    constructor(props){
-        super(props)
-        this.state = {
-            message: "",
-        }
-        this.changeMessage = this.changeMessage.bind(this)
-    }
-    changeMessage(newMessage){
-        this.setState({
-            message: newMessage
-        });
-    }
-    render(){
-        function showMessage(newMessage){
-            return(
-                <div>
-                    {newMessage}
-                </div>
-            );
-        }
-        return(
-            <div>
-                <ChatHeader/>
-                <ChatBody showMessage = {showMessage(this.state.message)}/>
-                <ChatMessage onMessageChange = {this.changeMessage}/>
-            </div>
-        );
-    }
+  changeMessage(event) {
+    event.preventDefault();
+
+    this.setState({
+      message: event.target.value,
+      // message: "Test",
+    });
+  }
+
+  onButtonClick(event) {
+    event.preventDefault();
+    console.log("Button clicked...");
+    //TODO: @Chima I beleive your intent is to do something with the message, you can do that here
+  }
+
+  render() {
+    return (
+      <div>
+        <ChatHeader />
+        <ChatBody message={this.state.message} />
+        <ChatMessage
+          onMessageChange={this.changeMessage}
+          onButtonClick={this.onButtonClick}
+        />
+      </div>
+    );
+  }
 }
 export default ChatContainer;
