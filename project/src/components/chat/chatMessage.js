@@ -20,12 +20,12 @@ function ChatMessage(props) {
             <IoIosAddCircle />
           </i>
         </button>
-        <button className={styles.btn}>
+        <button className={styles.btn} onClick={props.onButtonClick}>
           <i>
             <IoMdSend />
           </i>
         </button>
-        <button className={styles.btn} onClick={props.onButtonClick}>
+        <button className={styles.btn}>
           <i>
             <GrEmoji />
           </i>
