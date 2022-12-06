@@ -8,18 +8,22 @@ import ChatHeader from "./components/chat/chatHeader";
 import ChatBody from "./components/chat/chatBody";
 import ChatMessage from "./components/chat/chatMessage";
 import ChatContainer from "./components/chat/chatContainer";
+import Gallery from "./components/gallery/gallery";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {
+        <Header />
+        /*
       <Nav />
       <Carousel />
       <Home />
-      <Footer />
+      <Footer /> */
+      }
 
-      {/* <ChatContainer/> */}
-      
+      {/* <ChatContainer /> */}
+      <Gallery />
     </div>
   );
 }

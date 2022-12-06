@@ -1,5 +1,6 @@
 import styles from "./carousel.module.css";
 // import images from "/sketches.jpg";
+
 // console.log(images);
 function Carousel() {
   return (
