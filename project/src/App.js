@@ -13,12 +13,12 @@ import Gallery from "./components/gallery/gallery";
 function App() {
   return (
     <div className="App">
-      {/* <Header />
+      <Header />
 
       <Nav />
       <Carousel />
       <Home />
-      <Footer /> */}
+      <Footer />
       <Gallery />
       {/* <ChatContainer /> */}
     </div>
