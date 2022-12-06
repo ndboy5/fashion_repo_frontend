@@ -24,6 +24,7 @@ class ChatContainer extends React.Component {
 
   onButtonClick(event) {
     event.preventDefault();
+    console.log("Button clicked...");
     //TODO: @Chima I beleive your intent is to do something with the message, you can do that here
   }
 
