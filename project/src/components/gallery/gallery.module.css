@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  background-color: rgb(129, 127, 127);
+  background-color: black;
   display: grid;
   grid-template: repeat(4, 200px) / repeat(6, 200px);
   margin: auto;
@@ -12,7 +12,6 @@ body {
 }
 
 .box {
-  background-color: rgb(85, 83, 83);
   border: 1px solid white;
   height: 12.5rem;
   width: 12.5rem;
@@ -25,5 +24,26 @@ body {
 
 .container .box2 {
   width: 24rem;
-  grid-area: 1/5/4/7;
+  grid-area: 1/5/3/7;
+}
+.container .box1 img,
+.container .box2 img,
+.container .box3 img {
+  width: 25rem;
+  height: 25rem;
+  background-position: top center;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.container .box3 {
+  width: 24rem;
+  grid-area: 3/3/5/5;
+}
+
+.container img {
+  height: 12.5rem;
+  width: 12.5rem;
+  background-position: center;
+  object-fit: fill;
 }
