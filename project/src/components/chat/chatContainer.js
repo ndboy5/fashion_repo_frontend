@@ -7,7 +7,7 @@ class ChatContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: "",
+      message: [],
     };
     this.changeMessage = this.changeMessage.bind(this);
     this.onButtonClick = this.onButtonClick.bind(this);
@@ -17,7 +17,9 @@ class ChatContainer extends React.Component {
     event.preventDefault();
 
     this.setState({
-      message: event.target.value,
+      message: [...this.state.message,
+                event.target.value
+                ]
       // message: "Test",
     });
   }

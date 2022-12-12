@@ -11,6 +11,13 @@ import { useState } from "react";
  * @returns JSX
  */
 function ChatMessage(props) {
+    const [message, setMessage] = useState();
+    const [updatedMessage, setUpdatedMessage]= useState(message);
+
+    function handleChange(event){
+        setMessage(event.target.value);
+    }
+    
   return (
     <div className={styles.container}>
       <div className={styles.messageBox}>
