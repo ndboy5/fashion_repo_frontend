@@ -13,12 +13,12 @@ class ChatContainer extends React.Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
-  changeMessage(event) {
-    event.preventDefault();
+  changeMessage(message) {
+    // event.preventDefault();
 
     this.setState({
       message: [...this.state.message,
-                event.target.value
+                message
                 ]
       // message: "Test",
     });

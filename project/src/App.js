@@ -20,7 +20,7 @@ function App() {
       <Home />
       <Footer />
       <Gallery />
-      {/* <ChatContainer /> */}
+      <ChatContainer />
     </div>
   );
 }
