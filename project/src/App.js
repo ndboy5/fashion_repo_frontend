@@ -21,6 +21,7 @@ function App() {
       <Footer />
       <Gallery />
       <ChatContainer />
+      <ChatContainer />
       {/* <OrderForm /> */}
     </div>
   );
