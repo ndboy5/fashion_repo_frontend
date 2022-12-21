@@ -8,6 +8,7 @@ function Header() {
         <img src="" alt="" />
         <h2>LOGO</h2>
       </div>
+
       <div className={styles.search}>
         <input type="text" className={styles.input} placeholder="search..." />
 
@@ -19,8 +20,21 @@ function Header() {
           </a>
         </button>
       </div>
+
+      <div className={styles.login}>
+        <button className={styles.btn}>SIGN IN</button>
+        <button className={styles.btn}>SIGN UP</button>
+      </div>
     </header>
   );
 }
+// const search = document.querySelector(".search");
+// const btn = document.querySelector(".btn");
+// const input = document.querySelector(".input");
+
+// btn.addEventListener("click", () => {
+//   search.classList.toggle("active");
+//   input.focus();
+// });
 
 export default Header;

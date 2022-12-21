@@ -1,0 +1,67 @@
+.container {
+  background-color: rgb(253, 253, 252);
+  height: 100vh;
+  margin: auto;
+  justify-content: center;
+  width: 800px;
+}
+
+.title {
+  margin: auto;
+  margin-left: 6rem;
+  padding-top: 2rem;
+  font-size: 20px;
+}
+
+h1 {
+  color: brown;
+  justify-content: center;
+  margin-left: 10rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  margin-left: 1rem;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container p {
+  color: red;
+  font-size: 12px;
+  margin-left: 1rem;
+}
+
+.label {
+  margin-left: 1.2rem;
+  margin-top: -1.5rem;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+hr {
+  margin-top: 1rem;
+  width: 700px;
+}
+
+.name input,
+.date input,
+.address input {
+  width: 20rem;
+  height: 2rem;
+  margin: -5px 10px 2rem 15px;
+  border: 1px solid rgb(219, 217, 217);
+  border-radius: 3px;
+  padding-left: 7px;
+}
+
+.date input {
+  width: 10rem;
+}
+.address input {
+  width: 41rem;
+}
+
+

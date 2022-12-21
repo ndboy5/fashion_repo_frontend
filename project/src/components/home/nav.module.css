@@ -11,10 +11,9 @@ nav {
   background-color: white;
   color: white;
   height: 18px;
-  /* margin-top: -1px; */
   padding: 1rem 0 1rem 25px;
   margin-bottom: 2rem;
-  width: 10rem;
+  width: 8rem;
 }
 
 nav a {
@@ -24,6 +23,7 @@ nav a {
   font-size: 14px;
   font-weight: 500;
   margin: auto;
+  margin-left: 15px;
   text-decoration: none;
 }
 
@@ -32,9 +32,19 @@ nav i {
   font-size: 12px;
   font-weight: 600;
   margin-right: 3px;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 nav :hover {
   color: rgb(121, 115, 33);
+}
+
+ul {
+  list-style-type: none;
+  margin-top: -0.01rem;
+  padding: 0;
+}
+
+li {
+  line-height: 1.5;
 }

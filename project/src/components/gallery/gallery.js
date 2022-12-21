@@ -27,7 +27,9 @@ function Gallery() {
         <div className={styles.box}>
           <img src="/images/trend_style/pic_f.jpg"></img>
         </div>
-        <div className={styles.box}></div>
+        <div className={styles.box}>
+          <img src="/images/carousel/mannequin.jpg"></img>
+        </div>
         <div className={styles.box}></div>
         <div className={styles.box}></div>
         <div className={styles.box}></div>

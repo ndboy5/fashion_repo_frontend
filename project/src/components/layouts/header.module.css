@@ -1,11 +1,11 @@
 header {
   background-color: rgb(34, 33, 33);
-  height: 5rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   position: fixed;
   padding-bottom: 2rem;
-  margin-top: -10rem;
+  margin-top: -12rem;
   width: 100vw;
 }
 
@@ -18,14 +18,24 @@ header {
   width: 100px;
 }
 
-.btn {
+.search {
+  height: 60px;
+  width: 30rem;
+  margin-left: 5rem;
+  position: relative;
+}
+
+.search .btn {
   background: none;
   border: 0;
   border-radius: 10px;
   font-size: 20px;
   height: 40px;
-  margin-right: 25px;
+  position: absolute;
+  margin-left: 39rem;
+  margin-top: -36px;
   width: 50px;
+  transition: transform 0.3s ease;
 }
 
 .btn i {
@@ -43,15 +53,45 @@ header {
   outline: none;
 }
 
-.input {
-  background-color: #fff;
+.search .input {
+  background: none;
+  color: #fff;
   border: 0;
   border-radius: 10px;
-  border: 1px solid rgb(221, 218, 218);
+  border: 1px solid rgb(117, 115, 115);
   font-size: 14px;
   height: 2px;
   margin-top: 3.5rem;
+  margin-left: 20rem;
   padding: 15px;
   transition: width 0.3s ease;
   width: 20vw;
+}
+
+.login {
+  height: 50px;
+  width: 12rem;
+  display: flex;
+  margin-top: 3.7rem;
+  margin-right: 2rem;
+}
+
+.login .btn {
+  background: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-size: 14px;
+  height: 30px;
+  width: 7rem;
+  margin-left: 10px;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translate(198px);
 }

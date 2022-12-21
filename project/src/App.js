@@ -9,18 +9,19 @@ import ChatBody from "./components/chat/chatBody";
 import ChatMessage from "./components/chat/chatMessage";
 import ChatContainer from "./components/chat/chatContainer";
 import Gallery from "./components/gallery/gallery";
+import OrderForm from "./components/order/orderForm";
 
 function App() {
   return (
     <div className="App">
       <Header />
-
       <Nav />
       <Carousel />
       <Home />
       <Footer />
       <Gallery />
-      {/* <ChatContainer /> */}
+      <ChatContainer />
+      {/* <OrderForm /> */}
     </div>
   );
 }

@@ -29,16 +29,40 @@ function Nav() {
 
       <nav className={styles.nav}>
         <a href="#" className={styles.a}>
-          <i className={styles.i}>
-            <FaUsersCog />
-          </i>
           Community
+          <i className={styles.i}>
+            <FaChevronDown />
+          </i>
         </a>
+        <li hidden>
+          <a href="">Chat</a>
+        </li>
       </nav>
+
+      <ul>
+        <nav className={styles.nav}>
+          <a href="#" className={styles.a}>
+            My Home
+            <i className={styles.i}>
+              <FaChevronDown />
+            </i>
+          </a>
+          <li hidden>
+            <a href="">Order</a>
+          </li>
+          <li hidden>
+            <a href="">My Tailor</a>
+          </li>
+
+          <li hidden>
+            <a href="">Measurement</a>
+          </li>
+        </nav>
+      </ul>
 
       <nav className={styles.nav}>
         <a href="#" className={styles.a}>
-          My Home
+          Market
           <i className={styles.i}>
             <FaChevronDown />
           </i>
@@ -47,19 +71,10 @@ function Nav() {
 
       <nav className={styles.nav}>
         <a href="#" className={styles.a}>
-          <i className={styles.i}>
-            <FaShoppingBasket />
-          </i>
-          Market
-        </a>
-      </nav>
-
-      <nav className={styles.nav}>
-        <a href="#" className={styles.a}>
-          <i className={styles.i}>
-            <FaPhotoVideo />
-          </i>
           Gallery
+          <i className={styles.i}>
+            <FaChevronDown />
+          </i>
         </a>
       </nav>
     </div>
