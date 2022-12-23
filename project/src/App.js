@@ -1,29 +1,27 @@
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/layouts/header";
 import Footer from "./components/layouts/footer";
 import Nav from "./components/home/nav";
-import Carousel from "./components/home/carousel";
 import Home from "./components/home/home";
-import ChatHeader from "./components/chat/chatHeader";
-import ChatBody from "./components/chat/chatBody";
-import ChatMessage from "./components/chat/chatMessage";
 import ChatContainer from "./components/chat/chatContainer";
 import Gallery from "./components/gallery/gallery";
 import OrderForm from "./components/order/orderForm";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav />
-      <Carousel />
-      <Home />
-      <Footer />
-      <Gallery />
-      <ChatContainer />
-      <ChatContainer />
-      {/* <OrderForm /> */}
-    </div>
+    <>
+      <div className="App">
+        <Nav />
+        <Routes>
+          {/*  defining the routes for the app  */}
+          <Route path="/" element={<Home />} />
+          <Route path="/community" element={<ChatContainer />} />
+          <Route path="/gallery" element={<Gallery />} />
+        </Routes>
+        <Footer />
+      </div>
+    </>
   );
 }
 
