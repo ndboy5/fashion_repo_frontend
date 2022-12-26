@@ -24,9 +24,6 @@ function Nav() {
       <div className={styles.home}>
         <nav className={styles.nav}>
           <a href="#" className={styles.a}>
-            <i className={styles.i}>
-              <FaInfo />
-            </i>
             About
           </a>
         </nav>
@@ -76,9 +73,6 @@ function Nav() {
         <nav className={styles.nav}>
           <Link to="/gallery" className={styles.a}>
             Gallery
-            <i className={styles.i}>
-              <FaChevronDown />
-            </i>
           </Link>
         </nav>
       </div>

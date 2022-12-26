@@ -1,5 +1,6 @@
 import styles from "./header.module.css";
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -22,7 +23,9 @@ function Header() {
       </div>
 
       <div className={styles.login}>
-        <button className={styles.btn}>SIGN IN</button>
+        <Link to="/order" className={styles.a}>
+          <button className={styles.btn}>SIGN IN</button>
+        </Link>
         <button className={styles.btn}>SIGN UP</button>
       </div>
     </header>

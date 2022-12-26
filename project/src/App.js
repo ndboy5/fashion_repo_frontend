@@ -12,12 +12,14 @@ function App() {
   return (
     <>
       <div className="App">
+        <Header />
         <Nav />
         <Routes>
           {/*  defining the routes for the app  */}
           <Route path="/" element={<Home />} />
           <Route path="/community" element={<ChatContainer />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/order" element={<OrderForm />} />
         </Routes>
         <Footer />
       </div>
