@@ -71,22 +71,27 @@ header {
 
 .login {
   height: 50px;
-  width: 15rem;
+  width: 12rem;
   display: flex;
   margin-top: 5.8rem;
   margin-right: 2rem;
 }
 
 .login .btn {
-  background: white;
+  background: rgb(8, 8, 8);
   border-radius: 5px;
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
-  color: black;
-  font-size: 14px;
+  color: white;
+  font-size: 12px;
   height: 30px;
-  width: 7rem;
+  width: 5rem;
   margin-left: 10px;
+}
+
+.login .btn:hover {
+  background: none;
+  border: none;
 }
 
 .search.active .input {

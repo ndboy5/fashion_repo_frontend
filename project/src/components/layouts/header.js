@@ -23,7 +23,7 @@ function Header() {
       </div>
 
       <div className={styles.login}>
-        <Link to="/order" className={styles.a}>
+        <Link to="/order">
           <button className={styles.btn}>SIGN IN</button>
         </Link>
         <button className={styles.btn}>SIGN UP</button>

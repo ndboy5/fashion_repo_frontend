@@ -1,42 +1,41 @@
-.container{
-    height: 70px;
-    padding: 10px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: solid;
-    border-width: 1px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    margin-top: 5px;
+.container {
+  height: 70px;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid;
+  border-width: 1px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
 }
 
-.container:hover{
-    background-color: rgb(77, 77, 77);
+.container:hover {
+  background-color: rgb(77, 77, 77);
 }
 
-.icons{
-    display: flex;
+.icons {
+  display: flex;
 }
-.icons:hover{
-    display: flex;
-    
+.icons:hover {
+  display: flex;
 }
 
-.icons button{
-    background: none;
-    color: white;
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-    border: none;
-    border-radius: 45px;
-    margin-right: 40px;
+.icons button {
+  background: none;
+  color: white;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 45px;
+  margin-right: 40px;
 }
-.icons:hover{
-    background-color: rgb(77, 77, 77);
+.icons:hover {
+  background-color: rgb(77, 77, 77);
 }
-.icons button:hover{
-    color: blue
+.icons button:hover {
+  color: blue;
 }

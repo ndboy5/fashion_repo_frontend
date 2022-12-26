@@ -20,6 +20,7 @@ function App() {
           <Route path="/community" element={<ChatContainer />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/topic/:id" element={<ChatContainer />} />
+          <Route path="/order" element={<OrderForm />} />
         </Routes>
         <Footer />
       </div>
