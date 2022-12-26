@@ -1,12 +1,12 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/layouts/header";
 import Footer from "./components/layouts/footer";
 import Nav from "./components/home/nav";
 import Home from "./components/home/home";
 import ChatContainer from "./components/chat/chatContainer";
 import Gallery from "./components/gallery/gallery";
 import OrderForm from "./components/order/orderForm";
+import Header from "./components/layouts/header";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/community" element={<ChatContainer />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/order" element={<OrderForm />} />
+          <Route path="/topic/:id" element={<ChatContainer />} />
         </Routes>
         <Footer />
       </div>

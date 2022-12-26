@@ -20,7 +20,6 @@ import Header from "../layouts/header";
 function Nav() {
   return (
     <>
-      <Header />
       <div className={styles.home}>
         <nav className={styles.nav}>
           <a href="#" className={styles.a}>
