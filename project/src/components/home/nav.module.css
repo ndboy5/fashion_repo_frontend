@@ -16,6 +16,10 @@ nav {
   width: 8rem;
 }
 
+nav:hover {
+  background-color: rgba(236, 229, 224, 0.534);
+}
+
 nav a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -33,10 +37,6 @@ nav i {
   font-weight: 600;
   margin-right: 3px;
   margin-left: 8px;
-}
-
-nav :hover {
-  color: rgb(121, 115, 33);
 }
 
 ul {

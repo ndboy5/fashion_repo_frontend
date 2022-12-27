@@ -8,7 +8,7 @@
 }
 
 .rows {
-  color: rgb(86, 87, 87);
+  color: rgb(107, 109, 109);
   display: flex;
   border-radius: 18px;
   height: 1rem;
@@ -27,5 +27,5 @@ h4 {
 }
 
 .rows:hover {
-  color: rgb(69, 121, 156);
+  color: rgb(96, 147, 180);
 }

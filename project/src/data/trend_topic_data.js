@@ -1,7 +1,7 @@
 const trending_topics_data = [
   {
     id: 1,
-    topic: "Trendy and classy women wear in voguw - Tito Collections",
+    topic: "Trendy and classy women wear in vogue - Tito Collections",
     link: "www.google.com",
   },
   {
@@ -32,7 +32,7 @@ const trending_topics_data = [
   },
   {
     id: 7,
-    topic: "Igbo Traditional Original George Rapper For Sale In Ibadan",
+    topic: "Igbo Traditional Original George Wrapper For Sale In Ibadan",
     link: "www.google.com",
   },
   {
@@ -43,7 +43,7 @@ const trending_topics_data = [
   },
   {
     id: 9,
-    topic: "Fashion Design and Sweing Technology",
+    topic: "Fashion Design and Sewing Technology",
     link: "www.google.com",
   },
   {
