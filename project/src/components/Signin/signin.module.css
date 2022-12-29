@@ -1,10 +1,9 @@
 .container {
-  background-color: white;
+  background-color: #fff;
   height: 500px;
   margin: auto;
-  margin-top: 10rem;
-  padding-top: 3rem;
-  /* justify-content: center; */
+  margin-top: 8rem;
+  padding-top: 2px;
   width: 25rem;
 }
 
@@ -35,6 +34,10 @@ input,
   width: 20rem;
 }
 
+input:focus {
+  outline-color: rgba(91, 165, 184, 0.452);
+}
+
 .checkbox {
   display: flex;
   margin-left: 3rem;
@@ -48,6 +51,7 @@ input,
 }
 
 .checkbox input {
+  accent-color: rgb(182, 31, 56);
   border: none;
   height: 15px;
   margin-top: 10px;
@@ -142,10 +146,11 @@ p {
 }
 
 .reminder a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(82, 79, 79);
   margin-top: 16px;
   margin-left: 5px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
 }
 
