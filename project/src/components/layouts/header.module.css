@@ -90,7 +90,7 @@ header {
 }
 
 .login .btn:hover {
-  background: rgba(43, 70, 82, 0.555);
+  /* background: rgba(43, 70, 82, 0.555); */
   border: none;
   color: white;
   transform: scaleX(1.1);

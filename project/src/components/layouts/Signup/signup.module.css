@@ -1,0 +1,130 @@
+.container {
+  background-color: white;
+  height: 500px;
+  margin: auto;
+  margin-top: 10rem;
+  padding-top: 3rem;
+  /* justify-content: center; */
+  width: 25rem;
+}
+
+.signup,
+.btn {
+  margin-left: 3rem;
+  font-weight: 500;
+}
+
+.container h3 {
+  color: rgb(145, 34, 52);
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  margin-left: 3rem;
+}
+
+.password,
+.email {
+  margin-top: 1.5rem;
+}
+
+input,
+.btn {
+  height: 2rem;
+  border: 1px solid rgb(209, 206, 206);
+  border-radius: 8px;
+  width: 20rem;
+}
+
+.btn {
+  background-color: rgb(252, 47, 81);
+  border: none;
+  margin-top: 1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0.5px 2px 5px #8b8b8a;
+}
+
+.btn:hover {
+  transform: scale(1.02, 1.01);
+}
+
+.linecontainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.line {
+  background-color: rgb(236, 235, 235);
+  position: absolute;
+  top: 40%;
+  bottom: 0;
+  height: 2px;
+  width: 20rem;
+  margin-left: 3rem;
+  margin-top: 15px;
+  /* z-index: -1; */
+}
+
+.square {
+  background-color: white;
+  color: #999;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(231, 227, 227);
+  border-radius: 5px;
+  position: relative;
+  margin-left: 12rem;
+  margin-top: 20px;
+}
+
+.icons {
+  display: flex;
+  height: 4rem;
+  margin-top: -10rem;
+  margin: auto;
+  width: 10rem;
+}
+
+i {
+  font-size: 24px;
+  color: rgb(131, 129, 129);
+  margin: 16px;
+}
+
+.icons i :hover {
+  color: black;
+}
+
+p {
+  color: rgb(54, 53, 53);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.reminder {
+  display: flex;
+  height: 3rem;
+  margin: auto;
+  margin-top: -2rem;
+  margin-left: 8rem;
+  width: 15rem;
+}
+
+.reminder a {
+  color: rgb(82, 79, 79);
+  margin-top: 16px;
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+a :hover {
+  color: rgb(36, 78, 168);
+}

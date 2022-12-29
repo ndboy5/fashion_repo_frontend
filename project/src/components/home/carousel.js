@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Carousel() {
   const imageUrl = [
-    "/images/carousel/sew.jpg",
+    "/images/carousel/sketches2.jpg",
     "/images/carousel/tailors.jpg",
     "/images/carousel/sketches.jpg",
   ];
