@@ -1,5 +1,4 @@
 .carousel {
-  /* background-color: rgba(34, 33, 43, 0.938); */
   color: black;
   display: flex;
   height: 32rem;
@@ -14,7 +13,7 @@
 
 .container img {
   height: 32rem;
-  width: 84.2rem;
+  width: 98.6vw;
   object-fit: cover;
   background-position: right;
 }

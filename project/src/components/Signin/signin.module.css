@@ -130,7 +130,7 @@ i {
   color: black;
 }
 
-p {
+.reminder p {
   color: rgb(54, 53, 53);
   font-size: 16px;
   font-weight: 700;
