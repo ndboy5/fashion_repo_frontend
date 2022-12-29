@@ -42,7 +42,7 @@ footer .contactMedia i {
   margin: 5px;
   font-size: 14px;
 }
-footer i:hover {
+.contactMedia i:hover {
   color: rgb(242, 245, 48);
   margin: 5px;
 }

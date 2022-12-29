@@ -27,18 +27,6 @@ function Nav() {
           </a>
         </nav>
 
-        <nav className={styles.nav}>
-          <Link to="/community" className={styles.a}>
-            Community
-            <i className={styles.i}>
-              <FaChevronDown />
-            </i>
-          </Link>
-          <li hidden>
-            <a href="">Chat</a>
-          </li>
-        </nav>
-
         <ul>
           <nav className={styles.nav}>
             <a href="#" className={styles.a}>
@@ -59,6 +47,12 @@ function Nav() {
             </li>
           </nav>
         </ul>
+
+        <nav className={styles.nav}>
+          <Link to="/community" className={styles.a}>
+            Community
+          </Link>
+        </nav>
 
         <nav className={styles.nav}>
           <a href="#" className={styles.a}>

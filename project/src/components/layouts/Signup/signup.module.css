@@ -129,6 +129,6 @@ p {
   font-size: 14px;
 }
 
-a :hover {
+.reminder a:hover {
   color: rgb(36, 78, 168);
 }

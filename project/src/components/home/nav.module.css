@@ -7,6 +7,7 @@
   justify-content: flex-start;
   width: 100vw;
 }
+
 nav {
   background-color: white;
   color: white;
@@ -17,7 +18,7 @@ nav {
 }
 
 nav:hover {
-  background-color: rgba(248, 227, 212, 0.534);
+  background-color: rgba(245, 236, 230, 0.534);
 }
 
 nav a {

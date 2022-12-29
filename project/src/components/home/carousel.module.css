@@ -1,7 +1,7 @@
 .carousel {
   color: black;
   display: flex;
-  height: 32rem;
+  height: 25rem;
   margin: auto;
   margin-top: 8.5rem;
   text-align: center;
@@ -12,10 +12,10 @@
 }
 
 .container img {
-  height: 32rem;
+  height: 30rem;
   width: 98.6vw;
   object-fit: cover;
-  background-position: right;
+  padding-top: -10rem;
 }
 
 .btns {
