@@ -14,7 +14,7 @@
 }
 
 .container h3 {
-  color: rgb(145, 34, 52);
+  color: rgb(128, 51, 64);
   font-weight: 700;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
@@ -61,7 +61,7 @@ input:focus {
 }
 
 .line {
-  background-color: rgb(236, 235, 235);
+  background-color: rgb(224, 219, 219);
   position: absolute;
   top: 40%;
   bottom: 0;
@@ -80,7 +80,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(231, 227, 227);
+  border: 2px solid rgb(224, 219, 219);
   border-radius: 5px;
   position: relative;
   margin-left: 12rem;
@@ -102,7 +102,7 @@ i {
 }
 
 .icons i :hover {
-  color: black;
+  color: rgb(63, 7, 26);
 }
 
 p {
@@ -116,7 +116,7 @@ p {
   height: 3rem;
   margin: auto;
   margin-top: -2rem;
-  margin-left: 8rem;
+  margin-left: 7.7rem;
   width: 15rem;
 }
 
@@ -130,5 +130,5 @@ p {
 }
 
 .reminder a:hover {
-  color: rgb(36, 78, 168);
+  color: rgb(18, 100, 138);
 }

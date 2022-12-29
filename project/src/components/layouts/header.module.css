@@ -21,7 +21,7 @@ header {
 .search {
   height: 60px;
   width: 15rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   /* margin-left: 30rem; */
   position: relative;
 }
@@ -29,21 +29,21 @@ header {
 .search .btn {
   background: none;
   border: 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   font-size: 20px;
-  height: 40px;
+  height: 32px;
   position: absolute;
-  margin-left: 19rem;
-  margin-top: -36px;
-  width: 50px;
+  margin-left: 17rem;
+  margin-top: -33px;
+  width: 40px;
   transition: transform 0.3s ease;
 }
 
-.search .input {
-  background: none;
+.search input {
+  background: black;
   color: #fff;
   border: 0;
-  border-radius: 10px;
+  border-radius: 3px;
   border: 1px solid rgb(117, 115, 115);
   font-size: 14px;
   height: 2px;
@@ -51,11 +51,16 @@ header {
   margin-right: 20rem;
   padding: 15px;
   transition: width 0.3s ease;
-  width: 20vw;
+  width: 15rem;
+}
+
+.search input:focus {
+  outline-color: white;
 }
 
 .btn i {
   color: rgb(155, 153, 153);
+  margin-left: 5px;
   font-size: 15px;
 }
 
