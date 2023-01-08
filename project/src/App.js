@@ -9,6 +9,8 @@ import OrderForm from "./components/order/orderForm";
 import Header from "./components/layouts/header";
 import SignUp from "./components/layouts/Signup/signup";
 import SignIn from "./components/Signin/signin";
+import MeasurementList from "./components/myHome/measurement/measurementList";
+import MyHome from "./components/myHome/myHome";
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/order" element={<OrderForm />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/myhome/" element={<MyHome />} />
+          <Route path="/myhome/measurement" element={<MeasurementList />} />
+          <Route path="/myhome/measurement/:id" element={<MeasurementList />} />
         </Routes>
         <Footer />
       </div>

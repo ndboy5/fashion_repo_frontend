@@ -29,12 +29,12 @@ function Nav() {
 
         <ul>
           <nav className={styles.nav}>
-            <a href="#" className={styles.a}>
+            <Link to={"/myhome/"} className={styles.a}>
               My Home
               <i className={styles.i}>
                 <FaChevronDown />
               </i>
-            </a>
+            </Link>
             <li hidden>
               <a href="">Order</a>
             </li>
