@@ -9,6 +9,7 @@ import OrderForm from "./components/order/orderForm";
 import Header from "./components/layouts/header";
 import SignUp from "./components/layouts/Signup/signup";
 import SignIn from "./components/Signin/signin";
+import Market from "./components/market/template";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/order" element={<OrderForm />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/market" element={<Market />} />
         </Routes>
         <Footer />
       </div>
