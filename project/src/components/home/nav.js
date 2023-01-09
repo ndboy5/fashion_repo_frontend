@@ -13,6 +13,12 @@ function Nav() {
           </a>
         </nav>
 
+        <nav className={styles.nav}>
+          <Link to="/community" className={styles.a}>
+            Community
+          </Link>
+        </nav>
+
         <ul>
           <nav className={styles.nav}>
             <Link to={"/myhome/"} className={styles.a}>
@@ -35,17 +41,8 @@ function Nav() {
         </ul>
 
         <nav className={styles.nav}>
-          <Link to="/community" className={styles.a}>
-            Community
-          </Link>
-        </nav>
-
-        <nav className={styles.nav}>
           <a href="#" className={styles.a}>
-            Market
-            <i className={styles.i}>
-              <FaChevronDown />
-            </i>
+            <Link to="/Market">Market</Link>
           </a>
         </nav>
 
