@@ -1,9 +1,11 @@
 import measurementData from "../../../data/measurement_data";
+import styles from "./measurementList.module.css";
 import {
   FaTrash,
   FaEdit,
   FaFemale,
   FaMale,
+  FaHeart,
   FaHandPaper,
   FaDraftingCompass,
 } from "react-icons/fa";
@@ -23,20 +25,23 @@ function MeasurementList() {
         <button>New</button>
         <table>
           <tr>
-            <th>SN</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Owner</th>
             <th>Sex</th>
             <th>Type</th>
             <th>Measure Unit</th>
+            <th>
+              <FaHeart />{" "}
+            </th>
             <th>Last Update</th>
-            <th> </th>
+            <th></th>
           </tr>
-          {myMeasurements.map((m) => (
+          {myMeasurements.map((m, index) => (
             <tr>
               <td>{m.id}</td>
               <td>
-                <Link to={"/myhome/measurement/" + m.id}>{m.name}</Link>
+                <Link to={"/myhome/measurement/" + index}>{m.name}</Link>
               </td>
               <td>{m.owner}</td>
               <td>
@@ -44,12 +49,21 @@ function MeasurementList() {
               </td>
               <td>
                 {m.type === "Free Hand" ? (
-                  <i>{<FaHandPaper />}</i>
+                  <i alt="Free Hand">{<FaHandPaper />}</i>
                 ) : (
-                  <i>{<FaDraftingCompass />}</i>
+                  <i alt="Pattern Design">{<FaDraftingCompass />}</i>
                 )}
               </td>
               <td>{m.unit}</td>
+              <td>
+                {m.is_favourite ? (
+                  <i>
+                    <FaHeart />
+                  </i>
+                ) : (
+                  " "
+                )}
+              </td>
               <td>{m.last_update_date}</td>
               <td>
                 <i>
