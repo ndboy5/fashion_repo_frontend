@@ -2,6 +2,12 @@ body {
   background-color: #fff;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   background-color: rgb(248, 255, 224);
   height: 80rem;
@@ -15,7 +21,7 @@ body {
   background-color: #333;
   display: flex;
   justify-content: space-between;
-  height: 2rem;
+  height: 5rem;
   position: fixed;
   padding-bottom: 3rem;
   margin-top: -4rem;
@@ -48,6 +54,7 @@ h1 {
 h2 {
   color: brown;
   margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
@@ -57,9 +64,7 @@ h3 {
 }
 
 h5 {
-  margin-top: -2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: 1.5rem;
+  margin: -2rem 0 1.5rem 1.5rem;
   color: rgb(139, 138, 138);
   font-size: 12px;
 }
@@ -68,6 +73,7 @@ h5 {
   color: red;
   font-size: 12px;
   margin-left: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 hr {
@@ -82,8 +88,7 @@ hr {
 .address input {
   width: 20rem;
   height: 2.2rem;
-  margin: -10px 10px 3rem 15px;
-
+  margin: 6px 10px 2.3rem 15px;
   border-radius: 15px;
   padding-left: 7px;
   box-shadow: 0.5px 2px 5px #d3d3d1;

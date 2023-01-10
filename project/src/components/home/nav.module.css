@@ -1,7 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .navBar {
-  background-color: white;
+  background-color: #fff;
   display: flex;
-  height: 50px;
+  height: 48px;
   margin-top: -4rem;
   position: fixed;
   justify-content: flex-start;
@@ -11,8 +17,8 @@
 nav {
   background-color: white;
   color: white;
-  height: 18px;
-  padding: 0.7rem 0 1rem 25px;
+  height: 3rem;
+  padding: 0.8rem 0 1rem 25px;
   margin-bottom: 2rem;
   width: 8rem;
 }

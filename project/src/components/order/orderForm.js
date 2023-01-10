@@ -27,7 +27,7 @@ function OrderForm() {
       </div>
 
       <div className={styles.address}>
-        <h3>Address</h3>
+        <h3>Contact Address</h3>
         <input type="type" class="input" />
         <h5>Street Address</h5>
         <input type="type" class="input" />
