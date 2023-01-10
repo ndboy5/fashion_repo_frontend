@@ -3,6 +3,7 @@ import Topic from "./topic";
 import Slides from "./slides";
 import trending_topics_data from "../../data/trend_topic_data";
 import Carousel from "./carousel";
+import Layout from "../layouts/layout";
 function Home() {
   //Get data for home page
   const topics = trending_topics_data;
@@ -23,11 +24,13 @@ function Home() {
 
   const message = "Hi chima, welcome to Lagos";
   return (
-    <main className={styles.main}>
-      <Carousel />
-      <Topic data={topics} message={message} />
-      <Slides slides={slides} />
-    </main>
+    <>
+      <div className={styles.main}>
+        <Carousel />
+        <Topic data={topics} message={message} />
+        <Slides slides={slides} />
+      </div>
+    </>
   );
 }
 export default Home;

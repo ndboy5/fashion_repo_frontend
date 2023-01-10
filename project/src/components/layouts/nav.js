@@ -1,16 +1,16 @@
 import styles from "./nav.module.css";
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Header from "../layouts/header";
+import Header from "./header";
 
 function Nav() {
   return (
     <>
       <div className={styles.navBar}>
         <nav className={styles.nav}>
-          <a href="#" className={styles.a}>
+          <Link to="/" className={styles.a}>
             About
-          </a>
+          </Link>
         </nav>
 
         <nav className={styles.nav}>
