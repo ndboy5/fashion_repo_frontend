@@ -1,19 +1,5 @@
 import styles from "./nav.module.css";
-import {
-  FaArrowDown,
-  FaCaretDown,
-  FaCartArrowDown,
-  FaChartArea,
-  FaChevronDown,
-  FaHome,
-  FaInfo,
-  FaPersonBooth,
-  FaPhotoVideo,
-  FaRegArrowAltCircleDown,
-  FaShoppingBasket,
-  FaUser,
-  FaUsersCog,
-} from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Header from "../layouts/header";
 

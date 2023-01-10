@@ -12,6 +12,7 @@ import SignIn from "./components/Signin/signin";
 import MeasurementList from "./components/myHome/measurement/measurementList";
 import MyHome from "./components/myHome/myHome";
 import Market from "./components/market/template";
+import SingleMeasurement from "./components/myHome/measurement/singleMeasurement";
 
 function App() {
   return (
@@ -31,7 +32,10 @@ function App() {
           <Route path="/market" element={<Market />} />
           <Route path="/myhome/" element={<MyHome />} />
           <Route path="/myhome/measurement" element={<MeasurementList />} />
-          <Route path="/myhome/measurement/:id" element={<MeasurementList />} />
+          <Route
+            path="/myhome/measurement/:id"
+            element={<SingleMeasurement />}
+          />
         </Routes>
         <Footer />
       </div>

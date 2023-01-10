@@ -1,0 +1,33 @@
+table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    box-shadow: 0 0 20px rgba(0, 0,0, 2);
+}
+
+thead tr {
+    background-color: #991e35a8;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+tbody tr {
+    border-bottom: thin solid #a46572c5;
+}
+
+tbody tr:last-of-type{
+    border-bottom: 2px solid #991e35;
+}
+
+th, td {
+padding: 12px 15px;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(250, 227, 231);
+  }
+
+tbody tr:hover{
+    font-weight: bold;
+    color: #991e35;
+}
