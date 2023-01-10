@@ -1,53 +1,153 @@
 import styles from "./gallery.module.css";
+import { HiArrowsExpand } from "react-icons/hi";
+import { BiExpand } from "react-icons/bi";
+
 function Gallery() {
   return (
-    <div className={styles.body}>
-      <div className={styles.container}>
-        <div className={styles.box1}>
-          <img src="/images/style-7.jpg"></img>
+    <section className={styles.container}>
+      <section className={styles.headerTop}>
+        <div className={styles.logo}>
+          <img src="" alt="" />
+          <h2>LOGO</h2>
         </div>
-        <div className={styles.box2}>
-          <img src="/images/style-1.jpg"></img>
-        </div>
-        <div className={styles.box3}>
-          <img src="/images/trend_style/pic_c.jpg"></img>
-        </div>
-        <div className={styles.box}>
-          <img src="/images/style-2.jpg"></img>
-        </div>
-        <div className={styles.box}>
-          <img src="/images/style-3.jpg"></img>
-        </div>
-        <div className={styles.box}>
-          <img src="/images/trend_style/pic_a.jpg"></img>
-        </div>
-        <div className={styles.box}>
-          <img src="/images/style-5.jpg"></img>
-        </div>
-        <div className={styles.box}>
-          <img src="/images/trend_style/pic_f.jpg"></img>
-        </div>
-        <div className={styles.box}>
-          <img src="/images/carousel/mannequin.jpg"></img>
-        </div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-        <div className={styles.box}></div>
-      </div>
-    </div>
+      </section>
+      {/* <h2 class="heading-text">Responsive <span>image gallery</span></h2> */}
+      <ul className={styles.imageGallery}>
+        <li>
+          <img src="/images/carousel/designer.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_f.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_d.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_a.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_b.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_c.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_g.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_h.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_k.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/trend_style/pic_e.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/carousel/designer.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+
+        <li>
+          <img src="/images/trend_style/pic_i.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
   );
 }
 export default Gallery;

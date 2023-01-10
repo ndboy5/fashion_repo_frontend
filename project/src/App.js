@@ -11,6 +11,7 @@ import SignUp from "./components/layouts/Signup/signup";
 import SignIn from "./components/Signin/signin";
 import MeasurementList from "./components/myHome/measurement/measurementList";
 import MyHome from "./components/myHome/myHome";
+import Market from "./components/market/template";
 
 function App() {
   return (

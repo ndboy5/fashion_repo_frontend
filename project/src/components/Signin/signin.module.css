@@ -21,6 +21,11 @@
   margin-left: 3rem;
 }
 
+.square h5 {
+  margin-top: 2.6rem;
+  margin-right: 1.5rem;
+}
+
 .password,
 .email {
   margin-top: 1.5rem;
