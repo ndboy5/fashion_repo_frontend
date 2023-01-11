@@ -5,7 +5,7 @@ function MarketBody() {
   return (
     <section className={styles.container}>
       <div className={styles.products}>
-        <Link to="/order">
+        <Link to="/">
           <button className={styles.btn}>
             <div className={styles.product}></div>
           </button>

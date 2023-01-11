@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   background-color: #fff;
   height: 500px;
   margin: auto;
   margin-top: 8rem;
-  padding-top: 2px;
+  padding-top: 1rem;
   width: 25rem;
 }
 
@@ -19,6 +25,10 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   margin-left: 3rem;
+}
+
+.container p {
+  font-weight: 700;
 }
 
 .password,
@@ -42,6 +52,7 @@ input:focus {
   background-color: rgb(252, 47, 81);
   border: none;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   color: white;
   cursor: pointer;
   box-shadow: 0.5px 2px 5px #8b8b8a;
@@ -87,6 +98,11 @@ input:focus {
   margin-top: 20px;
 }
 
+.square h5 {
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .icons {
   display: flex;
   height: 4rem;
@@ -105,10 +121,11 @@ i {
   color: rgb(63, 7, 26);
 }
 
-p {
+.reminder p {
   color: rgb(54, 53, 53);
   font-size: 16px;
   font-weight: 700;
+  margin-top: 1rem;
 }
 
 .reminder {

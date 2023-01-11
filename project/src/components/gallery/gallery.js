@@ -5,16 +5,38 @@ import { BiExpand } from "react-icons/bi";
 function Gallery() {
   return (
     <section className={styles.container}>
-      <section className={styles.headerTop}>
+      {/* <section className={styles.headerTop}>
         <div className={styles.logo}>
           <img src="" alt="" />
           <h2>LOGO</h2>
         </div>
-      </section>
-      {/* <h2 class="heading-text">Responsive <span>image gallery</span></h2> */}
+      </section> */}
+
       <ul className={styles.imageGallery}>
         <li>
+          <img src="/images/style-2.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
           <img src="/images/carousel/designer.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <img src="/images/style-1.jpg" alt="" />
           <div className={styles.overlay}>
             <span>Image title</span>
             <button className={styles.btn}>
@@ -69,6 +91,17 @@ function Gallery() {
           </div>
         </li>
         <li>
+          <img src="/images/trend_style/pic_d.jpg" alt="" />
+          <div className={styles.overlay}>
+            <span>Image title</span>
+            <button className={styles.btn}>
+              <i className={styles.i}>
+                <BiExpand />
+              </i>
+            </button>
+          </div>
+        </li>
+        <li>
           <img src="/images/trend_style/pic_c.jpg" alt="" />
           <div className={styles.overlay}>
             <span>Image title</span>
@@ -113,7 +146,7 @@ function Gallery() {
           </div>
         </li>
         <li>
-          <img src="/images/trend_style/pic_e.jpg" alt="" />
+          <img src="/images/style-1.jpg" alt="" />
           <div className={styles.overlay}>
             <span>Image title</span>
             <button className={styles.btn}>
@@ -124,7 +157,7 @@ function Gallery() {
           </div>
         </li>
         <li>
-          <img src="/images/carousel/designer.jpg" alt="" />
+          <img src="/images/style-2.jpg" alt="" />
           <div className={styles.overlay}>
             <span>Image title</span>
             <button className={styles.btn}>
