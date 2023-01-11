@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-.container{
-    display: flex;
-    justify-content: center;
-}
-
-table{
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    box-shadow: 0 0 20px rgba(0, 0,0, 2);
-=======
 table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 2);
->>>>>>> f4fcf17dfbaff19209d288aba0dca437145cd1f8
 }
 
 thead tr {
