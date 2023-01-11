@@ -1,38 +1,44 @@
-.navBar {
-  background-color: white;
-  display: flex;
-  height: 50px;
-  margin-top: -4rem;
-  position: fixed;
-  justify-content: flex-start;
-  width: 100vw;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-nav {
+.navHolder {
   background-color: white;
+  display: flex;
+  height: 48px;
+  margin-top: -4rem;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+}
+
+.nav {
+  background-color: rgb(255, 255, 255);
   color: white;
-  height: 18px;
-  padding: 1rem 0 1rem 25px;
-  margin-bottom: 2rem;
+  height: 3rem;
+  padding: 0.8rem 0 1rem 0px;
+  position: relative;
   width: 8rem;
 }
 
-nav:hover {
+.nav:hover {
   background-color: rgba(212, 206, 203, 0.267);
 }
 
-nav a {
+.nav a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: rgb(58, 58, 49);
   font-size: 14px;
   font-weight: 500;
   margin: auto;
-  margin-left: 15px;
+  margin-left: 18px;
   text-decoration: none;
 }
 
-nav i {
+.nav i {
   color: rgb(179, 179, 175);
   font-size: 12px;
   font-weight: 600;
@@ -40,12 +46,42 @@ nav i {
   margin-left: 8px;
 }
 
-ul {
-  list-style-type: none;
-  margin-top: -0.01rem;
-  padding: 0;
+.navMenu {
+  background-color: #fff;
+  line-height: 2;
+  margin-top: 0.7rem;
 }
 
-li {
-  line-height: 1.5;
+.navMenu ul {
+  display: none;
+}
+
+.navMenu li {
+  list-style-type: none;
+  margin: 0;
+  padding-left: -3rem;
+}
+
+.navMenu li:hover {
+  background-color: rgba(247, 247, 17, 0.103);
+}
+
+.navMenu .expanded ul {
+  display: block;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.nav .btn:hover {
+  border: none;
+  cursor: pointer;
+}
+
+.nav i :hover {
+  color: black;
 }

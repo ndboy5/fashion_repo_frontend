@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   background-color: #fff;
   display: flex;
@@ -16,12 +22,10 @@
 .product img {
   background-color: rgba(196, 199, 199, 0.534);
   height: 18rem;
-  /* margin-top: 5rem; */
   width: 15rem;
 }
 
 .pricetag {
-  /* background-color: #333; */
   height: 6rem;
   width: 15rem;
   margin-left: 0.5rem;
@@ -30,7 +34,6 @@
 
 .price,
 .name {
-  /* background-color: rgb(240, 233, 233); */
   border-radius: 3px;
   color: black;
   font-weight: 700;
