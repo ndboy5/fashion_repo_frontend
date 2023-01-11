@@ -5,12 +5,13 @@
 }
 
 .topic {
-  background-color: rgba(235, 252, 248, 0.377);
+  background-color: rgba(241, 251, 252, 0.377);
   font-size: 26px;
   font-weight: 700;
   height: 400px;
   margin: auto;
   margin-top: 5rem;
+  margin-bottom: 3rem;
   overflow: hidden;
 }
 
