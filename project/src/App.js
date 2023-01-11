@@ -4,7 +4,7 @@ import Home from "./components/home/home";
 import ChatContainer from "./components/chat/chatContainer";
 import Gallery from "./components/gallery/gallery";
 import OrderForm from "./components/order/orderForm";
-import SignUp from "./components/layouts/Signup/signup";
+import SignUp from "./components/Signup/signup";
 import SignIn from "./components/Signin/signin";
 import MeasurementList from "./components/myHome/measurement/measurementList";
 import MyHome from "./components/myHome/myHome";

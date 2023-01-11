@@ -6,7 +6,7 @@ import Header from "./header";
 function Nav() {
   return (
     <>
-      <div className={styles.navBar}>
+      <div className={styles.navholder}>
         <nav className={styles.nav}>
           <Link to="/" className={styles.a}>
             About
