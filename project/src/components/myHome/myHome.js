@@ -12,10 +12,12 @@ function MyHome() {
         <h1>Welcome David</h1>
       </div>
       <div>
-        <p>Here are your favorite topics from the community</p>
-      </div>
-      <div>
-        <MeasurementList />
+        <div>
+          <p>Here are your favorite topics from the community</p>
+        </div>
+        <div>
+          <MeasurementList />
+        </div>
       </div>
     </div>
   );
