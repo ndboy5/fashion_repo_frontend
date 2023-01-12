@@ -21,8 +21,8 @@ function Header() {
               <li>
                 <input
                   type="text"
-                  // className={styles.input}
-                  placeholder="search..."
+                  className={styles.input}
+                  placeholder="Search..."
                 />
               </li>
             </ul>
