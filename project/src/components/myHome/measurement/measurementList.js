@@ -21,8 +21,10 @@ function MeasurementList() {
 
   return (
     <>
-      <section>
-        <button>New</button>
+      <section className={styles.container}>
+        <div>
+          <button>New</button>
+        </div>
         <table>
           <thead>
             <tr>
