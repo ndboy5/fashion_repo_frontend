@@ -51,7 +51,7 @@ function Nav() {
           </i>
         </button>
 
-        <div
+        < div
           className={isNavMenuToggle ? styles.navMenu.expanded : styles.navMenu}
         >
           <ul className={styles.navMenu}>

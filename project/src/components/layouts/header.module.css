@@ -25,67 +25,61 @@ header {
 }
 
 .search {
-  height: 60px;
-  width: 15rem;
-  margin-top: 2rem;
-  /* margin-left: 30rem; */
-  position: relative;
+  margin-top: 5.5rem;
+  margin-left: -20rem;
+  display: flex;
+  position: absolute;
 }
 
 .search .btn {
   background: none;
-  border: 0;
-  /* border-radius: 10px; */
+  border: none;
   font-size: 20px;
-  height: 32px;
+  height: 30px;
   position: absolute;
-  margin-left: 17rem;
-  margin-top: -33px;
-  width: 40px;
+  margin-left: 18rem;
+  width: 31px;
   transition: transform 0.3s ease;
 }
 
 .search input {
-  background: black;
+  background: none;
   color: #fff;
-  border: 0;
-  border-radius: 3px;
+  border: none;
+  border-radius: 1px;
   border: 1px solid rgb(117, 115, 115);
   font-size: 14px;
   height: 2px;
-  margin-top: 3.5rem;
-  margin-right: 20rem;
+  margin-top: -0.5rem;
   padding: 15px;
-  transition: width 0.3s ease;
-  width: 15rem;
-}
-
-.search input:focus {
-  outline-color: white;
+  transition: width 0.5s ease;
+  width: 18rem;
 }
 
 .search .btn i {
-  color: rgb(155, 153, 153);
-  margin-left: -3.5rem;
+  color: rgb(161, 159, 159);
+  margin-left: 0.5rem;
   font-size: 15px;
 }
 
-.btn i :hover {
-  color: rgb(250, 249, 249);
-  font-size: 15px;
+.Input ul {
+  display: none;
 }
 
-.btn:focus,
-.input:focus {
-  outline: none;
+.Input .expanded ul {
+  display: flex;
+}
+
+.search .btn i :hover {
+  color: #fff;
+  font-size: 15px;
 }
 
 .login {
   height: 50px;
-  width: 12rem;
   display: flex;
   margin-top: 5.5rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .login .btn {
@@ -96,21 +90,12 @@ header {
   color: rgba(221, 215, 215, 0.836);
   font-size: 11px;
   height: 30px;
-  width: 5rem;
+  width: 4rem;
   margin-left: 10px;
 }
 
 .login .btn:hover {
-  /* background: rgba(43, 70, 82, 0.555); */
   border: none;
   color: white;
   transform: scaleX(1.1);
 }
-
-.search.active .input {
-  width: 200px;
-}
-
-/* .search.active .btn {
-  transform: translate(198px);
-} */
