@@ -6,31 +6,14 @@
 
 .container {
   background-color: white;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
+  margin-top: 8rem;
+  position: relative;
 }
 
-.headerTop {
-  background-color: rgb(73, 73, 71);
-  display: flex;
-  justify-content: space-between;
-  height: 5rem;
-  position: fixed;
-  padding-bottom: 3rem;
-  margin-top: -5.4rem;
-  width: 100vw;
-  z-index: 1;
-}
-
-.logo h2 {
-  border-radius: 20px;
-  height: 200px;
-  color: #fff;
-  margin-left: 25px;
-  margin-top: 1rem;
-  width: 100px;
-}
 .overlay span {
   font-weight: 300;
+  padding-left: 1.5rem;
 }
 
 ul {

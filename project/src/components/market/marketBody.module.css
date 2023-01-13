@@ -9,7 +9,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 8rem;
+  margin-top: 8rem;
+  padding-top: 2rem;
   width: 98.5vw;
 }
 

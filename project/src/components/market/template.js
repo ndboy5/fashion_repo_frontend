@@ -13,13 +13,6 @@ import MarketBody from "./marketBody";
 function Market() {
   return (
     <section className={styles.container}>
-      <section className={styles.headerTop}>
-        <div className={styles.logo}>
-          <img src="" alt="" />
-          <h2>LOGO</h2>
-        </div>
-      </section>
-
       <section className={styles.headerBar}>
         <div className={styles.barLeft}>
           <a href="#" className={styles.a}>
