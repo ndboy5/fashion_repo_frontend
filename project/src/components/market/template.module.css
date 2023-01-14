@@ -5,32 +5,30 @@
 }
 
 .headerBar {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   height: 3rem;
   margin-bottom: 8px;
   margin-top: -1.2rem;
-  /* padding-top: 5rem; */
   position: fixed;
   width: 98.5vw;
+  z-index: 0;
 }
 
 .headerBar i {
   color: rgb(145, 142, 142);
-  font-size: 14px;
+  font-size: 16px;
   margin-right: 1.8rem;
   margin-left: 1.8rem;
 }
 
 .headerBar i :hover {
   color: #000;
-  font-weight: 900;
 }
 
 .barLeft,
 .barRight {
-  /* background-color: burlywood; */
   display: flex;
   height: 1rem;
   margin-top: 0.7rem;
@@ -38,7 +36,7 @@
 }
 
 .sideline {
-  background-color: rgb(238, 236, 236);
+  background-color: rgb(223, 221, 221);
   height: 1.5rem;
   width: 1px;
 }
