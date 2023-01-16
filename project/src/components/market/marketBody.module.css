@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 8rem;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
   width: 98.5vw;
 }
 
@@ -21,7 +21,7 @@
 
 .product,
 .product img {
-  background-color: rgba(196, 199, 199, 0.534);
+  background-color: rgba(231, 235, 235, 0.534);
   height: 18rem;
   width: 15rem;
 }

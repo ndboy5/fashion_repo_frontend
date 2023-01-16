@@ -15,7 +15,8 @@ import styles from "./slides.module.css";
  * @returns
  */
 function Slides(props) {
-  const [pos, setPosition] = useState([0, 1, 2, 3]); // 4 element array used to show four pics. This must be changed if the number of showing pics changes
+  const [pos, setPosition] = useState([0, 1, 2, 3]);
+  // 4 element array used to show four pics. This must be changed if the number of showing pics changes
   const [currIndex, setCurrIndex] = useState(0);
 
   const slides = props.slides;
