@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+}
+
+.details{
+    border: thin solid;
+    display: grid;
+    justify-content: center;
+}
+
+.measures{
+
+}
+
+form>section:nth-child(odd){
+    background-color: #EDC2D8FF;
+}
+
+form>section:nth-child(even){
+    background-color: #FCF6F5FF;
+}
+
+.detailsLeft{
+    
+}
+
+.detailsRight{
+justify-content: left;
+}

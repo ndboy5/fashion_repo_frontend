@@ -6,15 +6,10 @@ import styles from "./myHome.module.css";
  * @returns The home page for user experience that has been customized solely for the user
  */
 function MyHome() {
+  //TODO: figure out where this component would be useful else it is to be deleted
   return (
-    <div>
+    <div className={styles.container}>
       <div>
-        <h1>Welcome David</h1>
-      </div>
-      <div>
-        <div>
-          <p>Here are your favorite topics from the community</p>
-        </div>
         <div>
           <MeasurementList />
         </div>

@@ -69,7 +69,7 @@ function Nav() {
             </li>
 
             <li>
-              <Link to={"/myhome/"}>
+              <Link to={"/myhome/measurement"}>
                 <a href=""> Measurement</a>
               </Link>
             </li>

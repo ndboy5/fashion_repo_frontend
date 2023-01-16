@@ -24,6 +24,7 @@ function MeasurementList() {
       <section className={styles.container}>
         <div>
           <button>New</button>
+          <button>New</button>
         </div>
         <table>
           <thead>
