@@ -8,9 +8,9 @@ function Nav() {
   return (
     <nav className={styles.navHolder}>
       <div className={styles.nav}>
-        <Link to="/community" className={styles.a}>
-          Community
-        </Link>
+        <a href="#" className={styles.a}>
+          About Us
+        </a>
         <button className={styles.btn}>
           <i className={styles.i}>
             <FaChevronDown />
@@ -19,9 +19,9 @@ function Nav() {
       </div>
 
       <div className={styles.nav}>
-        <a href="#" className={styles.a}>
-          About Us
-        </a>
+        <Link to="/community" className={styles.a}>
+          Community
+        </Link>
         <button className={styles.btn}>
           <i className={styles.i}>
             <FaChevronDown />
@@ -37,7 +37,7 @@ function Nav() {
           //   setIsNavMenuToggle(!isNavMenuToggle);
           // }}
         >
-          My Home
+          <Link to={"/"}>My Home</Link>
         </a>
 
         <button

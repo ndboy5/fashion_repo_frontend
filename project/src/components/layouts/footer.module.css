@@ -16,15 +16,14 @@ footer {
   font-size: 14px;
   height: 2rem;
   margin-top: 1rem;
-  margin-left: 3rem;
   justify-content: space-between;
-  width: 90vw;
+  width: 100vw;
 }
 
 .footerItems a {
   text-decoration: none;
   color: rgb(143, 140, 140);
-  margin-right: 20px;
+  margin-left: 30px;
 }
 
 .footerItems a:hover {
@@ -35,6 +34,8 @@ footer {
 footer .contactMedia a {
   height: 40px;
   width: 40px;
+  margin-right: 20px;
+  margin-left: 0;
 }
 
 footer .contactMedia i {

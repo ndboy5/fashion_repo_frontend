@@ -3,12 +3,6 @@ import styles from "./orderForm.module.css";
 function OrderForm() {
   return (
     <form className={styles.container}>
-      <section className={styles.headerTop}>
-        <div className={styles.logo}>
-          <img src="" alt="" />
-          <h2>LOGO</h2>
-        </div>
-      </section>
       <h1> ORDER FORM</h1>
 
       <div className={styles.date}>
@@ -29,9 +23,9 @@ function OrderForm() {
       <div className={styles.address}>
         <h3>Contact Address</h3>
         <input type="type" class="input" />
-        <h5>Street Address</h5>
+        <h5>Street Address Line 1</h5>
         <input type="type" class="input" />
-        <h5>Home Address</h5>
+        <h5>Home Address Line 2</h5>
       </div>
 
       <div className={styles.holder}>

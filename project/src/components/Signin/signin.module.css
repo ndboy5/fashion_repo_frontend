@@ -49,6 +49,10 @@ input,
   width: 20rem;
 }
 
+input {
+  padding: 1rem;
+}
+
 input:focus {
   outline-color: rgba(91, 165, 184, 0.452);
 }
