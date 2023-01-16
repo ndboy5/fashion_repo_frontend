@@ -29,7 +29,6 @@ ul {
 .imageGallery li {
   flex: 1 1 auto;
   height: 300px;
-  /* width: 200px; */
   position: relative;
 }
 
