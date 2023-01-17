@@ -4,15 +4,15 @@ import { FaEdit } from "react-icons/fa";
 function MeasureInputField(props) {
   const name = props.name;
   const value = props.value;
-  const detail_content = props.detail_section;
+  const styleClass = props.styleClass;
 
   return (
     <div className={styles.main}>
-      <span className={detail_content ? styles.dark : styles.light}>
+      <span className={styleClass === "dark" ? styles.dark : styleClass}>
         {" "}
         {name}:{" "}
       </span>{" "}
-      <span className={detail_content ? styles.light : styles.dark}>
+      <span className={styleClass === "dark" ? styles.light : styleClass}>
         {" "}
         {value}{" "}
       </span>

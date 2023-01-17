@@ -15,7 +15,8 @@ import styles from "./singleMeasurement.module.css";
  * TODO: Validation of the entries
  */
 
-function SingleMeasurement() { //TODO: recieve parameters when decided on wether to use Redux or not  
+function SingleMeasurement() {
+  //TODO: recieve parameters when decided on wether to use Redux or not
   let params = useParams();
 
   // Get the measurment data from store
@@ -34,7 +35,7 @@ function SingleMeasurement() { //TODO: recieve parameters when decided on wether
     console.log(measurement);
   };
 
-  const detail_section = true;
+  const styleClass = "dark";
   // TODO: handle save functionality to server
 
   return (
@@ -45,52 +46,139 @@ function SingleMeasurement() { //TODO: recieve parameters when decided on wether
           <MeasureInputField
             name={"name"}
             value={measurement.name}
-            detail_section
+            styleClass={styleClass}
           />
           <MeasureInputField
             name={"description"}
             value={measurement.description}
-            detail_section={detail_section}
+            styleClass={styleClass}
           />
           <MeasureInputField
             name={"is_favourite"}
             value={measurement.is_favourite}
+            styleClass={styleClass}
           />
         </div>
         <div className={styles.detailsRight}>
-          <MeasureInputField name={"gender"} value={measurement.gender} />
-          <MeasureInputField name={"type"} value={measurement.type} />
-          <MeasureInputField name={"unit"} value={measurement.unit} />
+          <MeasureInputField
+            name={"gender"}
+            value={measurement.gender}
+            styleClass={styleClass}
+          />
+          <MeasureInputField
+            name={"type"}
+            value={measurement.type}
+            styleClass={styleClass}
+          />
+          <MeasureInputField
+            name={"unit"}
+            value={measurement.unit}
+            styleClass={styleClass}
+          />
         </div>
       </section>
       <section className={styles.measures} id="measures-section">
-      <div className={styles.FHMaleUpperBody}>
-        {/* <span>This is the Free-hand male upper body</span> */}
- 
-        for(const key in measurement.upper_body_measure){
-          <MeasureInputField name={key} value={measurement.upper_body_measure[key]}/>
-        }
-      
-        
-      </div>
-      <div className={styles.FHMaleLowerBody}>
-        <span>This is the free- hand male lower body</span>
-      </div>
-      <div className={styles.PDMaleUpperBody}>
-        <span>This is the pattern design male upper body</span>
-      </div>
-      <div className={styles.PDMaleLowerBody}>
-        <span>This is the pattern design male lower body</span>
-      </div>
-      <div className={styles.PDFemaleBodice}>
-        <span>This is the pattern design female Bodice</span>
-      </div>
-      <div className={styles.PDFemaleSkirt}>
-        <span>This is the pattern design female skirt</span>
-      </div>
-      <div className={styles.PDFemaleTrouser}>
-        <span>This is the pattern design female Trouser</span>
-      </div>
+        {measurement.upper_body_measure && (
+          <div className={styles.FHMaleUpperBody}>
+            <span>This is the Free-hand male upper body</span>
+
+            {Object.keys(measurement.upper_body_measure).map((measure, i) => {
+              return (
+                <MeasureInputField
+                  key={i}
+                  name={measure}
+                  value={measurement.upper_body_measure[measure]}
+                />
+              );
+            })}
+          </div>
+        )}
+        {measurement.lower_body_measure && (
+          <div className={styles.FHMaleLowerBody}>
+            <span>This is the free- hand male lower body</span>
+            {Object.keys(measurement.lower_body_measure).map((measure, i) => {
+              return (
+                <MeasureInputField
+                  key={i}
+                  name={measure}
+                  value={measurement.lower_body_measure[measure]}
+                />
+              );
+            })}
+          </div>
+        )}
+        {measurement.type === "Pattern Drafting" &&
+          measurement.upper_body_measure && (
+            <div className={styles.PDMaleUpperBody}>
+              <span>This is the pattern design male upper body</span>
+              {Object.keys(measurement.upper_body_measure).map((measure, i) => {
+                return (
+                  <MeasureInputField
+                    key={i}
+                    name={measure}
+                    value={measurement.upper_body_measure[measure]}
+                  />
+                );
+              })}
+            </div>
+          )}
+        {measurement.type === "Pattern Drafting" &&
+          measurement.lower_body_measure && (
+            <div className={styles.PDMaleLowerBody}>
+              <span>This is the pattern design male lower body</span>
+              {Object.keys(measurement.lower_body_measure).map((measure, i) => {
+                return (
+                  <MeasureInputField
+                    key={i}
+                    name={measure}
+                    value={measurement.upper_body_measure[measure]}
+                  />
+                );
+              })}
+            </div>
+          )}
+        {measurement.gender === "F" && measurement.bodice_measure && (
+          <div className={styles.PDFemaleBodice}>
+            <span>This is the pattern design female Bodice</span>
+            {Object.keys(measurement.bodice_measure).map((measure, i) => {
+              return (
+                <MeasureInputField
+                  key={i}
+                  name={measure}
+                  value={measurement.bodice_measure[measure]}
+                />
+              );
+            })}
+          </div>
+        )}
+        {measurement.gender === "F" && measurement.skirt_measure && (
+          <div className={styles.PDFemaleSkirt}>
+            <span>This is the pattern design female skirt</span>
+            {Object.keys(measurement.skirt_measure).map((measure, i) => {
+              return (
+                <MeasureInputField
+                  key={i}
+                  name={measure}
+                  value={measurement.skirt_measure[measure]}
+                />
+              );
+            })}
+          </div>
+        )}
+        {measurement.gender === "F" && measurement.trouser_measure && (
+          <div className={styles.PDFemaleTrouser}>
+            <span>This is the pattern design female Trouser</span>
+            {Object.keys(measurement.trouser_measure).map((measure, i) => {
+              return (
+                <MeasureInputField
+                  key={i}
+                  name={measure}
+                  value={measurement.trouser_measure[measure]}
+                />
+              );
+            })}
+          </div>
+        )}
       </section>
       <input type="submit" />
     </form>
