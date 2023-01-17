@@ -194,7 +194,15 @@ function SingleMeasurement() {
         {/* When each section/field is clicked, the image component should change
         TODO: To make the image component dynamic
         */}
-        <div className={styles.imageContainer}> Dynamic images go in here</div>
+        <div
+          className={styles.imageContainer}
+          style={{
+            backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
+          }}
+        >
+          {" "}
+          Dynamic images go in here
+        </div>
       </section>
       <input type="submit" />
     </form>
