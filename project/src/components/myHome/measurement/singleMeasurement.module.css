@@ -34,6 +34,7 @@ justify-content: left;
 }
 
 .measuresContainer{
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content:space-around;
+    grid-template-columns: 50% 50%;
 }

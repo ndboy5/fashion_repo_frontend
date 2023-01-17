@@ -1,5 +1,6 @@
 import styles from "./measureInputField.module.css";
 import { FaEdit } from "react-icons/fa";
+import { redirect } from "react-router-dom";
 
 function MeasureInputField(props) {
   const name = props.name;
@@ -11,7 +12,7 @@ function MeasureInputField(props) {
       <span className={styleClass ? styleClass : styles.dark}> {name}: </span>{" "}
       <span className={styleClass ? styleClass : styles.light}> {value} </span>
       <i>
-        <FaEdit />
+        <FaEdit style={{ color: "#E2D1F9" }} size={15} />
       </i>
     </div>
   );
