@@ -8,14 +8,8 @@ function MeasureInputField(props) {
 
   return (
     <div className={styles.main}>
-      <span className={styleClass === "dark" ? styles.dark : styleClass}>
-        {" "}
-        {name}:{" "}
-      </span>{" "}
-      <span className={styleClass === "dark" ? styles.light : styleClass}>
-        {" "}
-        {value}{" "}
-      </span>
+      <span className={styleClass ? styleClass : styles.dark}> {name}: </span>{" "}
+      <span className={styleClass ? styleClass : styles.light}> {value} </span>
       <i>
         <FaEdit />
       </i>

@@ -6,9 +6,9 @@ import styles from "./singleMeasurement.module.css";
 
 /**
  *@param1 A measurment object is received as parameter from the myHome Component
- @param2 A flag indicating if this is a new measurement or an edit
- * @returns This component displays the measurement for all the various body segments
- * The elements displayed is based on the type of measurement pattern and gender.
+ *@param2 A flag indicating if this is a new measurement or an edit
+ *@returns This component displays the measurement for all the various body segments
+ * The measurement elements displayed is based on the type of measurement pattern and gender.
  * it should accept an empty measurement as default
  *
  * TODO: Addition of edit functionality to the measurement entries
@@ -37,7 +37,6 @@ function SingleMeasurement() {
 
   const styleClass = "dark";
   // TODO: handle save functionality to server
-
   return (
     // <div className={styles.container}>
     <form onSubmit={handleSubmit}>
@@ -77,108 +76,125 @@ function SingleMeasurement() {
           />
         </div>
       </section>
-      <section className={styles.measures} id="measures-section">
-        {measurement.upper_body_measure && (
-          <div className={styles.FHMaleUpperBody}>
-            <span>This is the Free-hand male upper body</span>
+      <section className={styles.measureImageSection} id="measuresSection">
+        {/* The measures section which shows the various measured values starts here */}
+        <div className={styles.measuresContainer}>
+          {measurement.type === "Free Hand" &&
+            measurement.upper_body_measure && (
+              <div className={styles.FHMaleUpperBody}>
+                <span>This is the Free-hand male upper body</span>
 
-            {Object.keys(measurement.upper_body_measure).map((measure, i) => {
-              return (
-                <MeasureInputField
-                  key={i}
-                  name={measure}
-                  value={measurement.upper_body_measure[measure]}
-                />
-              );
-            })}
-          </div>
-        )}
-        {measurement.lower_body_measure && (
-          <div className={styles.FHMaleLowerBody}>
-            <span>This is the free- hand male lower body</span>
-            {Object.keys(measurement.lower_body_measure).map((measure, i) => {
-              return (
-                <MeasureInputField
-                  key={i}
-                  name={measure}
-                  value={measurement.lower_body_measure[measure]}
-                />
-              );
-            })}
-          </div>
-        )}
-        {measurement.type === "Pattern Drafting" &&
-          measurement.upper_body_measure && (
-            <div className={styles.PDMaleUpperBody}>
-              <span>This is the pattern design male upper body</span>
-              {Object.keys(measurement.upper_body_measure).map((measure, i) => {
+                {Object.keys(measurement.upper_body_measure).map(
+                  (measure, i) => {
+                    return (
+                      <MeasureInputField
+                        key={i}
+                        name={measure}
+                        value={measurement.upper_body_measure[measure]}
+                      />
+                    );
+                  }
+                )}
+              </div>
+            )}
+          {measurement.type === "Free Hand" &&
+            measurement.lower_body_measure && (
+              <div className={styles.FHMaleLowerBody}>
+                <span>This is the free- hand male lower body</span>
+                {Object.keys(measurement.lower_body_measure).map(
+                  (measure, i) => {
+                    return (
+                      <MeasureInputField
+                        key={i}
+                        name={measure}
+                        value={measurement.lower_body_measure[measure]}
+                      />
+                    );
+                  }
+                )}
+              </div>
+            )}
+          {measurement.type === "Pattern Drafting" &&
+            measurement.upper_body_measure && (
+              <div className={styles.PDMaleUpperBody}>
+                <span>This is the pattern design male upper body</span>
+                {Object.keys(measurement.upper_body_measure).map(
+                  (measure, i) => {
+                    return (
+                      <MeasureInputField
+                        key={i}
+                        name={measure}
+                        value={measurement.upper_body_measure[measure]}
+                      />
+                    );
+                  }
+                )}
+              </div>
+            )}
+          {measurement.type === "Pattern Drafting" &&
+            measurement.lower_body_measure && (
+              <div className={styles.PDMaleLowerBody}>
+                <span>This is the pattern design male lower body</span>
+                {Object.keys(measurement.lower_body_measure).map(
+                  (measure, i) => {
+                    return (
+                      <MeasureInputField
+                        key={i}
+                        name={measure}
+                        value={measurement.upper_body_measure[measure]}
+                      />
+                    );
+                  }
+                )}
+              </div>
+            )}
+          {measurement.gender === "F" && measurement.bodice_measure && (
+            <div className={styles.PDFemaleBodice}>
+              <span>This is the pattern design female Bodice</span>
+              {Object.keys(measurement.bodice_measure).map((measure, i) => {
                 return (
                   <MeasureInputField
                     key={i}
                     name={measure}
-                    value={measurement.upper_body_measure[measure]}
+                    value={measurement.bodice_measure[measure]}
                   />
                 );
               })}
             </div>
           )}
-        {measurement.type === "Pattern Drafting" &&
-          measurement.lower_body_measure && (
-            <div className={styles.PDMaleLowerBody}>
-              <span>This is the pattern design male lower body</span>
-              {Object.keys(measurement.lower_body_measure).map((measure, i) => {
+          {measurement.gender === "F" && measurement.skirt_measure && (
+            <div className={styles.PDFemaleSkirt}>
+              <span>This is the pattern design female skirt</span>
+              {Object.keys(measurement.skirt_measure).map((measure, i) => {
                 return (
                   <MeasureInputField
                     key={i}
                     name={measure}
-                    value={measurement.upper_body_measure[measure]}
+                    value={measurement.skirt_measure[measure]}
                   />
                 );
               })}
             </div>
           )}
-        {measurement.gender === "F" && measurement.bodice_measure && (
-          <div className={styles.PDFemaleBodice}>
-            <span>This is the pattern design female Bodice</span>
-            {Object.keys(measurement.bodice_measure).map((measure, i) => {
-              return (
-                <MeasureInputField
-                  key={i}
-                  name={measure}
-                  value={measurement.bodice_measure[measure]}
-                />
-              );
-            })}
-          </div>
-        )}
-        {measurement.gender === "F" && measurement.skirt_measure && (
-          <div className={styles.PDFemaleSkirt}>
-            <span>This is the pattern design female skirt</span>
-            {Object.keys(measurement.skirt_measure).map((measure, i) => {
-              return (
-                <MeasureInputField
-                  key={i}
-                  name={measure}
-                  value={measurement.skirt_measure[measure]}
-                />
-              );
-            })}
-          </div>
-        )}
-        {measurement.gender === "F" && measurement.trouser_measure && (
-          <div className={styles.PDFemaleTrouser}>
-            <span>This is the pattern design female Trouser</span>
-            {Object.keys(measurement.trouser_measure).map((measure, i) => {
-              return (
-                <MeasureInputField
-                  key={i}
-                  name={measure}
-                  value={measurement.trouser_measure[measure]}
-                />
-              );
-            })}
-          </div>
-        )}
+          {measurement.gender === "F" && measurement.trouser_measure && (
+            <div className={styles.PDFemaleTrouser}>
+              <span>This is the pattern design female Trouser</span>
+              {Object.keys(measurement.trouser_measure).map((measure, i) => {
+                return (
+                  <MeasureInputField
+                    key={i}
+                    name={measure}
+                    value={measurement.trouser_measure[measure]}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
+        {/* When each section/field is clicked, the image component should change
+        TODO: To make the image component dynamic
+        */}
+        <div className={styles.imageContainer}> Dynamic images go in here</div>
       </section>
       <input type="submit" />
     </form>
