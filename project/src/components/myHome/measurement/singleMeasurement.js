@@ -15,7 +15,7 @@ import styles from "./singleMeasurement.module.css";
  * TODO: Validation of the entries
  */
 
-function SingleMeasurement() {
+function SingleMeasurement() { //TODO: recieve parameters when decided on wether to use Redux or not  
   let params = useParams();
 
   // Get the measurment data from store
@@ -64,7 +64,33 @@ function SingleMeasurement() {
         </div>
       </section>
       <section className={styles.measures} id="measures-section">
-        <MeasureInputField name={"unit"} value={measurement.unit} />
+      <div className={styles.FHMaleUpperBody}>
+        {/* <span>This is the Free-hand male upper body</span> */}
+ 
+        for(const key in measurement.upper_body_measure){
+          <MeasureInputField name={key} value={measurement.upper_body_measure[key]}/>
+        }
+      
+        
+      </div>
+      <div className={styles.FHMaleLowerBody}>
+        <span>This is the free- hand male lower body</span>
+      </div>
+      <div className={styles.PDMaleUpperBody}>
+        <span>This is the pattern design male upper body</span>
+      </div>
+      <div className={styles.PDMaleLowerBody}>
+        <span>This is the pattern design male lower body</span>
+      </div>
+      <div className={styles.PDFemaleBodice}>
+        <span>This is the pattern design female Bodice</span>
+      </div>
+      <div className={styles.PDFemaleSkirt}>
+        <span>This is the pattern design female skirt</span>
+      </div>
+      <div className={styles.PDFemaleTrouser}>
+        <span>This is the pattern design female Trouser</span>
+      </div>
       </section>
       <input type="submit" />
     </form>
