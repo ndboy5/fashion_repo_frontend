@@ -1,5 +1,6 @@
-.container{
+.container {
   display: flex;
+  margin-top: 8rem;
   justify-content: center;
 }
 table {

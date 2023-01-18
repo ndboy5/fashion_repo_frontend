@@ -1,13 +1,12 @@
-.main{
+.main {
 }
 
-.light{
-    background-color: #FBEAEB;
-    color: #2F3C7E;
+.light {
+  background-color: #fbeaeb;
+  color: #2f3c7e;
 }
 
-.dark{
-    background-color: #2F3C7E;
-    color: #f9f3f3e5;
-    
+.dark {
+  background-color: #2f3c7e;
+  color: #f9f3f3e5;
 }

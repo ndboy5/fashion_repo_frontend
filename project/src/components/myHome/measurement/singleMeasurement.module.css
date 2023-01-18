@@ -1,29 +1,28 @@
-.container{
-    display: grid;
+.container {
+  display: grid;
 }
 
-.details{
-    border: thin solid;
-    display: grid;
-    justify-content: center;
+.details {
+  border: thin solid;
+  display: grid;
+  justify-content: center;
 }
 
-.measures{
-
+.measures {
 }
 
-form>section:nth-child(odd){
-    background-color: #EDC2D8FF;
+form > section:nth-child(odd) {
+  background-color: #edc2d8ff;
+  margin-top: 8rem;
 }
 
-form>section:nth-child(even){
-    background-color: #FCF6F5FF;
+form > section:nth-child(even) {
+  background-color: #fcf6f5ff;
 }
 
-.detailsLeft{
-    
+.detailsLeft {
 }
 
-.detailsRight{
-justify-content: left;
+.detailsRight {
+  justify-content: left;
 }
