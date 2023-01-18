@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import measurement_data from "../../../data/measurement_data";
 import MeasureInputField from "./measureInputField";
+import { FaStar } from "react-icons/fa";
 import styles from "./singleMeasurement.module.css";
 
 /**
@@ -23,11 +24,13 @@ function SingleMeasurement() {
   const [measurement, setMeasurement] = useState(measurement_data[params.id]);
 
   //handle form change events
-  const handleOnchange = (event) => {
+  const handleOnChangeMeasures = (event) => {
     event.preventDefault();
     const name = event.target.name;
     const value = event.target.value;
+
     setMeasurement({ ...measurement, [name]: value });
+    console.log(measurement);
   };
 
   const handleSubmit = (event) => {
@@ -35,7 +38,7 @@ function SingleMeasurement() {
     console.log(measurement);
   };
 
-  const styleClass = "dark";
+  const styleClass = "dark"; //TODO: for testing only, to be modified afterwards
   // TODO: handle save functionality to server
   return (
     // <div className={styles.container}>
@@ -52,11 +55,6 @@ function SingleMeasurement() {
             value={measurement.description}
             styleClass={styleClass}
           />
-          <MeasureInputField
-            name={"is_favourite"}
-            value={measurement.is_favourite}
-            styleClass={styleClass}
-          />
         </div>
         <div className={styles.detailsRight}>
           <MeasureInputField
@@ -69,6 +67,17 @@ function SingleMeasurement() {
             value={measurement.type}
             styleClass={styleClass}
           />
+        </div>
+        <div>
+          <i>
+            <FaStar
+              style={
+                measurement.is_favourite
+                  ? { color: "#FFD700" }
+                  : { color: "#FBEAEB" }
+              }
+            />{" "}
+          </i>
           <MeasureInputField
             name={"unit"}
             value={measurement.unit}
@@ -89,6 +98,7 @@ function SingleMeasurement() {
                     return (
                       <MeasureInputField
                         key={i}
+                        handleChange={handleOnChangeMeasures}
                         name={measure}
                         value={measurement.upper_body_measure[measure]}
                       />

@@ -8,7 +8,7 @@ const measurement_data = [
     owner: "Dumebi",
     ownerId: 45678,
     last_update_by: 2,
-    is_favourite: true,
+    is_favourite: false,
     created_at: "2023-01-08",
     last_update_date: "2023-01-08",
     type: "Free Hand",

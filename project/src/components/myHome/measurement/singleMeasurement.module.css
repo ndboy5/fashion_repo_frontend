@@ -4,7 +4,7 @@
 
 .details{
     border: thin solid;
-    display: grid;
+    display: flex;
     justify-content: center;
 }
 
