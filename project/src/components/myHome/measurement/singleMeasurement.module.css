@@ -4,11 +4,13 @@
 
 .details {
   border: thin solid;
-  display: grid;
+  display: flex;
   justify-content: center;
 }
 
-.measures {
+.measureImageSection {
+  display: grid;
+  grid-template-columns: 70% auto;
 }
 
 form > section:nth-child(odd) {
@@ -21,8 +23,19 @@ form > section:nth-child(even) {
 }
 
 .detailsLeft {
+  justify-content: left;
 }
 
 .detailsRight {
   justify-content: left;
+}
+
+.imageContainer {
+  /* background-color: rgb(102, 112, 122); */
+}
+
+.measuresContainer {
+  display: flex;
+  justify-content: space-around;
+  grid-template-columns: 50% 50%;
 }
