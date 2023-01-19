@@ -1,24 +1,24 @@
-.container{
-    display: grid;
+.container {
+  display: grid;
 }
 
-.details{
-    border: thin solid;
-    display: flex;
-    justify-content: center;
+.details {
+  border: thin solid;
+  display: flex;
+  justify-content: center;
 }
 
-.measureImageSection{
-display: grid;
-grid-template-columns: 70% auto;
+.measureImageSection {
+  display: grid;
+  grid-template-columns: 70% auto;
 }
 
 .detailsLeft{
 justify-content: left;
 }
 
-.detailsRight{
-justify-content: left;
+.detailsRight {
+  justify-content: left;
 }
 
 .imageContainer{
@@ -28,8 +28,8 @@ justify-content: left;
     object-fit: cover;
 }
 
-.measuresContainer{
-    display: flex;
-    justify-content:space-around;
-    grid-template-columns: 50% 50%;
+.measuresContainer {
+  display: flex;
+  justify-content: space-around;
+  grid-template-columns: 50% 50%;
 }
