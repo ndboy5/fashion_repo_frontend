@@ -6,13 +6,14 @@ import { useState } from "react";
 function MeasureInputField(props) {
   const name = props.name;
   const value = props.value;
+  const action_type = props.action_type;
   const styleClass = props.styleClass;
 
   const [isEditMode, setIsEditMode] = useState(false);
-const handleOnSubmit = (e)=>{
-  e.preventDefault()
-  setIsEditMode(false)
-}
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    setIsEditMode(false);
+  };
 
   return (
     <div className={styles.main}>
@@ -23,7 +24,7 @@ const handleOnSubmit = (e)=>{
             value={value}
             name={name}
             onChange={(e) => {
-              props.handleChange(e);
+              props.handleChange(e, action_type);
             }}
           />
         </form>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import measurement_data from "../../../data/measurement_data";
 import MeasureInputField from "./measureInputField";
@@ -20,27 +20,90 @@ function SingleMeasurement() {
   //TODO: recieve parameters when decided on wether to use Redux or not
   let params = useParams();
 
+  const reducer = (measurement, action) => {
+    const { name, value } = action.payload;
+    console.log(`It got here. name: ${name}, value: ${value}`);
+    switch (action.type) {
+      case "update_male_upper_body":
+        return {
+          ...measurement,
+          upper_body_measure: {
+            ...measurement.upper_body_measure,
+            [name]: value,
+          }, //TODO: fix the return of only action
+        };
+
+      case "update_male_lower_body":
+        return {
+          ...measurement,
+          lower_body_measure: {
+            ...measurement.lower_body_measure,
+            [name]: value,
+          }, //TODO: fix the return of only action
+        };
+      case "update_bodice_measure":
+        return {
+          ...measurement,
+          bodice_measure: {
+            ...measurement.bodice_measure,
+            [name]: value,
+          }, //TODO: fix the return of only action
+        };
+      case "update_skirt_measure":
+        return {
+          ...measurement,
+          skirt_measure: {
+            ...measurement.skirt_measure,
+            [name]: value,
+          }, //TODO: fix the return of only action
+        };
+      case "update_trouser_measure":
+        return {
+          ...measurement,
+          trouser_measure: {
+            ...measurement.trouser_measure,
+            [name]: value,
+          },
+        };
+      default:
+        return measurement;
+    }
+  };
+
   // Get the measurment data from store
-  const [measurement, setMeasurement] = useState(measurement_data[params.id]);
+  const [measurement, dispatch] = useReducer(
+    reducer,
+    measurement_data[params.id]
+  );
 
   //handle form change events
-  const handleOnChangeMeasures = (event) => {
-
+  /**
+   * @param {*} event: The called here is being generated from each individual MeasurementInputField
+   * @param {*} action_type: The ation types are the various reducer action types such as update_upper_body.
+   */
+  const handleOnChangeMeasures = (event, action_type) => {
     event.preventDefault();
     const name = event.target.name;
     const value = event.target.value;
 
-    console.log(`name: ${name}, value: ${value}`)
+    console.log(`name: ${name}, value: ${value}  - ${action_type}`);
+    dispatch({
+      type: action_type,
+      payload: { name: name, value: value },
+    });
     //Use nested destructuring to update value in measurement
-    setMeasurement({ ...measurement, upper_body_measure: {...measurement.upper_body_measure, [name]: value} });
-  };
 
+    // setMeasurement({
+    //   ...measurement,
+    //   upper_body_measure: { ...measurement.upper_body_measure, [name]: value },
+    // });
+  };
 
   const styleClass = "dark"; //TODO: for testing only, to be modified afterwards
   // TODO: handle save functionality to server
   return (
     // <div className={styles.container}>
-    <div >
+    <div>
       <section className={styles.details} id="details">
         <div className={styles.detailsLeft}>
           <MeasureInputField
@@ -98,6 +161,7 @@ function SingleMeasurement() {
                         key={i}
                         handleChange={handleOnChangeMeasures}
                         name={measure}
+                        action_type="update_male_upper_body"
                         value={measurement.upper_body_measure[measure]}
                       />
                     );
@@ -115,6 +179,7 @@ function SingleMeasurement() {
                       <MeasureInputField
                         key={i}
                         handleChange={handleOnChangeMeasures}
+                        action_type="update_male_lower_body"
                         name={measure}
                         value={measurement.lower_body_measure[measure]}
                       />
@@ -133,6 +198,7 @@ function SingleMeasurement() {
                       <MeasureInputField
                         key={i}
                         handleChange={handleOnChangeMeasures}
+                        action_type="update_male_upper_body"
                         name={measure}
                         value={measurement.upper_body_measure[measure]}
                       />
@@ -151,8 +217,9 @@ function SingleMeasurement() {
                       <MeasureInputField
                         key={i}
                         handleChange={handleOnChangeMeasures}
+                        action_type="update_male_lower_body"
                         name={measure}
-                        value={measurement.upper_body_measure[measure]}
+                        value={measurement.lower_body_measure[measure]}
                       />
                     );
                   }
@@ -166,7 +233,8 @@ function SingleMeasurement() {
                 return (
                   <MeasureInputField
                     key={i}
-                        handleChange={handleOnChangeMeasures}
+                    handleChange={handleOnChangeMeasures}
+                    action_type="update_bodice_measure"
                     name={measure}
                     value={measurement.bodice_measure[measure]}
                   />
@@ -181,7 +249,8 @@ function SingleMeasurement() {
                 return (
                   <MeasureInputField
                     key={i}
-                        handleChange={handleOnChangeMeasures}
+                    handleChange={handleOnChangeMeasures}
+                    action_type="update_skirt_measure"
                     name={measure}
                     value={measurement.skirt_measure[measure]}
                   />
@@ -196,7 +265,8 @@ function SingleMeasurement() {
                 return (
                   <MeasureInputField
                     key={i}
-                        handleChange={handleOnChangeMeasures}
+                    handleChange={handleOnChangeMeasures}
+                    action_type="update_trouser_measure"
                     name={measure}
                     value={measurement.trouser_measure[measure]}
                   />
@@ -209,19 +279,19 @@ function SingleMeasurement() {
         TODO: To make the image component dynamic
         */}
         <div
-          // style={{
-            // backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
-          // }}
+        // style={{
+        // backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
+        // }}
         >
-          <img src={"/images/measurement/waist_measure.jpg"}
-          
-          className={styles.imageContainer}
-            />
-          {" "}
+          <img
+            src={"/images/measurement/waist_measure.jpg"}
+            alt="Body part"
+            className={styles.imageContainer}
+          />{" "}
           Dynamic images come in here
         </div>
       </section>
-    <button>save</button>
+      <button>save</button>
     </div>
     // </div>
   );
