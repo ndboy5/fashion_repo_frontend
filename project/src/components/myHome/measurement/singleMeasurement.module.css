@@ -13,14 +13,6 @@ display: grid;
 grid-template-columns: 70% auto;
 }
 
-form>section:nth-child(odd){
-    background-color: #EDC2D8FF;
-}
-
-form>section:nth-child(even){
-    background-color: #FCF6F5FF;
-}
-
 .detailsLeft{
 justify-content: left;
 }
@@ -31,6 +23,9 @@ justify-content: left;
 
 .imageContainer{
     /* background-color: rgb(102, 112, 122); */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .measuresContainer{

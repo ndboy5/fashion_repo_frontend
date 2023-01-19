@@ -25,24 +25,22 @@ function SingleMeasurement() {
 
   //handle form change events
   const handleOnChangeMeasures = (event) => {
+
     event.preventDefault();
     const name = event.target.name;
     const value = event.target.value;
 
-    setMeasurement({ ...measurement, [name]: value });
-    console.log(measurement);
+    console.log(`name: ${name}, value: ${value}`)
+    //Use nested destructuring to update value in measurement
+    setMeasurement({ ...measurement, upper_body_measure: {...measurement.upper_body_measure, [name]: value} });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(measurement);
-  };
 
   const styleClass = "dark"; //TODO: for testing only, to be modified afterwards
   // TODO: handle save functionality to server
   return (
     // <div className={styles.container}>
-    <form onSubmit={handleSubmit}>
+    <div >
       <section className={styles.details} id="details">
         <div className={styles.detailsLeft}>
           <MeasureInputField
@@ -116,6 +114,7 @@ function SingleMeasurement() {
                     return (
                       <MeasureInputField
                         key={i}
+                        handleChange={handleOnChangeMeasures}
                         name={measure}
                         value={measurement.lower_body_measure[measure]}
                       />
@@ -133,6 +132,7 @@ function SingleMeasurement() {
                     return (
                       <MeasureInputField
                         key={i}
+                        handleChange={handleOnChangeMeasures}
                         name={measure}
                         value={measurement.upper_body_measure[measure]}
                       />
@@ -150,6 +150,7 @@ function SingleMeasurement() {
                     return (
                       <MeasureInputField
                         key={i}
+                        handleChange={handleOnChangeMeasures}
                         name={measure}
                         value={measurement.upper_body_measure[measure]}
                       />
@@ -165,6 +166,7 @@ function SingleMeasurement() {
                 return (
                   <MeasureInputField
                     key={i}
+                        handleChange={handleOnChangeMeasures}
                     name={measure}
                     value={measurement.bodice_measure[measure]}
                   />
@@ -179,6 +181,7 @@ function SingleMeasurement() {
                 return (
                   <MeasureInputField
                     key={i}
+                        handleChange={handleOnChangeMeasures}
                     name={measure}
                     value={measurement.skirt_measure[measure]}
                   />
@@ -193,6 +196,7 @@ function SingleMeasurement() {
                 return (
                   <MeasureInputField
                     key={i}
+                        handleChange={handleOnChangeMeasures}
                     name={measure}
                     value={measurement.trouser_measure[measure]}
                   />
@@ -205,17 +209,20 @@ function SingleMeasurement() {
         TODO: To make the image component dynamic
         */}
         <div
-          className={styles.imageContainer}
-          style={{
-            backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
-          }}
+          // style={{
+            // backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
+          // }}
         >
+          <img src={"/images/measurement/waist_measure.jpg"}
+          
+          className={styles.imageContainer}
+            />
           {" "}
-          Dynamic images go in here
+          Dynamic images come in here
         </div>
       </section>
-      <input type="submit" />
-    </form>
+    <button>save</button>
+    </div>
     // </div>
   );
 }

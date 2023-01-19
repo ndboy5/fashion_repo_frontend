@@ -4,11 +4,13 @@
 
 .light{
     background-color: #FBEAEB;
+    margin: 7px;
     color: #2F3C7E;
 }
 
 .dark{
     background-color: #2F3C7E;
     color: #f9f3f3e5;
+    font-weight: bold;
     
 }
