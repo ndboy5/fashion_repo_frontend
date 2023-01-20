@@ -1,14 +1,9 @@
 import styles from "./carousel.module.css";
 import { useEffect, useState } from "react";
+import images from "../../data/caorusel_image_url_data.js";
 
 function Carousel() {
-  const imageUrl = [
-    "/images/carousel/designer3.jpg",
-    "/images/carousel/tailors.jpg",
-    "/images/carousel/designer5.jpg",
-  ];
-
-  const [counter, setCounter] = useState(0);
+  const imageUrl = images;
 
   const [imageNo, setImageNo] = useState(0);
   let image = imageUrl[imageNo];
@@ -17,15 +12,18 @@ function Carousel() {
     setImageNo(imageNumber);
   }
 
-  useEffect((t) => {
-    setInterval((t) => setCounter(counter + 1), 3000);
-  }, []);
+  useEffect(() => {
+    console.log(imageNo);
+    setInterval(() => {
+      setImageNo((t) => imageNo + 1);
+      if (imageNo === imageUrl.length - 1) setImageNo(0);
+    }, 6000);
+  }, [imageNo, imageUrl]);
 
   return (
     <div className={styles.carousel}>
-      <span>{`Counter: `}</span>
       <div className={styles.container}>
-        <img src={image}></img>
+        <img src={image} alt="Fashion designers"></img>
         <div className={styles.btns}>
           <button
             className={styles.btn}
