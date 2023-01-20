@@ -2,12 +2,15 @@
   margin: 8px;
 }
 
-.light {
-  background-color: #fbeaeb;
-  color: #2f3c7e;
+.light{
+    background-color: #FBEAEB;
+    margin: 7px;
+    color: #2F3C7E;
 }
 
-.dark {
-  background-color: #2f3c7e;
-  color: #f9f3f3e5;
+.dark{
+    background-color: #2F3C7E;
+    color: #f9f3f3e5;
+    font-weight: bold;
+    
 }

@@ -6,21 +6,28 @@ import { useState } from "react";
 function MeasureInputField(props) {
   const name = props.name;
   const value = props.value;
+  const action_type = props.action_type;
   const styleClass = props.styleClass;
 
   const [isEditMode, setIsEditMode] = useState(false);
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    setIsEditMode(false);
+  };
+
   return (
     <div className={styles.main}>
       {isEditMode ? (
-        <div>
+        <form onSubmit={handleOnSubmit}>
           <input
             type="number"
             value={value}
+            name={name}
             onChange={(e) => {
-              props.handleOnChangeMeasures(e);
+              props.handleChange(e, action_type);
             }}
           />
-        </div>
+        </form>
       ) : (
         <div>
           <span className={styleClass ? styleClass : styles.dark}>
@@ -33,7 +40,7 @@ function MeasureInputField(props) {
           </span>
           <i>
             <FaEdit
-              style={{ color: "#E2D1F9" }}
+              style={{ color: "#666666" }}
               size={15}
               onClick={(e) => {
                 setIsEditMode(true);

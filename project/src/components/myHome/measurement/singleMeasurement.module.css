@@ -13,25 +13,11 @@
   grid-template-columns: 70% auto;
 }
 
-form > section:nth-child(odd) {
-  background-color: #edc2d8ff;
-  margin-top: 8rem;
-}
-
-form > section:nth-child(even) {
-  background-color: #fcf6f5ff;
-}
-
-.detailsLeft {
-  justify-content: left;
-}
-
-.detailsRight {
-  justify-content: left;
-}
-
-.imageContainer {
-  /* background-color: rgb(102, 112, 122); */
+.imageContainer{
+    /* background-color: rgb(102, 112, 122); */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .measuresContainer {
