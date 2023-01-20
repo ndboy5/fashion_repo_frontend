@@ -22,15 +22,15 @@ function SingleMeasurement() {
 
   const reducer = (measurement, action) => {
     const { name, value } = action.payload;
-    console.log(`It got here. name: ${name}, value: ${value}`);
     switch (action.type) {
       case "update_male_upper_body":
         return {
+    //Use nested destructuring to update value in measurement
           ...measurement,
           upper_body_measure: {
             ...measurement.upper_body_measure,
             [name]: value,
-          }, //TODO: fix the return of only action
+          }, 
         };
 
       case "update_male_lower_body":
@@ -39,7 +39,7 @@ function SingleMeasurement() {
           lower_body_measure: {
             ...measurement.lower_body_measure,
             [name]: value,
-          }, //TODO: fix the return of only action
+          }, 
         };
       case "update_bodice_measure":
         return {
@@ -47,7 +47,7 @@ function SingleMeasurement() {
           bodice_measure: {
             ...measurement.bodice_measure,
             [name]: value,
-          }, //TODO: fix the return of only action
+          }, 
         };
       case "update_skirt_measure":
         return {
@@ -55,7 +55,7 @@ function SingleMeasurement() {
           skirt_measure: {
             ...measurement.skirt_measure,
             [name]: value,
-          }, //TODO: fix the return of only action
+          }, 
         };
       case "update_trouser_measure":
         return {
@@ -86,17 +86,12 @@ function SingleMeasurement() {
     const name = event.target.name;
     const value = event.target.value;
 
-    console.log(`name: ${name}, value: ${value}  - ${action_type}`);
+    // console.log(`name: ${name}, value: ${value}  - ${action_type}`);
     dispatch({
       type: action_type,
       payload: { name: name, value: value },
     });
-    //Use nested destructuring to update value in measurement
 
-    // setMeasurement({
-    //   ...measurement,
-    //   upper_body_measure: { ...measurement.upper_body_measure, [name]: value },
-    // });
   };
 
   const styleClass = "dark"; //TODO: for testing only, to be modified afterwards
@@ -116,18 +111,15 @@ function SingleMeasurement() {
             value={measurement.description}
             styleClass={styleClass}
           />
+          <MeasureInputField
+            name={"unit"}
+            value={measurement.unit}
+            styleClass={styleClass}
+          />
         </div>
-        <div className={styles.detailsRight}>
-          <MeasureInputField
-            name={"gender"}
-            value={measurement.gender}
-            styleClass={styleClass}
-          />
-          <MeasureInputField
-            name={"type"}
-            value={measurement.type}
-            styleClass={styleClass}
-          />
+        <div >
+          <div><span>Sex: </span><span>{measurement.gender}</span></div>
+          <div><span>Measure Style: </span><span>{measurement.type}</span></div>
         </div>
         <div>
           <i>
@@ -139,11 +131,6 @@ function SingleMeasurement() {
               }
             />{" "}
           </i>
-          <MeasureInputField
-            name={"unit"}
-            value={measurement.unit}
-            styleClass={styleClass}
-          />
         </div>
       </section>
       <section className={styles.measureImageSection} id="measuresSection">
