@@ -3,21 +3,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid white;
+  padding-bottom: 1rem;
+  /* border: 2px solid white; */
   background-color: rgb(12, 11, 11);
-  margin-top: -10rem;
-  width: 83rem;
+  margin-top: -11rem;
+  width: 80vw;
 }
 
 .message {
-  height: 40px;
-  width: 50rem;
+  height: 20px;
+  width: 76vw;
   border: none;
   text-align: left;
   font-size: 15px;
   margin: auto;
   margin-left: 10px;
   margin-bottom: 15px;
+  padding-top: 1.5rem;
   background-color: rgb(12, 11, 11);
   color: white;
 }

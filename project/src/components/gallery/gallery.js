@@ -5,13 +5,6 @@ import { BiExpand } from "react-icons/bi";
 function Gallery() {
   return (
     <section className={styles.container}>
-      {/* <section className={styles.headerTop}>
-        <div className={styles.logo}>
-          <img src="" alt="" />
-          <h2>LOGO</h2>
-        </div>
-      </section> */}
-
       <ul className={styles.imageGallery}>
         <li>
           <img src="/images/style-2.jpg" alt="" />

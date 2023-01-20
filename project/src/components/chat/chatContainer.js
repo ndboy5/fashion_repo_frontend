@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./chatContainer.module.css";
 import ChatBody from "./chatBody";
 import ChatHeader from "./chatHeader";
 import ChatMessage from "./chatMessage";
@@ -17,9 +18,7 @@ class ChatContainer extends React.Component {
     // event.preventDefault();
 
     this.setState({
-      message: [...this.state.message,
-                message
-                ]
+      message: [...this.state.message, message],
       // message: "Test",
     });
   }
@@ -32,7 +31,7 @@ class ChatContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <ChatHeader />
         <ChatBody message={this.state.message} />
         <ChatMessage

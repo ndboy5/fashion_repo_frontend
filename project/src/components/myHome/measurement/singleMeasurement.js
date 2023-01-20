@@ -17,7 +17,7 @@ import styles from "./singleMeasurement.module.css";
  */
 
 function SingleMeasurement() {
-  //TODO: recieve parameters when decided on wether to use Redux or not
+  //TODO: recieve parameters when decided on whether to use Redux or not
   let params = useParams();
 
   // Get the measurment data from store
