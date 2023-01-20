@@ -13,12 +13,17 @@ function Carousel() {
   }
 
   useEffect(() => {
-    console.log(imageNo);
-    setInterval(() => {
-      setImageNo((t) => imageNo + 1);
-      if (imageNo === imageUrl.length - 1) setImageNo(0);
+    const interval = setInterval(() => {
+      setImageNo((imageNo) => {
+        if (imageNo < 2) {
+          return imageNo + 1;
+        }
+        return 0;
+      });
     }, 6000);
-  }, [imageNo, imageUrl]);
+
+    return () => clearInterval(interval);
+  }, [imageNo]);
 
   return (
     <div className={styles.carousel}>
