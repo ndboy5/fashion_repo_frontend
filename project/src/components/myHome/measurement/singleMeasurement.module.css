@@ -13,14 +13,6 @@
   grid-template-columns: 70% auto;
 }
 
-.detailsLeft{
-justify-content: left;
-}
-
-.detailsRight {
-  justify-content: left;
-}
-
 .imageContainer{
     /* background-color: rgb(102, 112, 122); */
     width: 100%;
