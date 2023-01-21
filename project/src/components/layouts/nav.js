@@ -54,7 +54,7 @@ function Nav() {
         <div
           className={isNavMenuToggle ? styles.navMenu.expanded : styles.navMenu}
         >
-          <ul className={styles.navMenu}>
+          <ul className={styles.navMenu} onClick={()=>setIsNavMenuToggle(false)}>
             <li>
               <Link to={"/order"}>
                 {" "}
@@ -62,7 +62,7 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link to={"/"}>
+              <Link to={"/"} >
                 {" "}
                 <a href="">My Tailor</a>{" "}
               </Link>
