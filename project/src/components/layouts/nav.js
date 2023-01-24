@@ -30,13 +30,7 @@ function Nav() {
       </div>
 
       <div className={styles.nav}>
-        <a
-          href="#"
-          className={styles.navName}
-          // onClick={() => {
-          //   setIsNavMenuToggle(!isNavMenuToggle);
-          // }}
-        >
+        <a href="#" className={styles.navName}>
           <Link to={"/"}>My Home</Link>
         </a>
 
@@ -54,7 +48,10 @@ function Nav() {
         <div
           className={isNavMenuToggle ? styles.navMenu.expanded : styles.navMenu}
         >
-          <ul className={styles.navMenu} onClick={()=>setIsNavMenuToggle(false)}>
+          <ul
+            className={styles.navMenu}
+            onClick={() => setIsNavMenuToggle(false)}
+          >
             <li>
               <Link to={"/order"}>
                 {" "}
@@ -62,7 +59,7 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link to={"/"} >
+              <Link to={"/"}>
                 {" "}
                 <a href="">My Tailor</a>{" "}
               </Link>

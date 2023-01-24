@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(19, 14, 14, 0.863);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal img {
+  width: 400px;
+  height: 450px;
+  margin-top: 5rem;
+  object-fit: cover;
+}
+
+.modal.content {
+  background-color: green;
+  margin: auto;
+  display: flex;
+}
+
+.modal .btn {
+  background: none;
+  border: none;
+  width: 0;
+  margin: 0rem 0 22rem 2rem;
+  color: rgba(255, 0, 0, 0.247);
+}
+
+.modal i {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.modal i :hover {
+  background: black;
+}
