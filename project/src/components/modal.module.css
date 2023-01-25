@@ -13,7 +13,7 @@
 .modal img {
   width: 400px;
   height: 450px;
-  margin-top: 5rem;
+  margin-top: 3rem;
   object-fit: cover;
 }
 
@@ -27,7 +27,7 @@
   background: none;
   border: none;
   width: 0;
-  margin: 0rem 0 22rem 2rem;
+  margin: -1rem 0 22rem 2rem;
   color: rgba(255, 0, 0, 0.247);
 }
 
