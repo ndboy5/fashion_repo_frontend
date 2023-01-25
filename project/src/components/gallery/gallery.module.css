@@ -45,6 +45,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  z-index: 0;
 }
 
 .overlay span {
