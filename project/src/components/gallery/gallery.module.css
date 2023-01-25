@@ -4,11 +4,47 @@
   padding: 0;
 }
 
+.filterHolder {
+  background-color: rgb(250, 249, 199);
+  display: flex;
+  height: 30px;
+  margin-top: -1rem;
+  margin-left: -16px;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+
+.filters {
+  background-color: rgb(250, 249, 199);
+  color: white;
+  height: 1.8rem;
+  padding: 4px;
+  position: relative;
+  width: 8rem;
+}
+
+.filters :hover {
+  color: #ff9900;
+}
+
+.filters a {
+  font-family: Arial, sans-serif;
+  color: rgb(58, 58, 49);
+  font-size: 12px;
+  font-weight: 500;
+  margin: auto;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
 .container {
   background-color: white;
   padding: 0rem 1rem;
   margin-top: 8rem;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .overlay span {
@@ -23,13 +59,16 @@ ul {
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
+  padding-top: 2rem;
 }
 
 .imageGallery li {
   flex: 1 1 auto;
   height: 300px;
+  width: 250px;
   position: relative;
+  margin-bottom: -1.5rem;
 }
 
 .imageGallery::after {
