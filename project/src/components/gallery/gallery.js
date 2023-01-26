@@ -28,11 +28,7 @@ function Gallery() {
         </div>
 
         <div className={styles.filters}>
-          <a
-            href="#"
-            onClick={() => filterItem("ankara styles")}
-            className={styles.a}
-          >
+          <a href="#" onClick={() => filterItem("ankara")} className={styles.a}>
             Ankara
           </a>
         </div>
@@ -40,16 +36,20 @@ function Gallery() {
         <div className={styles.filters}>
           <a
             href="#"
-            onClick={() => filterItem("trousers")}
+            onClick={() => filterItem("english")}
             className={styles.a}
           >
-            Trousers
+            English
           </a>
         </div>
 
         <div className={styles.filters}>
-          <a href="#" onClick={() => filterItem("skirts")} className={styles.a}>
-            Skirts
+          <a
+            href="#"
+            onClick={() => filterItem("traditional")}
+            className={styles.a}
+          >
+            Traditional
           </a>
         </div>
 
@@ -60,14 +60,8 @@ function Gallery() {
         </div>
 
         <div className={styles.filters}>
-          <a href="#" onClick={() => filterItem("laces")} className={styles.a}>
-            Laces
-          </a>
-        </div>
-
-        <div className={styles.filters}>
-          <a href="#" onClick={() => filterItem("shoes")} className={styles.a}>
-            Shoes
+          <a href="#" onClick={() => filterItem("suits")} className={styles.a}>
+            Suits
           </a>
         </div>
 

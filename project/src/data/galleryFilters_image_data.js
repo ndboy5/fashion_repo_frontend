@@ -16,21 +16,21 @@ const galleryFilters = [
     id: 3,
     image: ["/images/style-1.jpg"],
 
-    category: "ankara styles",
+    category: "ankara",
   },
 
   {
     id: 4,
     image: ["/images/trend_style/pic_d.jpg"],
 
-    category: "skirts",
+    category: "english",
   },
 
   {
     id: 5,
     image: ["/images/trend_style/pic_e.jpg"],
 
-    category: "trousers",
+    category: "english",
   },
   {
     id: 6,
@@ -48,19 +48,33 @@ const galleryFilters = [
     id: 8,
     image: ["/images/trend_style/pic_h.jpg"],
 
-    category: "skirts",
+    category: "suits",
   },
   {
     id: 9,
     image: ["/images/style-2.jpg"],
 
-    category: "ankara styles",
+    category: "ankara",
   },
   {
     id: 10,
     image: ["/images/style-7.jpg"],
 
-    category: "ankara styles",
+    category: "traditional",
+  },
+
+  {
+    id: 11,
+    image: ["/images/style-3.jpg"],
+
+    category: "ankara",
+  },
+
+  {
+    id: 12,
+    image: ["/images/style-5.jpg"],
+
+    category: "senators",
   },
 ];
 
