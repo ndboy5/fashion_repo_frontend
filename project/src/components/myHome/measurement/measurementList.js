@@ -23,15 +23,15 @@ function MeasurementList() {
     <>
       <section className={styles.container}>
         <div>
-          <button>New Measurement</button>
+          <button className={styles.newButton}>New Measurement</button>
         </div>
         <table>
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
+              <th>Measurement</th>
               <th>Owner</th>
-              <th>Measure Unit</th>
+              <th>Unit</th>
               <th>Last Update</th>
               <th>Sex</th>
               <th>Type</th>
@@ -43,9 +43,9 @@ function MeasurementList() {
           </thead>
           <tbody>
             {myMeasurements.map((m, index) => (
-              <tr key={index}>
+              <tr title={m.description} key={index}>
                 <td>{m.id}</td>
-                <td>
+                <td className={styles.measurementName}>
                   <Link to={"/myhome/measurement/" + index}>{m.name}</Link>
                 </td>
                 <td>{m.owner}</td>

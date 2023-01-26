@@ -1,17 +1,21 @@
+
 .container {
   display: flex;
   margin-top: 8rem;
+  flex-direction: column;
   justify-content: center;
 }
 table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 0;
   font-size: 0.9em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+  table-layout: fixed;
+  width: 100%;
 }
 
 thead tr {
-  background-color: #991e35a8;
+  background-color: #991e35bd;
   font-weight: bold;
   color: #ffffff;
 }
@@ -20,6 +24,7 @@ tbody tr {
   border-bottom: thin solid #a46572c5;
 }
 
+
 tbody tr:last-of-type {
   border-bottom: 2px solid #991e35;
 }
@@ -27,6 +32,7 @@ tbody tr:last-of-type {
 th,
 td {
   padding: 12px 15px;
+  text-align: center;
 }
 
 tr:nth-child(even) {
@@ -36,4 +42,56 @@ tr:nth-child(even) {
 tbody tr:hover {
   font-weight: bold;
   color: #991e35;
+}
+
+.newButton{
+  background-color: #d47e44;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 10px 16px;
+  text-align: center;
+  transition: color 100ms;
+  vertical-align: baseline;
+}
+
+.newButton:hover,
+.newButton:focus {
+  background-color: #eb792e;
+}
+
+ 
+@media screen and (max-width: 600px) {
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
 }
