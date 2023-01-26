@@ -9,7 +9,7 @@ const galleryFilters = [
     id: 2,
     image: ["/images/trend_style/pic_a.jpg"],
 
-    category: "trousers",
+    category: "gowns",
   },
 
   {
@@ -30,25 +30,37 @@ const galleryFilters = [
     id: 5,
     image: ["/images/trend_style/pic_e.jpg"],
 
-    category: "gowns",
+    category: "trousers",
   },
   {
     id: 6,
     image: ["/images/trend_style/pic_f.jpg"],
 
-    category: "ankara styles",
+    category: "trousers",
   },
   {
     id: 7,
     image: ["/images/trend_style/pic_g.jpg"],
 
-    category: "trousers",
+    category: "gowns",
   },
   {
     id: 8,
     image: ["/images/trend_style/pic_h.jpg"],
 
     category: "skirts",
+  },
+  {
+    id: 9,
+    image: ["/images/style-2.jpg"],
+
+    category: "ankara styles",
+  },
+  {
+    id: 10,
+    image: ["/images/style-7.jpg"],
+
+    category: "ankara styles",
   },
 ];
 

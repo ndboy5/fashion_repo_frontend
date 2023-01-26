@@ -21,9 +21,19 @@ function Gallery() {
           <a
             href="#"
             onClick={() => setItems(galleryFilters)}
-            className={styles.a}
+            className={styles.selected}
           >
             All
+          </a>
+        </div>
+
+        <div className={styles.filters}>
+          <a
+            href="#"
+            onClick={() => filterItem("ankara styles")}
+            className={styles.a}
+          >
+            Ankara
           </a>
         </div>
 
@@ -38,16 +48,6 @@ function Gallery() {
         </div>
 
         <div className={styles.filters}>
-          <a
-            href="#"
-            onClick={() => filterItem("ankara styles")}
-            className={styles.a}
-          >
-            Ankara Styles
-          </a>
-        </div>
-
-        <div className={styles.filters}>
           <a href="#" onClick={() => filterItem("skirts")} className={styles.a}>
             Skirts
           </a>
@@ -58,28 +58,52 @@ function Gallery() {
             Gowns
           </a>
         </div>
+
+        <div className={styles.filters}>
+          <a href="#" onClick={() => filterItem("laces")} className={styles.a}>
+            Laces
+          </a>
+        </div>
+
+        <div className={styles.filters}>
+          <a href="#" onClick={() => filterItem("shoes")} className={styles.a}>
+            Shoes
+          </a>
+        </div>
+
+        <div className={styles.filters}>
+          <a
+            href="#"
+            onClick={() => filterItem("senators")}
+            className={styles.a}
+          >
+            Senators
+          </a>
+        </div>
       </section>
 
-      {items.map((elem) => {
-        const { id, image } = elem;
+      <div className={styles.imageGalleryHolder}>
+        {items.map((elem) => {
+          const { id, image } = elem;
 
-        return (
-          <ul className={styles.imageGallery}>
-            <li>
-              <img src={image} alt="" />
-              <div className={styles.overlay}>
-                <span>Image title</span>
-                <button onClick={() => setShow(true)} className={styles.btn}>
-                  <i className={styles.i}>
-                    <BiExpand />
-                  </i>
-                </button>
-              </div>
-            </li>
-            <Modal onClose={() => setShow(false)} show={show} />
-          </ul>
-        );
-      })}
+          return (
+            <ul className={styles.imageGallery}>
+              <li>
+                <img src={image} alt="" />
+                <div className={styles.overlay}>
+                  <span>Image title</span>
+                  <button onClick={() => setShow(true)} className={styles.btn}>
+                    <i className={styles.i}>
+                      <BiExpand />
+                    </i>
+                  </button>
+                </div>
+              </li>
+              <Modal onClose={() => setShow(false)} show={show} />
+            </ul>
+          );
+        })}
+      </div>
     </section>
   );
 }

@@ -1,10 +1,10 @@
 .modal {
   position: fixed;
   left: 0;
-  top: 35px;
+  top: 4rem;
   right: 0;
   bottom: 0;
-  background-color: rgba(19, 14, 14, 0.863);
+  background-color: rgba(15, 14, 11, 0.767);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 
 .modal img {
   width: 400px;
-  height: 450px;
+  height: 440px;
   margin-top: 3rem;
   object-fit: cover;
 }
@@ -39,5 +39,5 @@
 }
 
 .modal i :hover {
-  background: black;
+  background: rgba(161, 3, 3, 0.308);
 }
