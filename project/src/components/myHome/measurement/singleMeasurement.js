@@ -98,7 +98,7 @@ function SingleMeasurement() {
   // TODO: handle save functionality to server
   return (
     // <div className={styles.container}>
-    <div>
+    <div className={styles.mainContainer}>
       <section className={styles.details} id="details">
         <div className={styles.detailsLeft}>
           <MeasureInputField
@@ -117,11 +117,9 @@ function SingleMeasurement() {
             styleClass={styleClass}
           />
         </div>
-        <div >
+        <div className={styles.detailsRight}>
           <div><span>Sex: </span><span>{measurement.gender}</span></div>
-          <div><span>Measure Style: </span><span>{measurement.type}</span></div>
-        </div>
-        <div>
+         <div>
           <i>
             <FaStar
               style={
@@ -132,7 +130,9 @@ function SingleMeasurement() {
             />{" "}
           </i>
         </div>
-      </section>
+  <div><span>Measure Style: </span><span>{measurement.type}</span></div>
+        </div>
+             </section>
       <section className={styles.measureImageSection} id="measuresSection">
         {/* The measures section which shows the various measured values starts here */}
         <div className={styles.measuresContainer}>
@@ -278,7 +278,7 @@ function SingleMeasurement() {
           Dynamic images come in here
         </div>
       </section>
-      <button>save</button>
+      <span className={styles.saveButton}>save</span>
     </div>
     // </div>
   );
