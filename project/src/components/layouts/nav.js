@@ -11,22 +11,14 @@ function Nav() {
         <a href="#" className={styles.a}>
           About Us
         </a>
-        <button className={styles.btn}>
-          <i className={styles.i}>
-            <FaChevronDown />
-          </i>
-        </button>
+        <button className={styles.btn}></button>
       </div>
 
       <div className={styles.nav}>
         <Link to="/community" className={styles.a}>
           Community
         </Link>
-        <button className={styles.btn}>
-          <i className={styles.i}>
-            <FaChevronDown />
-          </i>
-        </button>
+        <button className={styles.btn}></button>
       </div>
 
       <div className={styles.nav}>
@@ -78,22 +70,14 @@ function Nav() {
         <a href="#" className={styles.a}>
           <Link to="/Market">Market</Link>
         </a>
-        <button className={styles.btn}>
-          <i className={styles.i}>
-            <FaChevronDown />
-          </i>
-        </button>
+        <button className={styles.btn}></button>
       </div>
 
       <div className={styles.nav}>
         <Link to="/gallery" className={styles.a}>
           Gallery
         </Link>
-        <button className={styles.btn}>
-          <i className={styles.i}>
-            <FaChevronDown />
-          </i>
-        </button>
+        <button className={styles.btn}></button>
       </div>
     </nav>
   );

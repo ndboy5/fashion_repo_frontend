@@ -1,7 +1,7 @@
-import styles from "./modal.module.css";
+import styles from "./galleryModal.module.css";
 import { BiX } from "react-icons/bi";
 
-function Modal(props) {
+function GalleryModal(props) {
   if (!props.show) {
     return null;
   }
@@ -23,4 +23,4 @@ function Modal(props) {
     </div>
   );
 }
-export default Modal;
+export default GalleryModal;

@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 8rem;
-  padding-top: 0.5rem;
+  padding-top: 2rem;
   width: 98.5vw;
 }
 
@@ -21,7 +21,7 @@
 
 .product,
 .product img {
-  background-color: rgba(231, 235, 235, 0.534);
+  border: 1px solid grey;
   height: 18rem;
   width: 15rem;
 }
@@ -29,8 +29,7 @@
 .pricetag {
   height: 6rem;
   width: 15rem;
-  margin-left: 0.5rem;
-  margin-top: 5px;
+  margin-top: -9px;
 }
 
 .price,
@@ -40,14 +39,17 @@
   font-weight: 700;
   font-size: 14px;
   height: 1.5rem;
-  margin: 5px 0px 2px 0px;
-  width: 10rem;
+  margin: 5px 0px 2px -6px;
+  padding: 1rem;
+  width: 15rem;
+  text-align: center;
 }
 
 .addCart {
   background-color: rgb(233, 215, 51);
-  border-radius: 8px;
   height: 2rem;
+  margin-left: 0.5rem;
+  margin-top: 0.6rem;
   text-align: center;
   width: 15rem;
 }
@@ -61,7 +63,7 @@
 .pricetag .btn {
   background: none;
   border: none;
-  margin-left: -0.4rem;
+  margin-left: -0.5rem;
   height: 2rem;
 }
 
@@ -74,3 +76,8 @@
   padding-top: 8px;
   font-size: 14px;
 }
+
+.product h3 {
+  text-align: center;
+  margin-top: 5rem;
+} */

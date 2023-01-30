@@ -1,17 +1,21 @@
 import styles from "./gallery.module.css";
 import { BiExpand } from "react-icons/bi";
-import Modal from "../modal";
+import GalleryModal from "../galleryModal";
 import { useState } from "react";
 import galleryFilters from "../../data/galleryFilters_image_data";
 
 function Gallery() {
   const [items, setItems] = useState(galleryFilters);
+
+  // This filters various images into categories
   const filterItem = (categItem) => {
     const updatedItems = galleryFilters.filter((galElem) => {
       return galElem.category === categItem;
     });
     setItems(updatedItems);
   };
+
+  // This useTate is declared for the modal
   const [show, setShow] = useState(false);
 
   return (
@@ -78,7 +82,7 @@ function Gallery() {
 
       <div className={styles.imageGalleryHolder}>
         {items.map((elem) => {
-          const { id, image } = elem;
+          const { image } = elem;
 
           return (
             <ul className={styles.imageGallery}>
@@ -93,7 +97,7 @@ function Gallery() {
                   </button>
                 </div>
               </li>
-              <Modal onClose={() => setShow(false)} show={show} />
+              <GalleryModal onClose={() => setShow(false)} show={show} />
             </ul>
           );
         })}
