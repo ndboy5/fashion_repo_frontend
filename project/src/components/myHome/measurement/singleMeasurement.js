@@ -135,11 +135,8 @@ function SingleMeasurement() {
             handleChange={handleOnChangeMeasures}
             action_type="update_main_detail"
           />
-        <div>
-          <span>
-          Select unit of measurement: 
-          </span>
-          <select onChange={e=>handleOnChangeMeasures(e,"update_main_detail")} name={"unit"} value={measurement.unit}>
+        <div className={styles.selectBox}>
+          <select className={styles.select} onChange={e=>handleOnChangeMeasures(e,"update_main_detail")} name={"unit"} value={measurement.unit}>
             <option value="CM">Centimeters</option>
             <option value="M">Meters</option>
             <option value="Inch">Inches</option>
