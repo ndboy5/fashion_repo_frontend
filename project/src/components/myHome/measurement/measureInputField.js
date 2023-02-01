@@ -7,6 +7,7 @@ function MeasureInputField(props) {
   const name = props.name;
   const value = props.value;
   const action_type = props.action_type;
+  const isText = props.isText;
   const styleClass = props.styleClass;
 
   const [isEditMode, setIsEditMode] = useState(false);
@@ -20,7 +21,7 @@ function MeasureInputField(props) {
       {isEditMode ? (
         <form onSubmit={handleOnSubmit}>
           <input
-            type="number"
+            type={isText? "text": "number"}
             value={value}
             name={name}
             onChange={(e) => {
@@ -30,11 +31,11 @@ function MeasureInputField(props) {
         </form>
       ) : (
         <div>
-          <span className={styleClass ? styleClass : styles.dark}>
+          <span className={styleClass ? null : styles.dark}>
             {" "}
             {name}:{" "}
           </span>{" "}
-          <span className={styleClass ? styleClass : styles.light}>
+          <span className={styleClass ? null : styles.light}>
             {" "}
             {value}{" "}
           </span>
