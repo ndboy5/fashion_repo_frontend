@@ -11,6 +11,7 @@ import MyHome from "./components/myHome/myHome";
 import Market from "./components/market/template";
 import SingleMeasurement from "./components/myHome/measurement/singleMeasurement";
 import Layout from "./components/layouts/layout";
+import ProfileComponent from "./components/profile/profileComponent";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             path="/myhome/measurement/:id"
             element={<SingleMeasurement />}
           />
+          <Route path="/userProfile" element={<ProfileComponent/>}/>
         </Route>
       </Routes>
     </div>

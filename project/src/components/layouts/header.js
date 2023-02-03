@@ -2,6 +2,7 @@ import styles from "./header.module.css";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import ProfileButton from "../profile/profileButton";
 
 function Header() {
   const [isSearchToggle, setIsSearchToggle] = useState(false);
@@ -49,6 +50,7 @@ function Header() {
           <Link to="/signup">
             <button className={styles.btn}>SIGN UP</button>
           </Link>
+          <ProfileButton/>
         </div>
       </div>
     </header>
