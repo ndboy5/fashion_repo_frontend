@@ -9,13 +9,6 @@
   z-index: 1;
 }
 
-.cart {
-  background-color: #fff;
-  height: 700px;
-  width: 35rem;
-  float: right;
-}
-
 .modal img {
   width: 400px;
   height: 440px;
@@ -27,6 +20,19 @@
   background-color: green;
   margin: auto;
   display: flex;
+}
+
+.cart {
+  background-color: #fff;
+  height: 700px;
+  width: 35rem;
+  float: right;
+}
+
+.cart h1 {
+  font-size: 30px;
+  color: rgb(230, 169, 3);
+  margin-top: -4.5rem;
 }
 
 .cart .btn {
@@ -183,7 +189,7 @@ hr {
   background-color: rgba(252, 217, 123, 0.89);
   border: none;
   cursor: pointer;
-  height: 5rem;
+  height: 4rem;
   margin: 2rem 1rem;
   justify-content: center;
   width: 33rem;

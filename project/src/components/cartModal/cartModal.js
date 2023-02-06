@@ -19,6 +19,7 @@ function CartModal(props) {
               <TfiClose />
             </i>
           </button>
+          <h1>Your Cart</h1>
           <div className={styles.title}>
             <div>
               <h3>PRODUCT</h3>

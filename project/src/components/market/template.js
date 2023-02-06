@@ -1,19 +1,15 @@
 import { FaPersonBooth } from "react-icons/fa";
-import {
-  BsCart,
-  BsFillPersonXFill,
-  BsHeart,
-  BsPerson,
-  BsSearch,
-} from "react-icons/bs";
+import { BsCart, BsHeart, BsPerson, BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import styles from "./template.module.css";
 import { useState } from "react";
-import CartModal from "../cartModal";
+import CartModal from "../cartModal/cartModal";
+import BuyNowModal from "../buyNowModal/buyNowModal";
 
 function Market() {
   // This useTate is declared for the modal
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <section className={styles.container}>
       <section className={styles.headerBar}>
@@ -58,17 +54,16 @@ function Market() {
           <div className={styles.name}>Name of item</div>
           <div className={styles.price}>Price</div>
 
-          <Link to="/">
-            <button className={styles.btn}>
-              <div className={styles.addCart}>
-                <h6>View More</h6>
-              </div>
-            </button>
-          </Link>
+          <button onClick={() => setOpen(true)} className={styles.btn}>
+            <div className={styles.addCart}>
+              <h6>View More</h6>
+            </div>
+          </button>
         </div>
       </div>
 
       <CartModal onClose={() => setShow(false)} show={show} />
+      <BuyNowModal onClose={() => setOpen(false)} open={open} />
     </section>
   );
 }
