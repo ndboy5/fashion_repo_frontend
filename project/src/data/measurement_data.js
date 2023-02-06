@@ -10,7 +10,7 @@ const measurement_data = [
     last_update_by: 2,
     is_favourite: false,
     created_at: "2023-01-08",
-    last_update_date: "2023-01-08",
+    last_sync_time: "2023-01-08",
     type: "Free Hand",
     unit: "CM",
     upper_body_measure: {
@@ -35,8 +35,8 @@ const measurement_data = [
     name: "Sample Measurement 2",
     description: "for trad wear",
     gender: "M",
-    created_By: 1,
     owner: "Jerry",
+    created_By: 1,
     ownerId: 45600,
     last_update_by: 2,
     is_favourite: false,

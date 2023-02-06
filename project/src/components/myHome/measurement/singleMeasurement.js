@@ -65,6 +65,11 @@ function SingleMeasurement() {
             [name]: value,
           },
         };
+        case "update_main_detail":
+          return {...measurement, [name]: value};
+
+          case "update_isFavourite":
+            return {...measurement, [name]: value}
       default:
         return measurement;
     }
@@ -86,13 +91,28 @@ function SingleMeasurement() {
     const name = event.target.name;
     const value = event.target.value;
 
-    // console.log(`name: ${name}, value: ${value}  - ${action_type}`);
+    console.log(`name: ${name}, value: ${value}  - ${action_type}`);
     dispatch({
       type: action_type,
       payload: { name: name, value: value },
     });
 
   };
+
+  const handleUpdateFavorite = (action_type) => {
+    const name = "is_favourite";
+    const value = !measurement.is_favourite;
+
+    console.log(`name: ${name}, value: ${value}  - ${action_type}`);
+    dispatch({
+      type: action_type,
+      payload: { name: name, value: value },
+    });
+
+  };
+
+
+
 
   const styleClass = "dark"; //TODO: for testing only, to be modified afterwards
   // TODO: handle save functionality to server
@@ -104,23 +124,29 @@ function SingleMeasurement() {
           <MeasureInputField
             name={"name"}
             value={measurement.name}
-            styleClass={styleClass}
+            isText={true}
+            handleChange={handleOnChangeMeasures}
+            action_type="update_main_detail"
           />
           <MeasureInputField
             name={"description"}
             value={measurement.description}
-            styleClass={styleClass}
+            isText={true}
+            handleChange={handleOnChangeMeasures}
+            action_type="update_main_detail"
           />
-          <MeasureInputField
-            name={"unit"}
-            value={measurement.unit}
-            styleClass={styleClass}
-          />
+        <div className={styles.selectBox}>
+          <select className={styles.select} onChange={e=>handleOnChangeMeasures(e,"update_main_detail")} name={"unit"} value={measurement.unit}>
+            <option value="CM">Centimeters</option>
+            <option value="M">Meters</option>
+            <option value="Inch">Inches</option>
+          </select>
+          </div>  
         </div>
         <div className={styles.detailsRight}>
           <div><span>Sex: </span><span>{measurement.gender}</span></div>
-         <div>
-          <i>
+         <div onClick={e=>handleUpdateFavorite("update_isFavourite")}  >
+          <i >
             <FaStar
               style={
                 measurement.is_favourite

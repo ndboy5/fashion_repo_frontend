@@ -41,6 +41,33 @@
   grid-template-columns: 50% 50%;
 }
 
+.select {
+	background: transparent;
+	padding: 5px;
+  width: 100%;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+  padding-right: 0;
+	vertical-align: top!important;
+	text-align: left;
+	height: auto;
+	line-height: 1em;
+}
+
+.select:hover{
+  background-color: #ba0f30;
+}
+
+.selectBox {
+	width: 180px;
+	height: 35px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	border-radius: 3px 5px 5px 3px;
+}
+
 .saveButton {
   background-color: #ba0f30;
   border-radius: 10px;
@@ -61,5 +88,5 @@
 
 .saveButton:hover,
 .saveButton:focus {
-  background-color: #c2453a;
+  background-color: #ef7c8e;
 }
