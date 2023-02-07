@@ -11,10 +11,10 @@
 
 .pic img {
   background-color: rgb(250, 238, 206);
-  height: 25rem;
+  height: 27rem;
   margin-top: 2rem;
   margin-left: 1rem;
-  width: 23rem;
+  width: 24rem;
   object-fit: cover;
 }
 
