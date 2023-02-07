@@ -1,21 +1,31 @@
 .modal {
+  bottom: 0;
+  background-color: rgba(20, 19, 17, 0.87);
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
-  background-color: rgba(20, 19, 17, 0.87);
+  overflow-y: scroll;
   z-index: 1;
+}
+
+.pic img {
+  background-color: rgb(250, 238, 206);
+  height: 25rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 23rem;
+  object-fit: cover;
 }
 
 .buy {
   background-color: white;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  width: 70vw;
-  height: 500px;
+  width: 60vw;
+  height: 62rem;
   margin: auto;
-  margin-top: 9rem;
+  margin-top: 4rem;
   justify-content: center;
 }
 
@@ -23,6 +33,8 @@
   color: rgb(182, 179, 179);
   font-weight: 100;
   font-size: 30px;
+  margin-right: 2rem;
+  margin-top: 1rem;
   cursor: pointer;
   float: right;
 }
@@ -101,7 +113,7 @@
   border: 2px solid rgb(5, 5, 78);
   cursor: pointer;
   height: 4rem;
-  width: 40vw;
+  width: 53vw;
   margin: auto;
   margin-left: 1.5rem;
   margin-top: 3rem;

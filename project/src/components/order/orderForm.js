@@ -51,7 +51,7 @@ function OrderForm() {
           <input type="email" class="input" placeholder="gstuyiso@gmail.com" />
         </div>
       </div>
-      <button className={styles.btn}>SUBMIT</button>
+      <button className={styles.btn}>Submit</button>
       <br />
       <button className={styles.back}>
         <i className={styles.i}>

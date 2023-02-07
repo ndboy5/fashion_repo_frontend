@@ -77,7 +77,7 @@ header {
   height: 50px;
   display: flex;
   margin-top: 5.5rem;
-  margin-right: 2rem;
+  margin-right: 0.2rem;
 }
 
 .login .btn {

@@ -5,6 +5,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(20, 19, 17, 0.87);
+  overflow-y: scroll;
   align-items: center;
   z-index: 1;
 }
@@ -46,7 +47,7 @@
 .cart i {
   color: rgb(182, 179, 179);
   font-weight: 100;
-  font-size: 25px;
+  font-size: 32px;
   cursor: pointer;
 }
 
@@ -145,6 +146,7 @@ hr {
 
 .counter i {
   font-size: 15px;
+  color: grey;
 }
 
 .counter i :hover {

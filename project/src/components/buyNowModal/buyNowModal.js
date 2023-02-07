@@ -10,13 +10,16 @@ function BuyNowModal(props) {
     <div
       className={styles.modal}
       //  modal closes on clicking anywhere on the modal.
-      onClick={props.onClose}
+      // onClick={props.onClose}
     >
       <div className={styles.modal.body}>
         <div className={styles.buy}>
-          <i className={styles.i}>
+          <i onClick={props.onClose} className={styles.i}>
             <TfiClose />
           </i>
+          <div className={styles.pic}>
+            <img src="images/style-2.jpg"></img>
+          </div>
           <div className={styles.item}>
             <h1>Ankara Ready to wear dress</h1>
             <h3>£12</h3>
