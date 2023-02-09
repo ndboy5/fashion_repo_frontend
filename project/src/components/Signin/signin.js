@@ -5,7 +5,7 @@ function SignIn() {
   return (
     <form className={styles.container}>
       <h3>LOGIN</h3>
-      <div className={styles.signup}>
+      <div className={styles.signin}>
         <div className={styles.email}>Email</div>
         <input type="text" name="name" id="name"></input>
         <div className={styles.password}>Password</div>

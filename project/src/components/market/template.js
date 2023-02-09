@@ -3,11 +3,12 @@ import { BsCart, BsHeart, BsPerson, BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import styles from "./template.module.css";
 import { useState } from "react";
-import CartModal from "../cartModal/cartModal";
-import BuyNowModal from "../buyNowModal/buyNowModal";
+import CartModal from "./cartModal";
+import BuyNowModal from "./buyNowModal";
 
 function Market() {
-  // This useTate is declared for the modal
+  let url = null;
+  // This useState is declared for the modal
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
   return (
@@ -63,6 +64,7 @@ function Market() {
       </div>
 
       <CartModal onClose={() => setShow(false)} show={show} />
+      {/* <BuyNowModal onClose={() => setOpen(false)} open={open} /> */}
       <BuyNowModal onClose={() => setOpen(false)} open={open} />
     </section>
   );

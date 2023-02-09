@@ -86,7 +86,9 @@ hr {
 
 .date input {
   width: 10rem;
+  padding: 10px;
 }
+
 .address input {
   width: 41.5rem;
 }

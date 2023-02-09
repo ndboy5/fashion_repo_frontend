@@ -1,5 +1,6 @@
 import styles from "./orderForm.module.css";
 import { BsArrowBarLeft, BsArrowLeft } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function OrderForm() {
   return (
     <form className={styles.container}>
@@ -53,12 +54,14 @@ function OrderForm() {
       </div>
       <button className={styles.btn}>Submit</button>
       <br />
-      <button className={styles.back}>
-        <i className={styles.i}>
-          <BsArrowLeft />
-        </i>
-        <h4> Back to Cart</h4>
-      </button>
+      <Link to="/market/cartModal">
+        <button className={styles.back}>
+          <i className={styles.i}>
+            <BsArrowLeft />
+          </i>
+          <h4> Back to Cart</h4>
+        </button>
+      </Link>
     </form>
   );
 }
