@@ -7,6 +7,7 @@ import ChatMessage from "./chatMessage";
 class ChatContainer extends React.Component {
   constructor(props) {
     super(props);
+    // console.log(`The parameter is: ${this.props.match.params.id}`);
     this.state = {
       message: [],
     };
@@ -30,8 +31,10 @@ class ChatContainer extends React.Component {
   }
 
   render() {
+    const { match } = this.props;
     return (
       <div className={styles.container}>
+        <p>Route params: {match.params.id}</p>
         <ChatHeader />
         <ChatBody message={this.state.message} />
         <ChatMessage

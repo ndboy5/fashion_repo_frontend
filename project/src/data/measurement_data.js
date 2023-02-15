@@ -13,7 +13,7 @@ const measurement_data = [
     last_sync_time: "2023-01-08",
     type: "Free Hand",
     unit: "CM",
-    upper_body_measure: {
+    upperBodyMeasure: {
       neck: 12,
       shoulder: 37,
       chest: 34,
@@ -21,7 +21,7 @@ const measurement_data = [
       sleeveLength: 24,
       sleeveWidth: 34,
     },
-    lower_body_measure: {
+    lowerBodyMeasure: {
       waist: 35,
       hip: 31,
       laps: 17,
@@ -44,7 +44,7 @@ const measurement_data = [
     last_update_date: "2023-01-08",
     type: "Pattern Drafting",
     unit: "CM",
-    upper_body_measure: {
+    upperBodyMeasure: {
       neck: 12,
       chest: 34,
       halfBack: 14,
@@ -58,7 +58,7 @@ const measurement_data = [
       hipSeat: 34,
       shoulder: 23,
     },
-    lower_body_measure: {
+    lowerBodyMeasure: {
       waist: 35,
       hipSeat: 31,
       bodyRise: 36,
@@ -83,7 +83,7 @@ const measurement_data = [
     last_update_date: "2023-01-08",
     type: "Pattern Drafting",
     unit: "CM",
-    bodice_measure: {
+    bodiceMeasure: {
       bust: 34,
       shoulder: 34,
       waist: 38,
@@ -99,13 +99,13 @@ const measurement_data = [
       elbowWidth: 14,
       roundWrist: 16,
     },
-    skirt_measure: {
+    skirtMeasure: {
       waist: 35,
       hip: 31,
       hipDepth: 36,
       length: 49,
     },
-    trouser_measure: {
+    trouserMeasure: {
       waist: 35,
       hip: 31,
       bodyRise: 40,
