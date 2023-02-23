@@ -2,7 +2,7 @@ import { useState, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import measurement_data from "../../../data/measurement_data";
 import MeasureInputField from "./measureInputField";
-import { FaStar } from "react-icons/fa";
+import { FaEdit, FaStar } from "react-icons/fa";
 import styles from "./singleMeasurement.module.css";
 
 /**
@@ -91,7 +91,6 @@ function SingleMeasurement() {
     const name = event.target.name;
     const value = event.target.value;
 
-    console.log(`name: ${name}, value: ${value}  - ${action_type}`);
     dispatch({
       type: action_type,
       payload: { name: name, value: value },
@@ -114,22 +113,20 @@ function SingleMeasurement() {
   return (
     // <div className={styles.container}>
     <div className={styles.mainContainer}>
-      <section className={styles.details} id="details">
+      <section className={styles.details}>
         <div className={styles.detailsLeft}>
-          <MeasureInputField
-            name={"name"}
-            value={measurement.name}
-            isText={true}
-            handleChange={handleOnChangeMeasures}
-            action_type="update_main_detail"
-          />
-          <MeasureInputField
-            name={"description"}
-            value={measurement.description}
-            isText={true}
-            handleChange={handleOnChangeMeasures}
-            action_type="update_main_detail"
-          />
+          <h2>
+            {measurement.name}{" "}
+            <i>
+              <FaEdit />
+            </i>
+          </h2>
+          <h3>
+            {measurement.description}
+            <i>
+              <FaEdit />
+            </i>
+          </h3>
           <div className={styles.selectBox}>
             <select
               className={styles.select}
@@ -142,12 +139,19 @@ function SingleMeasurement() {
               <option value="Inch">Inches</option>
             </select>
           </div>
+          <div>
+            <h3>
+              {" "}
+              {`${measurement.type} 
+              ${
+                measurement.gender === "M"
+                  ? "Male Measurement"
+                  : "Female Measurement"
+              }`}
+            </h3>
+          </div>
         </div>
         <div className={styles.detailsRight}>
-          <div>
-            <span>Sex: </span>
-            <span>{measurement.gender}</span>
-          </div>
           <div onClick={(e) => handleUpdateFavorite("update_isFavourite")}>
             <i>
               <FaStar
@@ -159,10 +163,6 @@ function SingleMeasurement() {
               />{" "}
             </i>
           </div>
-          <div>
-            <span>Measure Style: </span>
-            <span>{measurement.type}</span>
-          </div>
         </div>
       </section>
       <section className={styles.measureImageSection} id="measuresSection">
@@ -170,7 +170,7 @@ function SingleMeasurement() {
         <div className={styles.measuresContainer}>
           {measurement.type === "Free Hand" && measurement.upperBodyMeasure && (
             <div className={styles.FHMaleUpperBody}>
-              <h2>Free-hand male upper body</h2>
+              <h2>Male upper body</h2>
 
               {Object.keys(measurement.upperBodyMeasure).map((measure, i) => {
                 return (
@@ -187,7 +187,7 @@ function SingleMeasurement() {
           )}
           {measurement.type === "Free Hand" && measurement.lowerBodyMeasure && (
             <div className={styles.FHMaleLowerBody}>
-              <h2>free- hand male lower body</h2>
+              <h2>Male lower body</h2>
               {Object.keys(measurement.lowerBodyMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -204,7 +204,7 @@ function SingleMeasurement() {
           {measurement.type === "Pattern Drafting" &&
             measurement.upperBodyMeasure && (
               <div className={styles.PDMaleUpperBody}>
-                <h2>pattern design male upper body</h2>
+                <h2>Male upper body</h2>
                 {Object.keys(measurement.upperBodyMeasure).map((measure, i) => {
                   return (
                     <MeasureInputField
@@ -221,7 +221,7 @@ function SingleMeasurement() {
           {measurement.type === "Pattern Drafting" &&
             measurement.lower_body_measure && (
               <div className={styles.PDMaleLowerBody}>
-                <h2>pattern design male lower body</h2>
+                <h2>Male lower body</h2>
                 {Object.keys(measurement.lowerBodyMeasure).map((measure, i) => {
                   return (
                     <MeasureInputField
@@ -237,7 +237,7 @@ function SingleMeasurement() {
             )}
           {measurement.gender === "F" && measurement.bodiceMeasure && (
             <div className={styles.PDFemaleBodice}>
-              <h2>pattern design female Bodice</h2>
+              <h2>Female Bodice</h2>
               {Object.keys(measurement.bodiceMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -253,7 +253,7 @@ function SingleMeasurement() {
           )}
           {measurement.gender === "F" && measurement.skirtMeasure && (
             <div className={styles.PDFemaleSkirt}>
-              <h2>pattern design female skirt</h2>
+              <h2>Female skirt</h2>
               {Object.keys(measurement.skirtMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -269,7 +269,7 @@ function SingleMeasurement() {
           )}
           {measurement.gender === "F" && measurement.trouserMeasure && (
             <div className={styles.PDFemaleTrouser}>
-              <h2>pattern design female Trouser</h2>
+              <h2>Female Trouser</h2>
               {Object.keys(measurement.trouserMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
