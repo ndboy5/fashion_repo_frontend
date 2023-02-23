@@ -1,23 +1,29 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 .mainContainer {
   background-color: #ffd4db;
   display: flex;
   flex-direction: column;
   margin-top: 8rem;
-  height: 100%;
 }
+
 .container {
   display: grid;
 }
 
 .details {
-  border: thin solid;
+  border-radius: 20%;
   display: flex;
   justify-content: center;
 }
 
 .detailsLeft,
 .detailsRight {
-  background-color: #d3b5e5;
+  background-color: #7c7780;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -25,47 +31,48 @@
 
 .measureImageSection {
   display: grid;
-  grid-template-columns: 70% auto;
+  grid-template-columns: auto 60%;
 }
 
 .imageContainer {
-  /* background-color: rgb(102, 112, 122); */
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .measuresContainer {
-  display: flex;
-  justify-content: space-around;
+  margin: 5%;
+  display: grid;
   grid-template-columns: 50% 50%;
+  gap: 20px;
 }
 
 .select {
-	background: transparent;
-	padding: 5px;
+  background-color: transparent;
+  padding: 5px;
   width: 100%;
-	line-height: 1;
-	border: 0;
-	border-radius: 0;
-	-webkit-appearance: none;
-  padding-right: 0;
-	vertical-align: top!important;
-	text-align: left;
-	height: auto;
-	line-height: 1em;
+  line-height: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  vertical-align: top!important;
+  text-align: left;
+  height: auto;
+  line-height: 1em;
 }
 
-.select:hover{
+.select:hover {
   background-color: #ba0f30;
+  border-color: #ba0f30;
+  color: #fff;
 }
 
 .selectBox {
-	width: 180px;
-	height: 35px;
-	overflow: hidden;
-	border: 1px solid #ddd;
-	border-radius: 3px 5px 5px 3px;
+  width: 180px;
+  height: 35px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 3px 0 0 3px;
 }
 
 .saveButton {
@@ -81,7 +88,7 @@
   margin: 2px;
   padding: 10px 16px;
   text-align: center;
-  transition: color 100ms;
+  transition: background-color 100ms;
   vertical-align: baseline;
   width: fit-content;
 }

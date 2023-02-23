@@ -1,16 +1,28 @@
-.main {
-  margin: 8px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-.light{
+.main{
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.value{
     background-color: #FBEAEB;
-    margin: 7px;
-    color: #2F3C7E;
+    margin: 3px;
 }
 
-.dark{
+.name{
     background-color: #3e4651;
-    color: #f9f3f3e5;
+    color: #fbf7f7;
     font-weight: bold;
-    
+}
+
+.input{
+padding: 10px;
+width: 100%;
+margin: 10px 0;
+box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+border: 2px solid #eee;
+border-radius: 20px;
 }

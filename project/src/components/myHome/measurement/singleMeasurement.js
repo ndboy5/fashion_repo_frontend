@@ -170,7 +170,7 @@ function SingleMeasurement() {
         <div className={styles.measuresContainer}>
           {measurement.type === "Free Hand" && measurement.upperBodyMeasure && (
             <div className={styles.FHMaleUpperBody}>
-              <span>This is the Free-hand male upper body</span>
+              <h2>Free-hand male upper body</h2>
 
               {Object.keys(measurement.upperBodyMeasure).map((measure, i) => {
                 return (
@@ -187,7 +187,7 @@ function SingleMeasurement() {
           )}
           {measurement.type === "Free Hand" && measurement.lowerBodyMeasure && (
             <div className={styles.FHMaleLowerBody}>
-              <span>This is the free- hand male lower body</span>
+              <h2>free- hand male lower body</h2>
               {Object.keys(measurement.lowerBodyMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -204,7 +204,7 @@ function SingleMeasurement() {
           {measurement.type === "Pattern Drafting" &&
             measurement.upperBodyMeasure && (
               <div className={styles.PDMaleUpperBody}>
-                <span>This is the pattern design male upper body</span>
+                <h2>pattern design male upper body</h2>
                 {Object.keys(measurement.upperBodyMeasure).map((measure, i) => {
                   return (
                     <MeasureInputField
@@ -221,7 +221,7 @@ function SingleMeasurement() {
           {measurement.type === "Pattern Drafting" &&
             measurement.lower_body_measure && (
               <div className={styles.PDMaleLowerBody}>
-                <span>This is the pattern design male lower body</span>
+                <h2>pattern design male lower body</h2>
                 {Object.keys(measurement.lowerBodyMeasure).map((measure, i) => {
                   return (
                     <MeasureInputField
@@ -237,7 +237,7 @@ function SingleMeasurement() {
             )}
           {measurement.gender === "F" && measurement.bodiceMeasure && (
             <div className={styles.PDFemaleBodice}>
-              <span>This is the pattern design female Bodice</span>
+              <h2>pattern design female Bodice</h2>
               {Object.keys(measurement.bodiceMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -253,7 +253,7 @@ function SingleMeasurement() {
           )}
           {measurement.gender === "F" && measurement.skirtMeasure && (
             <div className={styles.PDFemaleSkirt}>
-              <span>This is the pattern design female skirt</span>
+              <h2>pattern design female skirt</h2>
               {Object.keys(measurement.skirtMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -269,7 +269,7 @@ function SingleMeasurement() {
           )}
           {measurement.gender === "F" && measurement.trouserMeasure && (
             <div className={styles.PDFemaleTrouser}>
-              <span>This is the pattern design female Trouser</span>
+              <h2>pattern design female Trouser</h2>
               {Object.keys(measurement.trouserMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
@@ -287,17 +287,12 @@ function SingleMeasurement() {
         {/* When each section/field is clicked, the image component should change
         TODO: To make the image component dynamic
         */}
-        <div
-        // style={{
-        // backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
-        // }}
-        >
+        <div>
           <img
             src={"/images/measurement/waist_measure.jpg"}
             alt="Body part"
             className={styles.imageContainer}
           />{" "}
-          Dynamic images come in here
         </div>
       </section>
       <span className={styles.saveButton}>save</span>
