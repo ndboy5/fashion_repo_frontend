@@ -36,7 +36,7 @@ function MeasurementList() {
               <th>Sex</th>
               <th>Type</th>
               <th>
-                <FaHeart />{" "}
+                <FaHeart />
               </th>
               <th></th>
             </tr>
@@ -44,30 +44,28 @@ function MeasurementList() {
           <tbody>
             {myMeasurements.map((m, index) => (
               <tr title={m.description} key={index}>
-                <td>{m.id}</td>
-                <td className={styles.measurementName}>
+                <td data-label="ID">{m.id}</td>
+                <td data-label="Measurement">
                   <Link to={"/myhome/measurement/" + index}>{m.name}</Link>
                 </td>
-                <td>{m.owner}</td>
-
-                <td>{m.unit}</td>
-
-                <td>{m.last_update_date}</td>
-                <td>
+                <td data-label="Owner">{m.owner}</td>
+                <td data-label="Unit">{m.unit}</td>
+                <td data-label="Last Update">{m.last_update_date}</td>
+                <td data-label="Sex">
                   {m.gender === "M" ? (
                     <i>{<FaMale />}</i>
                   ) : (
                     <i>{<FaFemale />}</i>
                   )}
                 </td>
-                <td>
+                <td data-label="Type">
                   {m.type === "Free Hand" ? (
                     <i alt="Free Hand">{<FaHandPaper />}</i>
                   ) : (
                     <i alt="Pattern Design">{<FaDraftingCompass />}</i>
                   )}
                 </td>
-                <td>
+                <td data-label="Favorite">
                   {m.is_favourite ? (
                     <i>
                       <FaHeart />
@@ -76,7 +74,7 @@ function MeasurementList() {
                     " "
                   )}
                 </td>
-                <td>
+                <td data-label="Actions">
                   <i>
                     <FaTrash />
                   </i>{" "}
