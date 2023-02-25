@@ -116,17 +116,28 @@ function SingleMeasurement() {
       <section className={styles.details}>
         <div className={styles.detailsLeft}>
           <h2>
-            {measurement.name}{" "}
+            {measurement.name}
             <i>
               <FaEdit />
             </i>
           </h2>
           <h3>
-            {measurement.description}
+            {`(${measurement.description})`}
             <i>
               <FaEdit />
             </i>
           </h3>
+          <div>
+            <h3>
+              {" "}
+              {`${measurement.type} 
+              ${
+                measurement.gender === "M"
+                  ? "Male Measurement"
+                  : "Female Measurement"
+              }`}
+            </h3>
+          </div>
           <div className={styles.selectBox}>
             <select
               className={styles.select}
@@ -138,17 +149,6 @@ function SingleMeasurement() {
               <option value="M">Meters</option>
               <option value="Inch">Inches</option>
             </select>
-          </div>
-          <div>
-            <h3>
-              {" "}
-              {`${measurement.type} 
-              ${
-                measurement.gender === "M"
-                  ? "Male Measurement"
-                  : "Female Measurement"
-              }`}
-            </h3>
           </div>
         </div>
         <div className={styles.detailsRight}>

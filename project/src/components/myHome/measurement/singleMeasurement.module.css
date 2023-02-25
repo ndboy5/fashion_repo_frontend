@@ -15,8 +15,7 @@
 
 .details {
   display: flex;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
   background: linear-gradient(to bottom right, #7c7c7c, #292929);
   justify-content: center;
 }
@@ -29,7 +28,7 @@
 }
 input:focus {
   border-color: #ffd700;
-  color: #ffd700;
+  color: #bea410;
 }
 
 input,
@@ -41,7 +40,7 @@ select {
 
 .detailsLeft
 {
-  border: #292929 solid thick;
+  border: #292929 solid thin;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -52,6 +51,7 @@ select {
   padding: 2rem;
   margin-bottom: 2rem;
   grid-template-columns: auto 60%;
+  /* background: linear-gradient(to bottom right, #7c7c7c, #292929); */
 }
 
 .imageContainer {
@@ -69,11 +69,11 @@ select {
 
 .select {
   background-color: transparent;
-  padding: 5px;
+  padding: 7px;
   width: 100%;
-color: #fff;
+color: #ffd700;
   line-height: 1;
-  border-radius: 5px;
+  border-radius: 15px;
   -webkit-appearance: none;
   vertical-align: top!important;
   text-align: left;
@@ -89,10 +89,9 @@ color: #fff;
 }
 
 .selectBox {
-  width: 180px;
-  height: 35px;
+  width: 260px;
+  margin-left: 20px;
   overflow: hidden;
-  border-radius: 3px 0 0 3px;
 }
 
 .measurementValue {
@@ -114,13 +113,13 @@ color: #fff;
 h2 {
   font-size: 1.5rem;
   color: #ffd700;
-  margin-bottom: 1rem;
 }
 
 h3{
   font-size: 1rem;
   color: #ffd700;
-  margin-bottom: 1rem;
+  
+  margin-bottom: 2rem;
 }
 
 
@@ -141,6 +140,7 @@ h3{
   vertical-align: baseline;
   width: fit-content;
 }
+
 
 .saveButton:hover,
 .saveButton:focus {
