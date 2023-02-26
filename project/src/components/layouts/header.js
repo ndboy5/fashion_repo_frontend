@@ -50,7 +50,7 @@ function Header() {
           <Link to="/signup">
             <button className={styles.btn}>SIGN UP</button>
           </Link>
-          <ProfileButton/>
+          <ProfileButton />
         </div>
       </div>
     </header>

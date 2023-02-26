@@ -1,5 +1,5 @@
 import styles from "./galleryModal.module.css";
-import { BiX } from "react-icons/bi";
+import { TfiClose } from "react-icons/tfi";
 
 function GalleryModal(props) {
   if (!props.show) {
@@ -17,7 +17,7 @@ function GalleryModal(props) {
       </div>
       <button onClick={props.onClose} className={styles.btn}>
         <i className={styles.i}>
-          <BiX />
+          <TfiClose />
         </i>
       </button>
     </div>

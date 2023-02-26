@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-color: rgb(248, 255, 224);
+  background-color: #fff;
   height: 80rem;
   margin: none;
   padding-left: -1rem;
@@ -86,9 +86,11 @@ hr {
 
 .date input {
   width: 10rem;
+  padding: 10px;
 }
+
 .address input {
-  width: 42rem;
+  width: 41.5rem;
 }
 
 .holder {
@@ -96,19 +98,48 @@ hr {
   width: 42rem;
 }
 
-.btn {
-  background-color: rgb(73, 66, 67);
+.btn,
+.back {
+  background-color: rgb(73, 81, 95);
   border: none;
-  box-shadow: 0.5px 2px 5px #d3d3d1;
+  box-shadow: 0.5px 2px 5px #aaaaa7;
   color: #fff;
   cursor: pointer;
   margin: 2rem 1rem;
-  height: 2rem;
+  height: 3rem;
   border-radius: 10px;
-  width: 10rem;
+  width: 41rem;
 }
 
 .btn:hover {
-  background-color: #fff;
+  color: #fff;
+}
+
+.back {
+  background: none;
+  width: 10rem;
+  height: 2.2rem;
+  margin-top: -2rem;
+  padding: 5px;
+}
+
+.back i {
+  color: black;
+  padding-bottom: -2rem;
+  margin-left: -5rem;
+}
+
+.back i:hover {
+  color: #000;
+}
+
+.back h4 {
+  color: #000;
+  margin-top: -3.5rem;
+  margin-left: 3rem;
+}
+
+.back:hover {
+  background-color: rgba(179, 133, 5, 0.144);
   color: #000;
 }

@@ -12,6 +12,9 @@ import Market from "./components/market/template";
 import SingleMeasurement from "./components/myHome/measurement/singleMeasurement";
 import Layout from "./components/layouts/layout";
 import ProfileComponent from "./components/profile/profileComponent";
+import BuyNowModal from "./components/market/buyNowModal";
+import CartModal from "./components/market/cartModal";
+import EditDetails from "./components/profile/editDetails";
 
 function App() {
   return (
@@ -33,7 +36,9 @@ function App() {
             path="/myhome/measurement/:id"
             element={<SingleMeasurement />}
           />
-          <Route path="/userProfile" element={<ProfileComponent/>}/>
+          <Route path="/userProfile" element={<ProfileComponent />} />
+          <Route path="/buyNowModal" element={<BuyNowModal />} />
+          <Route path="/market/CartModal" element={<CartModal />} />
         </Route>
       </Routes>
     </div>

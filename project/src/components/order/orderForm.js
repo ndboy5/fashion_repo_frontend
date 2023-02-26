@@ -1,5 +1,6 @@
 import styles from "./orderForm.module.css";
-
+import { BsArrowBarLeft, BsArrowLeft } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function OrderForm() {
   return (
     <form className={styles.container}>
@@ -48,10 +49,19 @@ function OrderForm() {
 
         <div className={styles.phone}>
           <h3> E- mail</h3>
-          <input type="type" class="input" placeholder="gstuyiso@gmail.com" />
+          <input type="email" class="input" placeholder="gstuyiso@gmail.com" />
         </div>
       </div>
-      <button className={styles.btn}>SUBMIT</button>
+      <button className={styles.btn}>Submit</button>
+      <br />
+      <Link to="/market/cartModal">
+        <button className={styles.back}>
+          <i className={styles.i}>
+            <BsArrowLeft />
+          </i>
+          <h4> Back to Cart</h4>
+        </button>
+      </Link>
     </form>
   );
 }

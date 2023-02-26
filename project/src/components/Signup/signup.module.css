@@ -25,6 +25,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   margin-left: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .container p {
@@ -33,7 +34,8 @@
 
 .password,
 .email {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  margin-left: -0.1rem;
 }
 
 input,
@@ -44,8 +46,16 @@ input,
   width: 20rem;
 }
 
+.signup input {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-left: -0.1rem;
+  border: none;
+  box-shadow: 0.5px 2px 5px #aaaaa7;
+}
+
 input:focus {
-  outline-color: rgba(91, 165, 184, 0.452);
+  outline-color: rgba(184, 125, 91, 0.342);
 }
 
 .btn {
@@ -60,6 +70,7 @@ input:focus {
 
 .btn:hover {
   transform: scale(1.02, 1.01);
+  color: #fff;
 }
 
 .linecontainer {

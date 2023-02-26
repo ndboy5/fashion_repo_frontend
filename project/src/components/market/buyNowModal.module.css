@@ -1,0 +1,126 @@
+.modal {
+  bottom: 0;
+  background-color: rgba(20, 19, 17, 0.87);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.pic img {
+  background-color: rgb(250, 238, 206);
+  height: 27rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 24rem;
+  object-fit: cover;
+}
+
+.buy {
+  background-color: white;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 60vw;
+  height: 62rem;
+  margin: auto;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.buy i {
+  color: rgb(182, 179, 179);
+  font-weight: 100;
+  font-size: 30px;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  float: right;
+}
+
+.buy i:hover {
+  color: black;
+}
+
+.item h1 {
+  color: rgb(143, 83, 4);
+  margin-left: 1rem;
+  font-size: 30px;
+  text-align: left;
+}
+
+.item h3 {
+  color: rgb(66, 42, 9);
+  font-size: 25px;
+}
+
+.item h5 {
+  color: rgb(66, 42, 9);
+  font-size: 16px;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+}
+
+.counter {
+  height: 3rem;
+  width: 15rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-left: -3.8rem;
+  display: flex;
+}
+
+.count {
+  background-color: #fff;
+  border: 1px solid rgb(109, 108, 108);
+  border-radius: 2rem;
+  display: flex;
+  height: 3rem;
+  margin-left: 5rem;
+  width: 7rem;
+}
+
+.counter i {
+  font-size: 15px;
+  color: rgb(87, 85, 85);
+}
+
+.counter i :hover {
+  color: black;
+}
+
+.count i {
+  color: rgb(65, 57, 57);
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.minus,
+.num,
+.plus {
+  width: 2rem;
+  height: 3rem;
+  padding-top: 0.8rem;
+  margin-left: 2px;
+  margin: auto;
+  text-align: center;
+}
+
+.buyNow,
+.addCart {
+  background-color: rgb(252, 251, 247);
+  border: 2px solid rgb(5, 5, 78);
+  cursor: pointer;
+  height: 4rem;
+  width: 53vw;
+  margin: auto;
+  margin-left: 1.5rem;
+  margin-top: 3rem;
+}
+
+.addCart {
+  background-color: rgb(247, 178, 74);
+  border: none;
+  margin-top: 0.5rem;
+}

@@ -1,6 +1,6 @@
 import styles from "./cartModal.module.css";
-import { GrClose, TfiClose } from "react-icons/tfi";
-import { FaMinus, FaPlus, FaTrash } from "react-icons/fa";
+import { TfiClose } from "react-icons/tfi";
+import { FaMinus, FaPlus, FaTrash, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function CartModal(props) {
   if (!props.show) {
@@ -19,6 +19,7 @@ function CartModal(props) {
               <TfiClose />
             </i>
           </button>
+          <h1>Your Cart</h1>
           <div className={styles.title}>
             <div>
               <h3>PRODUCT</h3>
@@ -60,7 +61,7 @@ function CartModal(props) {
               </div>
             </div>
             <i>
-              <FaTrash />
+              <FaTrashAlt />
             </i>
           </div>
           <div className={styles.sub}></div>
@@ -75,7 +76,7 @@ function CartModal(props) {
           <div className={styles.checkout}>
             <Link to="/order">
               <button className={styles.button}>
-                <h3>CHECKOUT</h3>
+                <h3>Checkout</h3>
               </button>
             </Link>
           </div>
