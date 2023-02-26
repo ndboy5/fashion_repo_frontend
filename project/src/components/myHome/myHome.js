@@ -10,6 +10,7 @@ function MyHome() {
   return (
     <div className={styles.container}>
       <div>
+        <h1>my Home page</h1>
         <div>
           <MeasurementList />
         </div>

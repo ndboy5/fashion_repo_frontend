@@ -1,15 +1,68 @@
 import styles from "./signin.module.css";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+
 function SignIn() {
+  const navigate = useNavigate();
+
+  const [credentials, setCredentials] = useState({
+    email: "",
+    password: "",
+  });
+
+  // handle input change
+  const handleInputChange = (event) => {
+    event.preventDefault();
+    const { name, value } = event.target;
+    setCredentials({ ...credentials, [name]: value });
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    axios
+      .post("http://localhost:5000/api/v1/auth/login", {
+        //TODO: encrypt the submission
+        email: credentials.email,
+        password: credentials.password,
+      })
+      .then((response) => {
+        const { success, id, role, token, name } = response.data;
+
+        if (success) {
+          console.log(
+            `welcome ${name}! Glad to have you here :). Your have an ${role} role and and your ID is ${id}`
+          );
+          //After login, navigate to the myHome page
+          navigate("/myhome");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
-    <form className={styles.container}>
+    <form className={styles.container} onSubmit={handleLogin}>
       <h3>LOGIN</h3>
       <div className={styles.signin}>
         <div className={styles.email}>Email</div>
-        <input type="text" name="name" id="name"></input>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value={credentials.email}
+          onChange={handleInputChange}
+        ></input>
         <div className={styles.password}>Password</div>
-        <input type="text" name="name" id="name"></input>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          value={credentials.password}
+          onChange={handleInputChange}
+        ></input>
       </div>
 
       <div className={styles.checkbox}>
@@ -17,7 +70,9 @@ function SignIn() {
         <p>Remember me ?</p>
       </div>
 
-      <button className={styles.btn}>LOGIN</button>
+      <button type="submit" className={styles.btn}>
+        LOGIN
+      </button>
 
       <div className={styles.fp}>
         <a href="">
