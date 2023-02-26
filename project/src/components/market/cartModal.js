@@ -74,7 +74,7 @@ function CartModal(props) {
             </div>
           </div>
           <div className={styles.checkout}>
-            <Link to="/order">
+            <Link to="/buyNowModal">
               <button className={styles.button}>
                 <h3>Checkout</h3>
               </button>

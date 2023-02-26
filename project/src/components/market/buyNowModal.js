@@ -9,8 +9,8 @@ function BuyNowModal(props) {
   return (
     <div
       className={styles.modal}
-      //  modal closes on clicking anywhere on the modal.
-      // onClick={props.onClose}
+      //  modal closes on clicking anywhere on the modal
+      onClick={props.onClose}
     >
       <div className={styles.modal.body}>
         <div className={styles.buy}>

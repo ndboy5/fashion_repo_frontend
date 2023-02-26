@@ -1,73 +1,92 @@
-.container{
-    background-color: rgb(32, 32, 32);
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-    
+.container {
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: 8rem;
+  position: relative;
 }
 
-.subContainer{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    align-items: flex-start;
-    padding: 20px;
+.subContainer {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+  padding: 20px;
+  margin: auto;
+  margin-top: -4rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.label{
-    font-size: 20px;
-    margin: 15px;
-    color: rgb(128, 51, 64);
-
+.label,
+.labels {
+  font-size: 20px;
+  margin: 15px 0 15px -24rem;
+  padding-left: 4rem;
+  color: rgb(128, 51, 64);
 }
 
-.userImage{
-    height: 50px;
-    width: 50px;
-    border-radius: 45px;
-    background-color: rgb(143, 143, 143);
-    text-align: center;
-    padding-top: 15px;
-    border: 1px solid rgb(143, 143, 143);
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    margin-right: 10rem;
+.labels {
+  margin-right: 4rem;
 }
 
-.profileImage{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    border-bottom:1px solid rgb(145, 141, 141);
+.userImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 45px;
+  background-color: rgb(143, 143, 143);
+  text-align: center;
+  padding-top: 15px;
+  border: 1px solid rgb(143, 143, 143);
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  margin-right: 10rem;
 }
 
-.profileImage .buttons{
-    margin-top: 20px;
+.profileImage,
+.userDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(145, 141, 141);
+  width: 27rem;
 }
 
-.input{
-    color: rgb(148, 141, 141);
-    margin-right: 15rem;
+.profileImage .buttons {
+  margin-top: 20px;
 }
 
-.userDetails{
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 10px;
-    border-bottom:1px solid rgb(145, 141, 141);
+.input {
+  color: rgb(148, 141, 141);
+  margin-right: 15rem;
 }
 
-.buttons button{
-    height: 30px;
-    color: rgb(151, 147, 147);
-    background: none;
-    border: none;
-    margin-right: 20px;
+.userDetails {
+  margin-bottom: 10px;
+  width: 27rem;
 }
 
-button:hover{
-    color: black;
+.buttons button {
+  height: 30px;
+  color: rgb(151, 147, 147);
+  background: none;
+  border: none;
+  margin-left: 20px;
+}
+
+.userDetails button {
+  background: none;
+  border: none;
+  height: 30px;
+  color: rgb(131, 7, 7);
+  background: none;
+  border: none;
+  margin-right: 30px;
+}
+
+button:hover {
+  color: #000;
 }
