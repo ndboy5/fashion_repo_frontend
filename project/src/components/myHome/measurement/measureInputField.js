@@ -21,7 +21,8 @@ function MeasureInputField(props) {
       {isEditMode ? (
         <form onSubmit={handleOnSubmit}>
           <input
-            type={isText? "text": "number"}
+            className={styles.input}
+            type={isText ? "text" : "number"}
             value={value}
             name={name}
             onChange={(e) => {
@@ -31,15 +32,9 @@ function MeasureInputField(props) {
         </form>
       ) : (
         <div>
-          <span className={styleClass ? null : styles.dark}>
-            {" "}
-            {name}:{" "}
-          </span>{" "}
-          <span className={styleClass ? null : styles.light}>
-            {" "}
-            {value}{" "}
-          </span>
-          <i>
+          <span className={styles.name}>{`${name}:`}</span>
+          <span className={styles.value}> {value} </span>
+          <i style={{ cursor: "pointer" }}>
             <FaEdit
               style={{ color: "#666666" }}
               size={15}

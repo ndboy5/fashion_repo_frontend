@@ -2,7 +2,7 @@ import { useState, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import measurement_data from "../../../data/measurement_data";
 import MeasureInputField from "./measureInputField";
-import { FaStar } from "react-icons/fa";
+import { FaEdit, FaStar } from "react-icons/fa";
 import styles from "./singleMeasurement.module.css";
 
 /**
@@ -25,51 +25,51 @@ function SingleMeasurement() {
     switch (action.type) {
       case "update_male_upper_body":
         return {
-    //Use nested destructuring to update value in measurement
+          //Use nested destructuring to update value in measurement
           ...measurement,
-          upper_body_measure: {
-            ...measurement.upper_body_measure,
+          upperBodyMeasure: {
+            ...measurement.upperBodyMeasure,
             [name]: value,
-          }, 
+          },
         };
 
       case "update_male_lower_body":
         return {
           ...measurement,
-          lower_body_measure: {
-            ...measurement.lower_body_measure,
+          lowerBodyMeasure: {
+            ...measurement.lowerBodyMeasure,
             [name]: value,
-          }, 
+          },
         };
       case "update_bodice_measure":
         return {
           ...measurement,
-          bodice_measure: {
-            ...measurement.bodice_measure,
+          bodiceMeasure: {
+            ...measurement.bodiceMeasure,
             [name]: value,
-          }, 
+          },
         };
       case "update_skirt_measure":
         return {
           ...measurement,
-          skirt_measure: {
-            ...measurement.skirt_measure,
+          skirtMeasure: {
+            ...measurement.skirtMeasure,
             [name]: value,
-          }, 
+          },
         };
       case "update_trouser_measure":
         return {
           ...measurement,
-          trouser_measure: {
-            ...measurement.trouser_measure,
+          trouserMeasure: {
+            ...measurement.trouserMeasure,
             [name]: value,
           },
         };
-        case "update_main_detail":
-          return {...measurement, [name]: value};
+      case "update_main_detail":
+        return { ...measurement, [name]: value };
 
-          case "update_isFavourite":
-            return {...measurement, [name]: value}
+      case "update_isFavourite":
+        return { ...measurement, [name]: value };
       default:
         return measurement;
     }
@@ -91,12 +91,10 @@ function SingleMeasurement() {
     const name = event.target.name;
     const value = event.target.value;
 
-    console.log(`name: ${name}, value: ${value}  - ${action_type}`);
     dispatch({
       type: action_type,
       payload: { name: name, value: value },
     });
-
   };
 
   const handleUpdateFavorite = (action_type) => {
@@ -108,180 +106,178 @@ function SingleMeasurement() {
       type: action_type,
       payload: { name: name, value: value },
     });
-
   };
-
-
-
 
   const styleClass = "dark"; //TODO: for testing only, to be modified afterwards
   // TODO: handle save functionality to server
   return (
     // <div className={styles.container}>
     <div className={styles.mainContainer}>
-      <section className={styles.details} id="details">
+      <section className={styles.details}>
         <div className={styles.detailsLeft}>
-          <MeasureInputField
-            name={"name"}
-            value={measurement.name}
-            isText={true}
-            handleChange={handleOnChangeMeasures}
-            action_type="update_main_detail"
-          />
-          <MeasureInputField
-            name={"description"}
-            value={measurement.description}
-            isText={true}
-            handleChange={handleOnChangeMeasures}
-            action_type="update_main_detail"
-          />
-        <div className={styles.selectBox}>
-          <select className={styles.select} onChange={e=>handleOnChangeMeasures(e,"update_main_detail")} name={"unit"} value={measurement.unit}>
-            <option value="CM">Centimeters</option>
-            <option value="M">Meters</option>
-            <option value="Inch">Inches</option>
-          </select>
-          </div>  
+          <h2>
+            {measurement.name}
+            <i>
+              <FaEdit />
+            </i>
+          </h2>
+          <h3>
+            {`(${measurement.description})`}
+            <i>
+              <FaEdit />
+            </i>
+          </h3>
+          <div>
+            <h3>
+              {" "}
+              {`${measurement.type} 
+              ${
+                measurement.gender === "M"
+                  ? "Male Measurement"
+                  : "Female Measurement"
+              }`}
+            </h3>
+          </div>
+          <div className={styles.selectBox}>
+            <select
+              className={styles.select}
+              onChange={(e) => handleOnChangeMeasures(e, "update_main_detail")}
+              name={"unit"}
+              value={measurement.unit}
+            >
+              <option value="CM">Centimeters</option>
+              <option value="M">Meters</option>
+              <option value="Inch">Inches</option>
+            </select>
+          </div>
         </div>
         <div className={styles.detailsRight}>
-          <div><span>Sex: </span><span>{measurement.gender}</span></div>
-         <div onClick={e=>handleUpdateFavorite("update_isFavourite")}  >
-          <i >
-            <FaStar
-              style={
-                measurement.is_favourite
-                  ? { color: "#FFD700" }
-                  : { color: "#FBEAEB" }
-              }
-            />{" "}
-          </i>
+          <div onClick={(e) => handleUpdateFavorite("update_isFavourite")}>
+            <i>
+              <FaStar
+                style={
+                  measurement.is_favourite
+                    ? { color: "#FFD700" }
+                    : { color: "#FBEAEB" }
+                }
+              />{" "}
+            </i>
+          </div>
         </div>
-  <div><span>Measure Style: </span><span>{measurement.type}</span></div>
-        </div>
-             </section>
+      </section>
       <section className={styles.measureImageSection} id="measuresSection">
         {/* The measures section which shows the various measured values starts here */}
         <div className={styles.measuresContainer}>
-          {measurement.type === "Free Hand" &&
-            measurement.upper_body_measure && (
-              <div className={styles.FHMaleUpperBody}>
-                <span>This is the Free-hand male upper body</span>
+          {measurement.type === "Free Hand" && measurement.upperBodyMeasure && (
+            <div className={styles.FHMaleUpperBody}>
+              <h2>Male upper body</h2>
 
-                {Object.keys(measurement.upper_body_measure).map(
-                  (measure, i) => {
-                    return (
-                      <MeasureInputField
-                        key={i}
-                        handleChange={handleOnChangeMeasures}
-                        name={measure}
-                        action_type="update_male_upper_body"
-                        value={measurement.upper_body_measure[measure]}
-                      />
-                    );
-                  }
-                )}
-              </div>
-            )}
-          {measurement.type === "Free Hand" &&
-            measurement.lower_body_measure && (
-              <div className={styles.FHMaleLowerBody}>
-                <span>This is the free- hand male lower body</span>
-                {Object.keys(measurement.lower_body_measure).map(
-                  (measure, i) => {
-                    return (
-                      <MeasureInputField
-                        key={i}
-                        handleChange={handleOnChangeMeasures}
-                        action_type="update_male_lower_body"
-                        name={measure}
-                        value={measurement.lower_body_measure[measure]}
-                      />
-                    );
-                  }
-                )}
-              </div>
-            )}
+              {Object.keys(measurement.upperBodyMeasure).map((measure, i) => {
+                return (
+                  <MeasureInputField
+                    key={i}
+                    handleChange={handleOnChangeMeasures}
+                    name={measure}
+                    action_type="update_male_upper_body"
+                    value={measurement.upperBodyMeasure[measure]}
+                  />
+                );
+              })}
+            </div>
+          )}
+          {measurement.type === "Free Hand" && measurement.lowerBodyMeasure && (
+            <div className={styles.FHMaleLowerBody}>
+              <h2>Male lower body</h2>
+              {Object.keys(measurement.lowerBodyMeasure).map((measure, i) => {
+                return (
+                  <MeasureInputField
+                    key={i}
+                    handleChange={handleOnChangeMeasures}
+                    action_type="update_male_lower_body"
+                    name={measure}
+                    value={measurement.lowerBodyMeasure[measure]}
+                  />
+                );
+              })}
+            </div>
+          )}
           {measurement.type === "Pattern Drafting" &&
-            measurement.upper_body_measure && (
+            measurement.upperBodyMeasure && (
               <div className={styles.PDMaleUpperBody}>
-                <span>This is the pattern design male upper body</span>
-                {Object.keys(measurement.upper_body_measure).map(
-                  (measure, i) => {
-                    return (
-                      <MeasureInputField
-                        key={i}
-                        handleChange={handleOnChangeMeasures}
-                        action_type="update_male_upper_body"
-                        name={measure}
-                        value={measurement.upper_body_measure[measure]}
-                      />
-                    );
-                  }
-                )}
+                <h2>Male upper body</h2>
+                {Object.keys(measurement.upperBodyMeasure).map((measure, i) => {
+                  return (
+                    <MeasureInputField
+                      key={i}
+                      handleChange={handleOnChangeMeasures}
+                      action_type="update_male_upper_body"
+                      name={measure}
+                      value={measurement.upperBodyMeasure[measure]}
+                    />
+                  );
+                })}
               </div>
             )}
           {measurement.type === "Pattern Drafting" &&
             measurement.lower_body_measure && (
               <div className={styles.PDMaleLowerBody}>
-                <span>This is the pattern design male lower body</span>
-                {Object.keys(measurement.lower_body_measure).map(
-                  (measure, i) => {
-                    return (
-                      <MeasureInputField
-                        key={i}
-                        handleChange={handleOnChangeMeasures}
-                        action_type="update_male_lower_body"
-                        name={measure}
-                        value={measurement.lower_body_measure[measure]}
-                      />
-                    );
-                  }
-                )}
+                <h2>Male lower body</h2>
+                {Object.keys(measurement.lowerBodyMeasure).map((measure, i) => {
+                  return (
+                    <MeasureInputField
+                      key={i}
+                      handleChange={handleOnChangeMeasures}
+                      action_type="update_male_lower_body"
+                      name={measure}
+                      value={measurement.lowerBodyMeasure[measure]}
+                    />
+                  );
+                })}
               </div>
             )}
-          {measurement.gender === "F" && measurement.bodice_measure && (
+          {measurement.gender === "F" && measurement.bodiceMeasure && (
             <div className={styles.PDFemaleBodice}>
-              <span>This is the pattern design female Bodice</span>
-              {Object.keys(measurement.bodice_measure).map((measure, i) => {
+              <h2>Female Bodice</h2>
+              {Object.keys(measurement.bodiceMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
                     key={i}
                     handleChange={handleOnChangeMeasures}
                     action_type="update_bodice_measure"
                     name={measure}
-                    value={measurement.bodice_measure[measure]}
+                    value={measurement.bodiceMeasure[measure]}
                   />
                 );
               })}
             </div>
           )}
-          {measurement.gender === "F" && measurement.skirt_measure && (
+          {measurement.gender === "F" && measurement.skirtMeasure && (
             <div className={styles.PDFemaleSkirt}>
-              <span>This is the pattern design female skirt</span>
-              {Object.keys(measurement.skirt_measure).map((measure, i) => {
+              <h2>Female skirt</h2>
+              {Object.keys(measurement.skirtMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
                     key={i}
                     handleChange={handleOnChangeMeasures}
                     action_type="update_skirt_measure"
                     name={measure}
-                    value={measurement.skirt_measure[measure]}
+                    value={measurement.skirtMeasure[measure]}
                   />
                 );
               })}
             </div>
           )}
-          {measurement.gender === "F" && measurement.trouser_measure && (
+          {measurement.gender === "F" && measurement.trouserMeasure && (
             <div className={styles.PDFemaleTrouser}>
-              <span>This is the pattern design female Trouser</span>
-              {Object.keys(measurement.trouser_measure).map((measure, i) => {
+              <h2>Female Trouser</h2>
+              {Object.keys(measurement.trouserMeasure).map((measure, i) => {
                 return (
                   <MeasureInputField
                     key={i}
                     handleChange={handleOnChangeMeasures}
                     action_type="update_trouser_measure"
                     name={measure}
-                    value={measurement.trouser_measure[measure]}
+                    value={measurement.trouserMeasure[measure]}
                   />
                 );
               })}
@@ -291,17 +287,12 @@ function SingleMeasurement() {
         {/* When each section/field is clicked, the image component should change
         TODO: To make the image component dynamic
         */}
-        <div
-        // style={{
-        // backgroundImage: `url("/images/measurement/waist_measure.jpg")`,
-        // }}
-        >
+        <div>
           <img
             src={"/images/measurement/waist_measure.jpg"}
             alt="Body part"
             className={styles.imageContainer}
           />{" "}
-          Dynamic images come in here
         </div>
       </section>
       <span className={styles.saveButton}>save</span>

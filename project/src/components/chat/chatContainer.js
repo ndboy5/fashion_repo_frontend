@@ -1,45 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./chatContainer.module.css";
 import ChatBody from "./chatBody";
 import ChatHeader from "./chatHeader";
 import ChatMessage from "./chatMessage";
+import { useParams } from "react-router-dom";
 
-class ChatContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: [],
-    };
-    this.changeMessage = this.changeMessage.bind(this);
-    this.onButtonClick = this.onButtonClick.bind(this);
-  }
-
-  changeMessage(message) {
+function ChatContainer(props) {
+  let {id} = useParams();
+  const [message, setMessage] = useState([]);
+  function changeMessage(newMessage) {
     // event.preventDefault();
-
-    this.setState({
-      message: [...this.state.message, message],
-      // message: "Test",
-    });
+    setMessage([...message, newMessage]);
   }
 
-  onButtonClick(event) {
+  function onButtonClick(event) {
     event.preventDefault();
     console.log("Button clicked...");
     //TODO: @Chima I beleive your intent is to do something with the message, you can do that here
   }
 
-  render() {
+ 
+   // const { match } = props;
     return (
       <div className={styles.container}>
+        <p>Route params: {id}</p>
         <ChatHeader />
-        <ChatBody message={this.state.message} />
+        <ChatBody message={message} />
         <ChatMessage
-          onMessageChange={this.changeMessage}
-          onButtonClick={this.onButtonClick}
+          onMessageChange={changeMessage}
+          onButtonClick={onButtonClick}
         />
       </div>
     );
-  }
+  
 }
 export default ChatContainer;
