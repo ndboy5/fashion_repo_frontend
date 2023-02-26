@@ -20,7 +20,8 @@ function ChatMessage(props) {
 
     function handleKeydown(event){
         if(event.key === 'Enter'){
-            props.onMessageChange(message)
+            props.onMessageChange(message);
+            event.target.value = "";
             console.log("Enter pressed");
         }
     }
