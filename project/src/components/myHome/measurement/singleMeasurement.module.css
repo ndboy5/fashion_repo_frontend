@@ -5,7 +5,7 @@
 }
 
 .mainContainer {
-  color:#fff ;
+  color: #fff;
   background-color: #292929;
 }
 
@@ -37,13 +37,16 @@ select {
   margin-bottom: 1rem;
 }
 
-
-.detailsLeft
-{
-  border: #292929 solid thin;
+.detailsLeft {
+  border: #d6cd7c65 solid thin;
   display: flex;
+  padding-top: 1rem;
   flex-direction: column;
   width: 100%;
+}
+
+.detailsLeft i:hover {
+  color: #dad5d5;
 }
 
 .measureImageSection {
@@ -71,20 +74,20 @@ select {
   background-color: transparent;
   padding: 7px;
   width: 100%;
-color: #ffd700;
+  color: #ffd700;
   line-height: 1;
   border-radius: 15px;
   -webkit-appearance: none;
-  vertical-align: top!important;
+  vertical-align: top !important;
   text-align: left;
   height: auto;
   cursor: pointer;
-  line-height: 1em;
+  line-height: 1rem;
 }
 
 .select:hover {
-  background-color: #dabb0fdd;
-  border-color: #fdd700e9;
+  background-color: #1f1d1cdd;
+  border-color: #292825e9;
   color: #fff;
 }
 
@@ -108,20 +111,18 @@ color: #ffd700;
   color: #292929;
 }
 
-
 /* This could be changed if the appearance doesn't look good */
-h2 {
+.details h2 {
   font-size: 1.5rem;
   color: #ffd700;
 }
 
-h3{
+.details h3 {
   font-size: 1rem;
   color: #ffd700;
-  
+
   margin-bottom: 2rem;
 }
-
 
 .saveButton {
   background-color: #ba0f30;
@@ -140,7 +141,6 @@ h3{
   vertical-align: baseline;
   width: fit-content;
 }
-
 
 .saveButton:hover,
 .saveButton:focus {

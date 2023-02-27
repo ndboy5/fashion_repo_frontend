@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BsFillPersonFill } from "react-icons/bs";
 import EditDetails from "./editDetails";
 import styles from "./profileComponent.module.css";
 
@@ -38,7 +39,11 @@ function ProfileComponent() {
       <div className={styles.subContainer}>
         <h3 className={styles.label}>Profile Photo</h3>
         <div className={styles.profileImage}>
-          <div className={styles.userImage}>U</div>
+          <div className={styles.userImage}>
+            <i>
+              <BsFillPersonFill />
+            </i>
+          </div>
           <div className={styles.buttons}>
             <button>Change photo</button>
             <button>Remove Photo</button>
