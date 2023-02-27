@@ -20,6 +20,9 @@ function SingleMeasurement() {
   //TODO: recieve parameters when decided on whether to use Redux or not
   let params = useParams();
 
+  // flag for switching into the edit mode
+  const [isEditMode, setEditMode] = useState(false);
+
   const reducer = (measurement, action) => {
     const { name, value } = action.payload;
     switch (action.type) {
@@ -115,18 +118,45 @@ function SingleMeasurement() {
     <div className={styles.mainContainer}>
       <section className={styles.details}>
         <div className={styles.detailsLeft}>
+       {isEditMode? ( <form onSubmit={e=>setEditMode(false)}>
+          <input
+            className={styles.input}
+            type='text'
+            value={measurement.name}
+            name='name'
+            onChange={(e) => {
+              handleOnChangeMeasures(e, 'update_main_detail');
+            }}
+          />
+        </form>
+):(
+
           <h2>
             {measurement.name}
             <i>
-              <FaEdit />
+              <FaEdit onClick={e=>setEditMode(true)} />
             </i>
           </h2>
+       )} 
+{isEditMode? ( <form onSubmit={e=>setEditMode(false)}>
+          <input
+            className={styles.input}
+            type='text'
+            value={measurement.description}
+            name='description'
+            onChange={(e) => {
+              handleOnChangeMeasures(e, 'update_main_detail');
+            }}
+          />
+        </form>
+       ):(
           <h3>
             {`(${measurement.description})`}
             <i>
-              <FaEdit />
+              <FaEdit onClick={e=>setEditMode(true)} />
             </i>
           </h3>
+       )} 
           <div>
             <h3>
               {" "}
