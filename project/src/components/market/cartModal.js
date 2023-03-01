@@ -1,6 +1,6 @@
 import styles from "./cartModal.module.css";
 import { TfiClose } from "react-icons/tfi";
-import { FaMinus, FaPlus, FaTrash, FaTrashAlt } from "react-icons/fa";
+import { FaMinus, FaPlus, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function CartModal(props) {
   if (!props.show) {
@@ -31,7 +31,7 @@ function CartModal(props) {
           <hr />
           <div className={styles.info}>
             <div className={styles.pics}>
-              <img src="images/style-2.jpg"></img>
+              <img src="images/style-2.jpg" alt="dress"></img>
             </div>
             <div className={styles.detail}>
               <div className={styles.detailName}>
@@ -74,7 +74,7 @@ function CartModal(props) {
             </div>
           </div>
           <div className={styles.checkout}>
-            <Link to="/buyNowModal">
+            <Link to="/order">
               <button className={styles.button}>
                 <h3>Checkout</h3>
               </button>

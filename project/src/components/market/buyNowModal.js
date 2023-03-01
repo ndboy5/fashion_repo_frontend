@@ -18,7 +18,7 @@ function BuyNowModal(props) {
             <TfiClose />
           </i>
           <div className={styles.pic}>
-            <img src="images/style-2.jpg"></img>
+            <img src="images/style-2.jpg" alt="dress"></img>
           </div>
           <div className={styles.item}>
             <h1>Ankara Ready to wear dress</h1>
