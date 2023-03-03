@@ -1,7 +1,7 @@
 import { FaPersonBooth } from "react-icons/fa";
 import { BsCart, BsHeart, BsPerson, BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import styles from "./template.module.css";
+import styles from "./market.module.css";
 import { useState } from "react";
 import CartModal from "./cartModal";
 import BuyNowModal from "./buyNowModal";
