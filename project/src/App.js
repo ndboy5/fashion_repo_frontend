@@ -8,7 +8,7 @@ import SignUp from "./components/Signup/signup";
 import SignIn from "./components/Signin/signin";
 import MeasurementList from "./components/myHome/measurement/measurementList";
 import MyHome from "./components/myHome/myHome";
-import Market from "./components/market/template";
+import Market from "./components/market/market";
 import SingleMeasurement from "./components/myHome/measurement/singleMeasurement";
 import Layout from "./components/layouts/layout";
 import ProfileComponent from "./components/profile/profileComponent";
@@ -38,7 +38,7 @@ function App() {
           />
           <Route path="/userProfile" element={<ProfileComponent />} />
           <Route path="/buyNowModal" element={<BuyNowModal />} />
-          <Route path="/market/CartModal" element={<CartModal />} />
+          <Route path="/CartModal" element={<CartModal />} />
         </Route>
       </Routes>
     </div>

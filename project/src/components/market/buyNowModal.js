@@ -1,7 +1,7 @@
 import styles from "./buyNowModal.module.css";
 import { TfiClose } from "react-icons/tfi";
 import { FaMinus, FaPlus } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function BuyNowModal(props) {
   if (!props.open) {
     return null;
@@ -18,7 +18,7 @@ function BuyNowModal(props) {
             <TfiClose />
           </i>
           <div className={styles.pic}>
-            <img src="images/style-2.jpg"></img>
+            <img src="images/style-2.jpg" alt="dress"></img>
           </div>
           <div className={styles.item}>
             <h1>Ankara Ready to wear dress</h1>
@@ -43,9 +43,11 @@ function BuyNowModal(props) {
             </div>
           </div>
 
-          <button className={styles.buyNow}>
-            <h3>Buy Now</h3>
-          </button>
+          <Link to="/cartModal">
+            <button className={styles.buyNow}>
+              <h3>Buy Now</h3>
+            </button>
+          </Link>
           <button className={styles.addCart}>
             <h3>Add to cart</h3>
           </button>

@@ -1,5 +1,5 @@
 .container {
-  background-color: #fff;
+  background-color: #0a0a0a;
   display: flex;
   align-items: flex-start;
   height: 100vh;
@@ -11,11 +11,11 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  /* width: 70vw; */
   height: 80vh;
   padding: 20px;
   margin: auto;
-  margin-top: -4rem;
+  /* margin-top: -4rem; */
   justify-content: center;
   align-items: center;
 }
@@ -25,7 +25,7 @@
   font-size: 20px;
   margin: 15px 0 15px -24rem;
   padding-left: 4rem;
-  color: rgb(21, 158, 168);
+  color: rgb(18, 155, 165);
 }
 
 .labels {
@@ -36,10 +36,10 @@
   height: 50px;
   width: 50px;
   border-radius: 45px;
-  background-color: rgb(143, 143, 143);
+  background-color: rgb(207, 205, 205);
   text-align: center;
   padding-top: 15px;
-  border: 1px solid rgb(143, 143, 143);
+  border: 1px solid rgb(207, 205, 205);
   font-size: 20px;
   color: rgb(0, 0, 0);
   margin-right: 10rem;
@@ -52,8 +52,12 @@
   justify-content: space-between;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-bottom: 1px solid rgb(145, 141, 141);
+  border-bottom: 1px solid rgba(145, 141, 141, 0.685);
   width: 27rem;
+}
+
+.profileImage i {
+  margin-left: 12px;
 }
 
 .profileImage .buttons {

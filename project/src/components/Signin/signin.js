@@ -1,16 +1,26 @@
 import styles from "./signin.module.css";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function SignIn() {
+  // TODO: Setup toast options
+  // https://www.youtube.com/watch?v=otaQKODEUFs&t=4009s
+
   const navigate = useNavigate();
 
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
+
+  //allow user to automatically navigate to home if already signed in
+  useEffect(() => {
+    if (localStorage.getItem("online-couturier-user")) {
+      navigate("/myhome");
+    }
+  }, []); //empty dependency array to make it run only once
 
   // handle input change
   const handleInputChange = (event) => {
@@ -34,6 +44,10 @@ function SignIn() {
           console.log(
             `welcome ${name}! Glad to have you here :). Your have an ${role} role and and your ID is ${id}`
           );
+
+          //Save token to local storage
+          localStorage.setItem("online-couturier-user", token); //TODO: Encrypt the token for security reasons
+
           //After login, navigate to the myHome page
           navigate("/myhome");
         }
