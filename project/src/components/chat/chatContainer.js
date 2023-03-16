@@ -5,8 +5,6 @@ import ChatHeader from "./chatHeader";
 import ChatMessage from "./chatMessage";
 import { useParams } from "react-router-dom";
 
-import socketIO from "socket.io-client";
-const socket = socketIO.connect("http://localhost:5000");
 
 function ChatContainer(props) {
   let { id } = useParams();
