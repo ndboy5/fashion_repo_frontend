@@ -43,6 +43,7 @@ footer .contactMedia i {
   margin: 5px;
   font-size: 14px;
 }
+
 .contactMedia i:hover {
   color: rgb(242, 245, 48);
   margin: 5px;
@@ -51,4 +52,84 @@ footer .contactMedia i {
 footer p {
   color: rgb(206, 206, 180);
   font-size: 10px;
+}
+
+.contactMedia p {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    height: 9rem;
+  }
+
+  .footerItems a {
+    display: block;
+    line-height: 2;
+    margin-left: 3rem;
+    font-size: 10px;
+  }
+
+  footer .contactMedia i {
+    font-size: 9px;
+  }
+
+  footer p {
+    margin-top: 7rem;
+    margin-left: -3rem;
+    font-size: 8px;
+  }
+
+  .contactMedia p {
+    display: flex;
+    color: grey;
+    font-weight: 100;
+    /* width: 3rem; */
+    margin-top: -0.2rem;
+    margin-left: -2.5rem;
+    margin-bottom: -1rem;
+  }
+
+  .contactMedia a {
+    font-weight: 100;
+    margin-bottom: -1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 9rem;
+    margin-top: 3rem;
+  }
+
+  .footerItems a {
+    display: block;
+    line-height: 2;
+    margin-left: 3rem;
+    font-size: 10px;
+  }
+
+  footer .contactMedia i {
+    font-size: 9px;
+  }
+
+  footer p {
+    margin-top: 7rem;
+    margin-left: -3rem;
+    font-size: 8px;
+  }
+
+  .contactMedia p {
+    display: flex;
+    color: grey;
+    font-weight: 100;
+    margin-top: -0.2rem;
+    margin-left: -2.5rem;
+    margin-bottom: -1rem;
+  }
+
+  .contactMedia a {
+    font-weight: 100;
+    margin-bottom: -1rem;
+  }
 }

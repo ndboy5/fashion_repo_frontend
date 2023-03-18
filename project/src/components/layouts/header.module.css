@@ -97,3 +97,49 @@ header {
   color: white;
   transform: scaleX(1.1);
 }
+
+.header .hidden {
+  display: none;
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    width: 100vw;
+    height: 9rem;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .header .hidden {
+    display: flex;
+    margin-left: -32rem;
+    margin-top: 6.5rem;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: white;
+  }
+
+  .logo h2 {
+    margin-left: 10rem;
+    font-size: 16px;
+    /* margin-top: 10rem; */
+  }
+
+  .search {
+    margin-top: 5.8rem;
+  }
+
+  .search .btn i {
+    font-size: 14px;
+  }
+
+  .search input {
+    width: 15rem;
+    margin-left: 3rem;
+    border: none;
+  }
+}

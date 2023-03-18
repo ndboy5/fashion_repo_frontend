@@ -19,8 +19,9 @@
 
 .container img {
   height: 31rem;
-  width: 98.6vw;
+  width: 100vw;
   margin-top: -0.9rem;
+  margin-left: -0.4rem;
   object-fit: cover;
 }
 

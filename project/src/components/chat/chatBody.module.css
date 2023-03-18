@@ -1,8 +1,11 @@
 .chatBody {
   margin: 0;
   padding: 0;
-  background-color: rgb(248, 229, 166);
+  background-color: rgb(8, 37, 28);
   height: 480px;
+  display: flex;
   /* overflow-y: scroll; */
   color: white;
+  box-shadow: 0.5px 2px 5px #aaaaa7;
+  padding-top: 2rem;
 }

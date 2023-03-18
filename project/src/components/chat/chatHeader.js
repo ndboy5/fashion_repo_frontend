@@ -5,30 +5,17 @@ import { Link } from "react-router-dom";
 function ChatHeader() {
   return (
     <div className={styles.container}>
-      <Link to="/order" className={styles.a}>
-        <button className={styles.btn}>
-          <i>
-            <IoIosArrowBack />
-          </i>
-        </button>
-      </Link>
-
-      <div className={styles.title}>
-        <h3>
-          Sample chat forum
-          <button className={styles.headerIcon}>
+      <div className={styles.heading}>
+        <Link to="/order" className={styles.a}>
+          <button className={styles.btn}>
             <i>
-              <FaChevronDown />
+              <IoIosArrowBack />
             </i>
           </button>
-        </h3>
-      </div>
+        </Link>
 
-      <button className={styles.btn}>
-        <i>
-          <IoIosSearch />
-        </i>
-      </button>
+        <h2>Chats</h2>
+      </div>
     </div>
   );
 }

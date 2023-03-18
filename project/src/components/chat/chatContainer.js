@@ -6,7 +6,7 @@ import ChatMessage from "./chatMessage";
 import { useParams } from "react-router-dom";
 
 function ChatContainer(props) {
-  let {id} = useParams();
+  let { id } = useParams();
   const [message, setMessage] = useState([]);
   function changeMessage(newMessage) {
     // event.preventDefault();
@@ -19,19 +19,13 @@ function ChatContainer(props) {
     //TODO: @Chima I beleive your intent is to do something with the message, you can do that here
   }
 
- 
-   // const { match } = props;
-    return (
-      <div className={styles.container}>
-        <p>Route params: {id}</p>
-        <ChatHeader />
-        <ChatBody message={message} />
-        <ChatMessage
-          onMessageChange={changeMessage}
-          onButtonClick={onButtonClick}
-        />
-      </div>
-    );
-  
+  // const { match } = props;
+  return (
+    <div className={styles.container}>
+      <p>Route params: {id}</p>
+      <ChatHeader />
+      <ChatBody message={message} />
+    </div>
+  );
 }
 export default ChatContainer;

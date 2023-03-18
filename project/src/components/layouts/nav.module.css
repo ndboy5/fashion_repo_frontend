@@ -14,52 +14,63 @@
   z-index: 1;
 }
 
-.nav {
-  background-color: #fff;
-  color: white;
-  height: 3rem;
+.menu {
+  display: flex;
   padding: 0.8rem 0 1rem 0px;
-  position: relative;
-  width: 10rem;
+  margin-right: 5px;
 }
 
-.nav:hover {
-  background-color: rgba(180, 180, 178, 0.055);
+.menu .nav {
+  height: 48px;
+  width: 7rem;
+  margin-top: -12px;
+  margin-right: 5px;
+  padding: 0.8rem 0 1rem 10px;
+  text-align: center;
 }
 
-.nav a {
+.menu .nav:hover {
+  background-color: rgba(180, 180, 178, 0.301);
+}
+
+.menu a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: rgb(58, 58, 49);
   font-size: 14px;
   font-weight: 500;
   margin: auto;
-  margin-left: 18px;
   text-decoration: none;
 }
 
-.nav i {
-  color: rgb(179, 179, 175);
-  font-size: 11px;
+.menu .btn {
+  margin-top: -5px;
+}
+
+.menu i {
+  color: rgb(112, 112, 110);
+  font-size: 15px;
   font-weight: 600;
-  margin-right: 3px;
-  margin-left: 8px;
+  margin: 4rem 3px 1rem 5px;
 }
 
 .navMenu {
   background-color: rgb(65, 62, 62);
   line-height: 2;
   margin-top: 0.9rem;
+  margin-left: -0.6rem;
+  width: 7rem;
 }
 
-.navMenu ul {
+.menu .navMenu ul {
   display: none;
+  text-align: left;
 }
 
 .navMenu li {
   list-style-type: none;
   margin: 0;
-  padding-left: -3rem;
+  text-align: left;
 }
 .navMenu li a {
   color: white;
@@ -89,4 +100,25 @@
 
 .nav i :hover {
   color: black;
+}
+
+@media screen and (max-width: 375px) {
+  .nav a {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+
+  .nav {
+    height: 38px;
+    padding: 0.8rem 0 0.5rem 0px;
+    width: 10rem;
+  }
+
+  .navHolder {
+    width: 100vw;
+  }
+
+  .navMenu {
+    width: 7rem;
+  }
 }

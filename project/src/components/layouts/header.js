@@ -1,5 +1,10 @@
 import styles from "./header.module.css";
-import { FaSearch } from "react-icons/fa";
+import {
+  FaPortrait,
+  FaRegCalendarMinus,
+  FaRegMinusSquare,
+  FaSearch,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ProfileButton from "../profile/profileButton";
@@ -12,6 +17,10 @@ function Header() {
         <img src="" alt="" />
         <h2>LOGO</h2>
       </div>
+      <button className={styles.hidden}>
+        {" "}
+        <FaRegMinusSquare />
+      </button>
 
       <div className={styles.headerLeft}>
         <div className={styles.search}>
@@ -56,13 +65,5 @@ function Header() {
     </header>
   );
 }
-// const search = document.querySelector(".search");
-// const btn = document.querySelector(".btn");
-// const input = document.querySelector(".input");
-
-// btn.addEventListener("click", () => {
-//   search.classList.toggle("active");
-//   input.focus();
-// });
 
 export default Header;

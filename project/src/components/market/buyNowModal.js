@@ -10,7 +10,7 @@ function BuyNowModal(props) {
     <div
       className={styles.modal}
       //  modal closes on clicking anywhere on the modal
-      onClick={props.onClose}
+      // onClick={props.onClose}
     >
       <div className={styles.modal.body}>
         <div className={styles.buy}>
@@ -40,6 +40,11 @@ function BuyNowModal(props) {
                   <FaPlus />
                 </i>
               </div>
+            </div>
+            <div className={styles.mesBuyer}>
+              <Link to="/messageContainer">
+                <h3>Message Buyer</h3>
+              </Link>
             </div>
           </div>
 

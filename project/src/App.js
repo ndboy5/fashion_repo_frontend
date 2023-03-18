@@ -15,6 +15,9 @@ import ProfileComponent from "./components/profile/profileComponent";
 import BuyNowModal from "./components/market/buyNowModal";
 import CartModal from "./components/market/cartModal";
 import EditDetails from "./components/profile/editDetails";
+import ChatMessage from "./components/chat/chatMessage";
+
+import MessageContainer from "./components/chat/messageContainer";
 
 function App() {
   return (
@@ -24,7 +27,7 @@ function App() {
           {/*  defining the routes for the app  */}
           <Route path="/" element={<Home />} />
           <Route path="/myhome" element={<MyHome />} />
-          <Route path="/community" element={<ChatContainer />} />
+          <Route path="/chatContainer" element={<ChatContainer />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/topic/:id" element={<ChatContainer />} />
           <Route path="/signup" element={<SignUp />} />
@@ -39,6 +42,7 @@ function App() {
           <Route path="/userProfile" element={<ProfileComponent />} />
           <Route path="/buyNowModal" element={<BuyNowModal />} />
           <Route path="/CartModal" element={<CartModal />} />
+          <Route path="/messageContainer" element={<MessageContainer />} />
         </Route>
       </Routes>
     </div>

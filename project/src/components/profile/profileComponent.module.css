@@ -4,6 +4,7 @@
   align-items: flex-start;
   height: 100vh;
   margin-top: 8rem;
+  max-width: 100vw;
   position: relative;
 }
 

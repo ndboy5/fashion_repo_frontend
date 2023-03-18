@@ -1,40 +1,44 @@
 .container {
   height: 5rem;
-  border-bottom: solid;
+
   border-width: 1px;
   border-color: rgb(172, 171, 171);
   display: flex;
-  justify-content: space-between;
-  box-shadow: 10px, 5px, 5px, red;
-  background-color: rgb(12, 11, 11);
+  background-color: rgba(208, 218, 166, 0.836);
   color: white;
-  /* margin-top: 8.5rem; */
   padding: 1rem;
+  justify-content: left;
+  box-shadow: 0.5px 2px 5px #aaaaa7;
 }
 
-.btn {
+.heading h2 {
+  margin-left: 4rem;
+  margin-top: -2.8rem;
+  color: #000;
+}
+
+.heading .btn {
   height: 50px;
   background: none;
   color: black;
   border: none;
-  margin-top: 10px;
 }
 
-.btn i {
+.heading .btn i {
   font-size: 20px;
   color: grey;
 }
 
-.btn i:hover {
+.heading .btn i:hover {
   color: #fff;
 }
 
-.headerIcon {
+.heading .headerIcon {
   border: none;
   background-color: rgb(12, 11, 11);
   color: white;
 }
 
-.headerIcon :hover {
+.heading .headerIcon :hover {
   color: #fff;
 }

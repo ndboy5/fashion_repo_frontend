@@ -12,6 +12,7 @@
   margin: auto;
   margin-top: 5rem;
   margin-bottom: 3rem;
+  /* max-width: 100vw; */
   overflow: hidden;
 }
 
@@ -36,4 +37,21 @@ h4 {
 
 .rows:hover {
   color: rgb(96, 147, 180);
+}
+
+@media screen and (max-width: 375px) {
+  .topic {
+    max-width: 100vw;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .rows {
+    padding: 1rem;
+    font-size: 11px;
+    margin: auto;
+    justify-content: left;
+    width: 25rem;
+    line-height: 1;
+  }
 }

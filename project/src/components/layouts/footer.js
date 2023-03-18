@@ -14,24 +14,28 @@ function Footer() {
         <div className={styles.contactMedia}>
           <ul>
             <a href="">
+              <p>LinkedIn</p>{" "}
               <i className={styles.i}>
                 <FaLinkedinIn />
               </i>
             </a>
 
             <a href="">
+              <p>Instagram</p>
               <i className={styles.i}>
                 <FaInstagram />
               </i>
             </a>
 
             <a href="">
+              <p>Whatsapp</p>
               <i className={styles.i}>
                 <FaWhatsapp />
               </i>
             </a>
 
             <a href="">
+              <p>Twitter</p>
               <i className={styles.i}>
                 <FaTwitter />
               </i>
