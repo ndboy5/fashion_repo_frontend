@@ -6,7 +6,7 @@ function ChatHeader() {
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
-        <Link to="/order" className={styles.a}>
+        <Link to="/myhome" className={styles.a}>
           <button className={styles.btn}>
             <i>
               <IoIosArrowBack />

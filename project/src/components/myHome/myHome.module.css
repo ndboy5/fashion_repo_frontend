@@ -1,2 +1,36 @@
-.container {
+.Container {
+  margin-top: 16rem;
+}
+.myHome {
+  display: flex;
+  margin-top: -8rem;
+  justify-content: space-between;
+}
+
+.myHome .myHomeChat .btn,
+.myHome .myHomeMeasurement .btn {
+  background-color: #f38911;
+  border-radius: 10px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: light;
+  padding: 10px 16px;
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: -1.5rem;
+  box-shadow: 2px 2px 2px #adadab;
+}
+
+.myHome .myHomeMeasurement .btn {
+  margin-right: 2rem;
+}
+
+.myHomeTitle h2 {
+  color: #0e2b0c;
+}
+
+.myHomeCarousel {
+  margin-top: -8rem;
 }

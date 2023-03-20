@@ -93,7 +93,7 @@ header {
 }
 
 .login .btn:hover {
-  border: none;
+  border: 1px solid grey;
   color: white;
   transform: scaleX(1.1);
 }

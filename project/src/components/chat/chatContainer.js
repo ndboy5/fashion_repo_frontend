@@ -22,7 +22,7 @@ function ChatContainer(props) {
   // const { match } = props;
   return (
     <div className={styles.container}>
-      <p>Route params: {id}</p>
+      {/* <p>Route params: {id}</p> */}
       <ChatHeader />
       <ChatBody message={message} />
     </div>

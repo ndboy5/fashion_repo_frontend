@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+import Carousel from "../home/carousel";
 import Layout from "../layouts/layout";
-import MeasurementList from "./measurement/measurementList";
 import styles from "./myHome.module.css";
+
 /**
  *
  * @returns The home page for user experience that has been customized solely for the user
@@ -8,12 +10,25 @@ import styles from "./myHome.module.css";
 function MyHome() {
   //TODO: figure out where this component would be useful else it is to be deleted
   return (
-    <div className={styles.container}>
-      <div>
-        <h1>my Home page</h1>
-        <div>
-          <MeasurementList />
+    <div className={styles.Container}>
+      <div className={styles.myHome}>
+        <div className={styles.myHomeChat}>
+          <Link to="/chatContainer">
+            <button className={styles.btn}>Message Log</button>
+          </Link>
         </div>
+        <div className={styles.myHomeTitle}>
+          {" "}
+          <h2>MY HOME PAGE</h2>
+        </div>
+        <div className={styles.myHomeMeasurement}>
+          <Link to="/myhome/measurement">
+            <button className={styles.btn}>My Measurement</button>
+          </Link>
+        </div>
+      </div>
+      <div className={styles.myHomeCarousel}>
+        <Carousel />
       </div>
     </div>
   );

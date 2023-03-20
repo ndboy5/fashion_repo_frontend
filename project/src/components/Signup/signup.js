@@ -11,38 +11,38 @@ function SignUp() {
     lastname: "",
     email: "",
     password: "",
-    cpassword:"",
+    cpassword: "",
     phone: "",
     role: "customer",
   });
 
-  const handleValidation = () => {
-    const { password, cpassword, firstname, lastname, email, phone } = values;
-    if (password !== cpassword) {
-      // toast.error(
-      //   "Password and confirm password should be same.",
-      //   toastOptions
-      // );
-      return false;
-    } else if (firstname.length < 3 || lastname.length < 3) {
-      // toast.error(
-      //   "Username should be greater than 3 characters.",
-      //   toastOptions
-      // );
-      return false;
-    } else if (password.length < 8) {
-      // toast.error(
-      //   "Password should be equal or greater than 8 characters.",
-      //   toastOptions
-      // );
-      return false;
-    } else if (email === "") {
-      // toast.error("Email is required.", toastOptions);
-      return false;
-    }
+  // const handleValidation = () => {
+  //   const { password, cpassword, firstname, lastname, email, phone } = values;
+  //   if (password !== cpassword) {
+  //     // toast.error(
+  //     //   "Password and confirm password should be same.",
+  //     //   toastOptions
+  //     // );
+  //     return false;
+  //   } else if (firstname.length < 3 || lastname.length < 3) {
+  //     // toast.error(
+  //     //   "Username should be greater than 3 characters.",
+  //     //   toastOptions
+  //     // );
+  //     return false;
+  //   } else if (password.length < 8) {
+  //     // toast.error(
+  //     //   "Password should be equal or greater than 8 characters.",
+  //     //   toastOptions
+  //     // );
+  //     return false;
+  //   } else if (email === "") {
+  //     // toast.error("Email is required.", toastOptions);
+  //     return false;
+  //   }
 
-    return true;
-  };
+  //   return true;
+  // };
 
   const handleInputChange = (event) => {
     event.preventDefault();
@@ -52,29 +52,28 @@ function SignUp() {
 
   const handleSignUp = (event) => {
     event.preventDefault();
-    
-//Validate form entries before posting to server
-if(handleValidation()){
 
-    axios
-      .post("http://localhost:5000/api/v1/auth/register", {
-        ...credentials,
-      })
-      .then((response) => {
-        //TODO: Determine where to store token recieved from server securely
-        const { success, id, role, token, name } = response.data;
+    //Validate form entries before posting to server
+    if (true) {
+      axios
+        .post("http://localhost:5000/api/v1/auth/register", {
+          ...credentials,
+        })
+        .then((response) => {
+          //TODO: Determine where to store token recieved from server securely
+          const { success, id, role, token, name } = response.data;
 
-        if (success) {
-          console.log(
-            `welcome ${name}! Glad to have you here :). Your have an ${role} role and and your ID is ${id}`
-          );
-          //After login, navigate to the myHome page
-          navigate("/myhome");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+          if (success) {
+            console.log(
+              `welcome ${name}! Glad to have you here :). Your have an ${role} role and and your ID is ${id}`
+            );
+            //After login, navigate to the myHome page
+            navigate("/myhome");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
   };
 
@@ -123,7 +122,7 @@ if(handleValidation()){
           onChange={handleInputChange}
         ></input>
 
-          <div className={styles.password}>Confirm Password</div>
+        <div className={styles.password}>Confirm Password</div>
         <input
           type="password"
           name="cpassword"

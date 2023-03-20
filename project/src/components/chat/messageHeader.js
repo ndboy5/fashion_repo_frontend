@@ -1,20 +1,29 @@
 import styles from "./messageHeader.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import BuyNowModal from "../market/buyNowModal";
+import ProfilePic from "./profilePhoto";
 function MessageHeader() {
+  const [showBuynowModal, setShowBuynowModal] = useState(false);
   return (
     <div className={styles.messageHeader}>
       <div className={styles.mesgTitle}>
-        <button className={styles.btn}>
-          <Link to="/chatContainer">
-            <i>
-              <IoIosArrowBack />
-            </i>
-          </Link>
+        <button className={styles.btn} onClick={() => setShowBuynowModal(true)}>
+          <i>
+            <IoIosArrowBack />
+          </i>
         </button>
-
-        <h2>Message</h2>
+        <div className={styles.sellerPhoto}>
+          <ProfilePic />
+          <h3>Name of Vendor</h3>
+        </div>
       </div>
+      <BuyNowModal
+        setShowBuynowModal={setShowBuynowModal}
+        onClose={() => setShowBuynowModal(false)}
+        show={showBuynowModal}
+      />
     </div>
   );
 }

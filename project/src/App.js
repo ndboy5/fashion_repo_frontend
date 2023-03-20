@@ -18,6 +18,7 @@ import EditDetails from "./components/profile/editDetails";
 import ChatMessage from "./components/chat/chatMessage";
 
 import MessageContainer from "./components/chat/messageContainer";
+import ChatLog from "./components/chat/chatLog";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/buyNowModal" element={<BuyNowModal />} />
           <Route path="/CartModal" element={<CartModal />} />
           <Route path="/messageContainer" element={<MessageContainer />} />
+          <Route path="/chatLog" element={<ChatLog />} />
         </Route>
       </Routes>
     </div>

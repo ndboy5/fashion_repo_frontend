@@ -1,6 +1,6 @@
 import styles from "./cartModal.module.css";
 import { TfiClose } from "react-icons/tfi";
-import { FaMinus, FaPlus, FaTrashAlt } from "react-icons/fa";
+import { FaArrowLeft, FaMinus, FaPlus, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function CartModal(props) {
   if (!props.show) {
@@ -80,6 +80,12 @@ function CartModal(props) {
               </button>
             </Link>
           </div>
+
+          <Link to="/market">
+            <button className={styles.cartBackBtn}>
+              <p>Continue shoping</p>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

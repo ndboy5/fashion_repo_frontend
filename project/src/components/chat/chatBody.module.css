@@ -1,7 +1,7 @@
 .chatBody {
   margin: 0;
   padding: 0;
-  background-color: rgb(8, 37, 28);
+  background-color: #f0faf7;
   height: 480px;
   display: flex;
   /* overflow-y: scroll; */

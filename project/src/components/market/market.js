@@ -9,8 +9,8 @@ import BuyNowModal from "./buyNowModal";
 function Market() {
   let url = null;
   // This useState is declared for the modal
-  const [show, setShow] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [showCartModal, setShowCartModal] = useState(false);
+  const [showBuynowModal, setShowBuynowModal] = useState(false);
   return (
     <section className={styles.container}>
       <section className={styles.headerBar}>
@@ -38,7 +38,11 @@ function Market() {
             </i>
           </a>
           <div className={styles.sideline}></div>
-          <a href="#" onClick={() => setShow(true)} className={styles.a}>
+          <a
+            href="#"
+            onClick={() => setShowCartModal(true)}
+            className={styles.a}
+          >
             <i className={styles.i}>
               <BsCart />
             </i>
@@ -55,7 +59,10 @@ function Market() {
           <div className={styles.name}>Name of item</div>
           <div className={styles.price}>Price</div>
 
-          <button onClick={() => setOpen(true)} className={styles.btn}>
+          <button
+            onClick={() => setShowBuynowModal(true)}
+            className={styles.btn}
+          >
             <div className={styles.addCart}>
               <h6>View More</h6>
             </div>
@@ -63,9 +70,15 @@ function Market() {
         </div>
       </div>
 
-      <CartModal onClose={() => setShow(false)} show={show} />
+      <CartModal onClose={() => setShowCartModal(false)} show={showCartModal} />
+
       {/* <BuyNowModal onClose={() => setOpen(false)} open={open} /> */}
-      <BuyNowModal onClose={() => setOpen(false)} open={open} />
+      <BuyNowModal
+        setShowBuynowModal={setShowBuynowModal}
+        onClose={() => setShowBuynowModal(false)}
+        show={showBuynowModal}
+        setShowCartModal={setShowCartModal}
+      />
     </section>
   );
 }

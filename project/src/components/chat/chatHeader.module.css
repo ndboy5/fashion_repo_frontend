@@ -4,7 +4,7 @@
   border-width: 1px;
   border-color: rgb(172, 171, 171);
   display: flex;
-  background-color: rgba(208, 218, 166, 0.836);
+  background-color: rgb(22, 51, 40);
   color: white;
   padding: 1rem;
   justify-content: left;
@@ -14,7 +14,7 @@
 .heading h2 {
   margin-left: 4rem;
   margin-top: -2.8rem;
-  color: #000;
+  color: #fff;
 }
 
 .heading .btn {

@@ -10,6 +10,8 @@ import {
   FaDraftingCompass,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import measurement_data from "../../../data/measurement_data";
+import axios from "axios";
 /**
  * This component lists all the measurements in the user's records.
  * This includes measurements entered by the user and measurements shared with the user.
@@ -19,12 +21,21 @@ import { Link } from "react-router-dom";
 function MeasurementList() {
   const myMeasurements = measurementData;
 
+  if (true) {
+    axios
+      .get("http://localhost:5000/api/v1/measurements", {
+        ...measurement_data,
+      })
+      .then((response) => {
+        const {} = response.data;
+      });
+  }
   return (
-    <>
-      <section className={styles.container}>
-        <div>
-          <button className={styles.newButton}>New Measurement</button>
-        </div>
+    <section className={styles.container}>
+      <div>
+        <button className={styles.newButton}>New Measurement</button>
+      </div>
+      <div className={styles.measurementTable}>
         <table>
           <thead>
             <tr>
@@ -86,8 +97,8 @@ function MeasurementList() {
             ))}
           </tbody>
         </table>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

@@ -1,9 +1,10 @@
 import styles from "./buyNowModal.module.css";
 import { TfiClose } from "react-icons/tfi";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
 function BuyNowModal(props) {
-  if (!props.open) {
+  if (!props.show) {
     return null;
   }
   return (
@@ -17,6 +18,13 @@ function BuyNowModal(props) {
           <i onClick={props.onClose} className={styles.i}>
             <TfiClose />
           </i>
+          <button className={styles.buyArrowBack}>
+            <Link to="/market">
+              <i>
+                <BsArrowLeft />
+              </i>
+            </Link>
+          </button>
           <div className={styles.pic}>
             <img src="images/style-2.jpg" alt="dress"></img>
           </div>
@@ -43,17 +51,30 @@ function BuyNowModal(props) {
             </div>
             <div className={styles.mesBuyer}>
               <Link to="/messageContainer">
-                <h3>Message Buyer</h3>
+                <button className={styles.btn}>
+                  <p>Message Buyer</p>
+                </button>
               </Link>
             </div>
           </div>
 
-          <Link to="/cartModal">
-            <button className={styles.buyNow}>
-              <h3>Buy Now</h3>
-            </button>
-          </Link>
-          <button className={styles.addCart}>
+          <button
+            onClick={() => {
+              props.setShowCartModal(true);
+              props.setShowBuynowModal(false);
+            }}
+            className={styles.buyNow}
+          >
+            <h3>Buy Now</h3>
+          </button>
+
+          <button
+            onClick={() => {
+              props.setShowCartModal(true);
+              props.setShowBuynowModal(false);
+            }}
+            className={styles.addCart}
+          >
             <h3>Add to cart</h3>
           </button>
         </div>

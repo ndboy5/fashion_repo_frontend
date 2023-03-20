@@ -11,7 +11,7 @@ function Nav() {
       <ul className={styles.menu}>
         <li className={styles.nav}>
           <a href="#" className={styles.navName}>
-            <Link to={"/"}>My Home</Link>
+            <Link to={"/"}> Home</Link>
           </a>
 
           <button
