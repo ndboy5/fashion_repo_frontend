@@ -9,18 +9,19 @@
 
 .myHome .myHomeChat .btn,
 .myHome .myHomeMeasurement .btn {
-  background-color: #f38911;
+  background-color: #e4fde2;
+  /* border: 1px solid #333; */
   border-radius: 10px;
   border-style: none;
-  color: #fff;
+  color: #333;
   cursor: pointer;
   font-size: 14px;
-  font-weight: light;
+  font-weight: bold;
   padding: 10px 16px;
   text-align: center;
   margin-left: 2rem;
   margin-top: -1.5rem;
-  box-shadow: 2px 2px 2px #adadab;
+  box-shadow: 1px 4px 2px #adadab;
 }
 
 .myHome .myHomeMeasurement .btn {
@@ -28,7 +29,8 @@
 }
 
 .myHomeTitle h2 {
-  color: #0e2b0c;
+  color: #c92d06;
+  font-weight: bold;
 }
 
 .myHomeCarousel {
