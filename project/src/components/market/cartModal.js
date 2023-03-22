@@ -83,7 +83,7 @@ function CartModal(props) {
 
           <Link to="/market">
             <button className={styles.cartBackBtn}>
-              <p>Continue shoping</p>
+              <h3>Continue shopping</h3>
             </button>
           </Link>
         </div>

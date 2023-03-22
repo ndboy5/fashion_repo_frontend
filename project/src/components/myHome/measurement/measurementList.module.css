@@ -12,18 +12,18 @@ table {
   border-collapse: collapse;
   margin: 0;
   font-size: 0.9em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 2);
   table-layout: fixed;
-  /* width: 48rem; */
+  width: 100vw;
 }
 
 tbody tr {
   border-bottom: thin solid #a46572c5;
 }
 
-tbody tr:last-of-type {
+/* tbody tr:last-of-type {
   border-bottom: 2px solid #991e35;
-}
+} */
 
 th,
 td {
@@ -50,7 +50,7 @@ tbody tr:hover {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  margin: 2px;
+  margin: 5px;
   padding: 10px 16px;
   text-align: center;
   transition: color 100ms;

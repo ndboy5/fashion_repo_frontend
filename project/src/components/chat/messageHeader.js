@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import BuyNowModal from "../market/buyNowModal";
 import ProfilePic from "./profilePhoto";
+import CartModal from "../market/cartModal";
 function MessageHeader() {
   const [showBuynowModal, setShowBuynowModal] = useState(false);
+  const [showCartModal, setShowCartModal] = useState(false);
   return (
     <div className={styles.messageHeader}>
       <div className={styles.mesgTitle}>
@@ -18,12 +20,20 @@ function MessageHeader() {
           <ProfilePic />
           <h3>Name of Vendor</h3>
         </div>
+        <div className={styles.messageChatLog}>
+          <Link to="/chatContainer">
+            <button>
+              <p>Chat Log</p>
+            </button>
+          </Link>
+        </div>
       </div>
       <BuyNowModal
-        setShowBuynowModal={setShowBuynowModal}
         onClose={() => setShowBuynowModal(false)}
         show={showBuynowModal}
+        setShowCartModal={setShowCartModal}
       />
+      <CartModal onClose={() => setShowCartModal(false)} show={showCartModal} />
     </div>
   );
 }

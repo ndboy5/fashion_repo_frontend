@@ -9,7 +9,11 @@
 
 .myHome .myHomeChat .btn,
 .myHome .myHomeMeasurement .btn {
-  background-color: #e4fde2;
+  background: linear-gradient(
+    45deg,
+    rgba(129, 85, 85, 0.2),
+    rgba(255, 255, 255, 0)
+  );
   /* border: 1px solid #333; */
   border-radius: 10px;
   border-style: none;
@@ -22,6 +26,7 @@
   margin-left: 2rem;
   margin-top: -1.5rem;
   box-shadow: 1px 4px 2px #adadab;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .myHome .myHomeMeasurement .btn {
@@ -34,5 +39,16 @@
 }
 
 .myHomeCarousel {
-  margin-top: -8rem;
+  margin-top: -4rem;
+}
+
+.myHomeCarousel .measureSummary {
+  width: 20rem;
+  height: 400px;
+}
+
+.myHomeCarousel .favTopics {
+  background-color: rgb(221, 220, 235);
+  width: 20rem;
+  height: 400px;
 }

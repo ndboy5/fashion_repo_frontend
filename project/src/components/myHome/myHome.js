@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Carousel from "../home/carousel";
 import Layout from "../layouts/layout";
+import MeasurementList from "./measurement/measurementList";
 import styles from "./myHome.module.css";
 
 /**
@@ -13,22 +13,26 @@ function MyHome() {
     <div className={styles.Container}>
       <div className={styles.myHome}>
         <div className={styles.myHomeChat}>
-          <Link to="/chatContainer">
-            <button className={styles.btn}>Message Log</button>
+          <Link to="/">
+            <button className={styles.btn}>Home</button>
           </Link>
         </div>
         <div className={styles.myHomeTitle}>
           {" "}
-          <h2>MY HOME PAGE</h2>
+          <h2>Welcome!</h2>
         </div>
         <div className={styles.myHomeMeasurement}>
-          <Link to="/myhome/measurement">
-            <button className={styles.btn}>My Measurement</button>
+          <Link to="/chatContainer">
+            <button className={styles.btn}>My Inbox</button>
           </Link>
         </div>
       </div>
       <div className={styles.myHomeCarousel}>
-        <Carousel />
+        <div className={styles.measureSummary}>
+          {" "}
+          <MeasurementList />{" "}
+        </div>
+        <div className={styles.favTopics}>My favorite topics </div>
       </div>
     </div>
   );

@@ -52,7 +52,7 @@ function BuyNowModal(props) {
             <div className={styles.mesBuyer}>
               <Link to="/messageContainer">
                 <button className={styles.btn}>
-                  <p>Message Buyer</p>
+                  <h3>Message Buyer</h3>
                 </button>
               </Link>
             </div>

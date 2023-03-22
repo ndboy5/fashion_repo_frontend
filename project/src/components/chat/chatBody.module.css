@@ -3,9 +3,16 @@
   padding: 0;
   background-color: #f0faf7;
   height: 480px;
-  display: flex;
-  /* overflow-y: scroll; */
   color: white;
   box-shadow: 0.5px 2px 5px #aaaaa7;
   padding-top: 2rem;
+}
+.chatHistory {
+  display: flex;
+  height: 5rem;
+  width: 80vh;
+}
+
+.chatBody hr {
+  width: 55vw;
 }

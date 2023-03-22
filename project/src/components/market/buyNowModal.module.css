@@ -41,6 +41,10 @@
   border: none;
 }
 
+.buyArrowBack i {
+  font-size: 40px;
+}
+
 .buy i:hover {
   color: black;
 }
@@ -119,9 +123,9 @@
   box-shadow: 2px 2px 7px #cacac6;
 }
 
-.mesBuyer p {
+.mesBuyer h3 {
   font-family: Arial, Helvetica, sans-serif;
-  color: #000;
+  color: #333;
   font-size: medium;
   text-align: center;
   margin-left: 5px;

@@ -10,8 +10,11 @@ function ChatBody(props) {
       {props.message.map((message) => (
         <SingleChatTemplate singleMessage={message} />
       ))}
-      <ProfilePic />
-      <ChatLog />
+      <div className={styles.chatHistory}>
+        <ProfilePic />
+        <ChatLog />
+      </div>
+      <hr></hr>
     </div>
   );
 }

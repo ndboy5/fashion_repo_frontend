@@ -6,7 +6,7 @@
 
 .messageHeader {
   background-color: rgba(208, 218, 166, 0.836);
-  height: 5rem;
+  height: 5.5rem;
   width: 80vw;
   margin-top: -4rem;
   box-shadow: 0.5px 2px 5px #aaaaa7;
@@ -19,28 +19,56 @@
 
 .mesgTitle {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 5px;
+  width: 80vw;
 }
 .mesgTitle h3 {
   color: #000;
-  margin-left: 5rem;
+  margin-left: -10px;
+  margin-top: 2rem;
+  padding-top: 5px;
+}
+
+.mesgTitle button {
+  background: none;
+  border: none;
+  height: 3rem;
+  width: 7rem;
+  margin-right: 1rem;
+}
+
+.mesgTitle .messageChatLog p {
+  background-color: rgba(219, 230, 176, 0.836);
+  border: 1px solid #333;
+  border-radius: 10px;
+  border-style: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 16px;
+  text-align: center;
+  margin-top: 1.5rem;
+  height: 3rem;
+  width: 7rem;
+  box-shadow: 1px 2px 2px #adadab;
 }
 
 .messageHeader .btn {
   background: none;
   color: black;
   border: none;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .messageHeader .btn i {
   font-size: 20px;
-  color: #333;
+  color: #686565;
   padding-top: 1rem;
 }
 
 .messageHeader .btn i:hover {
-  color: #fff;
+  color: #000;
 }
