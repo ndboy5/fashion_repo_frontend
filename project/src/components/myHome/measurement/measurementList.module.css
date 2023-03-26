@@ -8,6 +8,11 @@
   width: 100vw;
 }
 
+table tbody a{
+    color: #dc3636;
+    text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
   margin: 0;
@@ -71,6 +76,11 @@ tbody tr:hover {
     display: none;
   }
 
+  table, table tbody, table tr, table td{
+    display: block;
+    width: 100%;
+   }
+
   tbody {
     display: block;
   }
@@ -87,10 +97,9 @@ tbody tr:hover {
   }
 
   tbody td {
-    display: block;
     text-align: right;
-    font-size: 14px;
-    padding: 10px 15px;
+    /* font-size: 14px; */
+    padding-left: 50%;
     position: relative;
   }
 
@@ -98,8 +107,8 @@ tbody tr:hover {
     content: attr(data-label);
     position: absolute;
     left: 0;
-    top: 0;
-    padding: 10px 15px;
+    /* top: 0; */
+    padding-left: 15px;
     text-align: left;
     font-weight: bold;
     font-size: 14px;

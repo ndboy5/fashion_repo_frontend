@@ -11,8 +11,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+
 /**
  * This component lists all the measurements in the user's records.
  * This includes measurements entered by the user and measurements shared with the user.
