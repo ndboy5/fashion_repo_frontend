@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import measurement_data from "../../../data/measurement_data";
 import axios from "axios";
+
 /**
  * This component lists all the measurements in the user's records.
  * This includes measurements entered by the user and measurements shared with the user.
