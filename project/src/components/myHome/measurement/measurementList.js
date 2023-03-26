@@ -10,8 +10,9 @@ import {
   FaDraftingCompass,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import measurement_data from "../../../data/measurement_data";
 import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 /**
  * This component lists all the measurements in the user's records.
  * This includes measurements entered by the user and measurements shared with the user.
@@ -19,21 +20,20 @@ import axios from "axios";
  */
 
 function MeasurementList() {
-  const myMeasurements = measurementData;
+  const [myMeasurements, setMyMeasurements] = useState([]);
 
-  if (true) {
-    axios
-      .get("http://localhost:5000/api/v1/measurements", {
-        ...measurement_data,
-      })
-      .then((response) => {
-        const {} = response.data;
-      });
-  }
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/v1/measurements").then((response) => {
+      setMyMeasurements(response.data.data);
+    });
+  }, []);
+
   return (
     <section className={styles.container}>
       <div>
-        <button className={styles.newButton}>New Measurement</button>
+        <Link to="/newMeasurement">
+          <button className={styles.newButton}>New Measurement</button>
+        </Link>
       </div>
       <div className={styles.measurementTable}>
         <table>

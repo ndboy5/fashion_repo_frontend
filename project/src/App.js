@@ -19,6 +19,7 @@ import ChatMessage from "./components/chat/chatMessage";
 
 import MessageContainer from "./components/chat/messageContainer";
 import ChatLog from "./components/chat/chatLog";
+import NewMeasurement from "./components/myHome/measurement/newMeasurement";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/CartModal" element={<CartModal />} />
           <Route path="/messageContainer" element={<MessageContainer />} />
           <Route path="/chatLog" element={<ChatLog />} />
+          <Route path="/newMeasurement" element={<NewMeasurement />} />
         </Route>
       </Routes>
     </div>

@@ -9,75 +9,100 @@ function Nav() {
   return (
     <nav className={styles.navHolder}>
       <ul className={styles.menu}>
-        <li className={styles.nav}>
-          <a href="#" className={styles.navName}>
-            <Link to={"/"}> Home</Link>
-          </a>
-
-          <button
-            className={styles.btn}
-            onClick={() => {
-              setIsNavMenuToggle(!isNavMenuToggle);
-            }}
-          >
-            <i className={styles.i}>
-              <IoMdArrowDropdown />
-            </i>
-          </button>
-
-          <div
-            className={
-              isNavMenuToggle ? styles.navMenu.expanded : styles.navMenu
-            }
-          >
-            <ul
-              className={styles.navMenu}
-              onClick={() => setIsNavMenuToggle(false)}
+        <button className={styles.btn}>
+          <li className={styles.nav}>
+            <Link to={"/"}>
+              <a href="#" className={styles.navName}>
+                Home
+              </a>
+            </Link>
+            <button
+              className={styles.btnI}
+              onClick={() => {
+                setIsNavMenuToggle(!isNavMenuToggle);
+              }}
             >
-              <li>
+              <i className={styles.i}>
+                <IoMdArrowDropdown />
+              </i>
+            </button>
+
+            <div
+              className={
+                isNavMenuToggle ? styles.navMenu.expanded : styles.navMenu
+              }
+            >
+              <ul
+                className={styles.navMenu}
+                onClick={() => setIsNavMenuToggle(false)}
+              >
                 <Link to={"/order"}>
-                  {" "}
-                  <a href="">Order</a>
+                  <button className={styles.btn3}>
+                    <li>
+                      {" "}
+                      <a href="">Order</a>
+                    </li>
+                  </button>
                 </Link>
-              </li>
-              <li>
                 <Link to={"/"}>
-                  {" "}
-                  <a href="">My Tailor</a>{" "}
+                  <button className={styles.btn3}>
+                    <li>
+                      {" "}
+                      <a href="">My Tailor</a>
+                    </li>
+                  </button>
                 </Link>
-              </li>
 
-              <li>
                 <Link to={"/myhome/measurement"}>
-                  <a href=""> Measurement</a>
+                  <button className={styles.btn3}>
+                    <li>
+                      {" "}
+                      <a href="">Measurement</a>
+                    </li>
+                  </button>
                 </Link>
-              </li>
-              <li>
                 <Link to={"/chatContainer"}>
-                  <a href=""> Chats</a>
+                  <button className={styles.btn3}>
+                    <li>
+                      {" "}
+                      <a href="">Chats</a>
+                    </li>
+                  </button>
                 </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
+              </ul>
+            </div>
+          </li>
+        </button>
 
-        <li className={styles.nav}>
-          <a href="#" className={styles.a}>
-            <Link to="/Market">Market</Link>
-          </a>
-        </li>
+        <Link to="/Market">
+          <button className={styles.btn}>
+            <li className={styles.nav}>
+              {" "}
+              Market
+              <a href="#" className={styles.a}></a>
+            </li>
+          </button>
+        </Link>
 
-        <li className={styles.nav}>
-          <Link to="/gallery" className={styles.a}>
-            Gallery
-          </Link>
-        </li>
+        <Link to="/gallery">
+          <button className={styles.btn}>
+            <li className={styles.nav}>
+              {" "}
+              Gallery
+              <a href="#" className={styles.a}></a>
+            </li>
+          </button>
+        </Link>
 
-        <li className={styles.nav}>
-          <a href="#" className={styles.a}>
-            About Us
-          </a>
-        </li>
+        <Link to="/">
+          <button className={styles.btn}>
+            <li className={styles.nav}>
+              {" "}
+              About Us
+              <a href="#" className={styles.a}></a>
+            </li>
+          </button>
+        </Link>
       </ul>
     </nav>
   );
