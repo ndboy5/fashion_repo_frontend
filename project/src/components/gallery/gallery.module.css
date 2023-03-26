@@ -10,6 +10,7 @@
   height: 30px;
   margin-top: -1.2rem;
   position: fixed;
+  justify-content: center;
   width: 100vw;
   z-index: 1;
 }
