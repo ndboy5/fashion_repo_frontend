@@ -1,10 +1,9 @@
-import styles from "./signin.module.css";
-import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import styles from "./newTopic.module.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import axios from "axios";
 
-function TopicForm() {
+function NewTopic() {
   // TODO: Setup toast options
   // https://www.youtube.com/watch?v=otaQKODEUFs&t=4009s
 
@@ -99,4 +98,4 @@ function TopicForm() {
     </form>
   );
 }
-export default TopicForm;
+export default NewTopic;

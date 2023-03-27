@@ -15,8 +15,8 @@ function Topic(props) {
         )}`,
       },
     };
-    //Get topics from the server
-
+    //Get trending topics from the server
+    //TODO: filter on server side to receive only the top 50 trending topics
     axios
       .get("http://localhost:5000/api/v1/topics", config)
       .then((response) => {

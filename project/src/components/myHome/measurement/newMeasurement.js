@@ -31,6 +31,7 @@ function NewMeasurement() {
   });
 
   const handleInputChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setMeasurement((prevState) => ({
       ...prevState,
@@ -39,6 +40,7 @@ function NewMeasurement() {
   };
 
   const handleUpperBodyInputChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setMeasurement((prevState) => ({
       ...prevState,
@@ -51,6 +53,7 @@ function NewMeasurement() {
 
   // setMeasurement({ ...measurement, [name]: value })
   const handleLowerBodyInputChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setMeasurement((prevState) => ({
       ...prevState,
@@ -64,27 +67,26 @@ function NewMeasurement() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Code to send `measurement` to server
-    const { name, value } = event.target;
-    setMeasurement({ ...measurement, [name]: value });
+    // const { name, value } = event.target;
+    // setMeasurement({ ...measurement, [name]: value });
     console.log(measurement);
+    axios
+      .post("http://localhost:5000/api/v1/measurements", {
+        measurement,
+      })
+      .then((response) => {
+        //TODO: Determine where to store token recieved from server securely
+        const { name, success } = response.data;
+        if (success) {
+          console.log(response.data);
+          //After login, navigate to the myHome page
+          navigate("/myhome");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
-
-  axios
-    .post("http://localhost:5000/api/v1/measurements", {
-      ...measurement,
-    })
-    .then((response) => {
-      //TODO: Determine where to store token recieved from server securely
-      const { name, success } = response.data;
-      if (success) {
-        console.log(response.data);
-        //After login, navigate to the myHome page
-        navigate("/myhome");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
 
   return (
     <div className={styles.container}>
@@ -104,6 +106,7 @@ function NewMeasurement() {
           <input
             type="text"
             name="description"
+            placeholder="purpose of measurement"
             value={measurement.description}
             onChange={handleInputChange}
           />
