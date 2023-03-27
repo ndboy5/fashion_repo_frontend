@@ -21,20 +21,27 @@
   margin-right: 5px;
 }
 
+.menu .btn {
+  height: 48px;
+  width: 9rem;
+  margin-top: -7px;
+}
+
 .menu .nav {
   height: 48px;
   width: 9rem;
-  margin-top: -12px;
+  margin-top: -10px;
   margin-right: 5px;
   padding: 0.8rem 0 1rem 10px;
   text-align: center;
 }
 
 .menu .nav:hover {
-  background-color: rgba(245, 245, 243, 0.39);
+  background-color: rgba(226, 226, 154, 0.39);
+  margin-top: -10px;
 }
 
-.menu a {
+.menu .nav a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: rgb(58, 58, 49);
@@ -42,10 +49,14 @@
   font-weight: 500;
   margin: auto;
   text-decoration: none;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
 }
 
-.menu .btn {
-  margin-top: -5px;
+.menu .btnI {
+  margin-left: 15px;
+  background: none;
+  border: none;
 }
 
 .menu i {
@@ -55,32 +66,42 @@
   margin: 4rem 3px 1rem 5px;
 }
 
-.navMenu {
+.menu .navMenu {
   background-color: rgb(65, 62, 62);
   line-height: 2;
-  margin-top: 0.9rem;
+  margin-top: 1.1rem;
   margin-left: -0.6rem;
   width: 9rem;
 }
 
 .menu .navMenu ul {
   display: none;
-  text-align: left;
 }
 
-.navMenu li {
+.menu .navMenu li {
   list-style-type: none;
   margin: 0;
   text-align: left;
 }
-.navMenu li a {
+.menu .navMenu li a {
   color: white;
-  margin-left: 0.6rem;
+  margin-left: 1rem;
   font-size: 13px;
 }
 
-.navMenu li:hover {
+.navMenu .btn3 {
+  background-color: red;
+  width: 9rem;
+  height: 2rem;
+  margin-left: -0.5rem;
+  background: none;
+  border: none;
+}
+
+.navMenu .btn3:hover {
   background-color: rgba(199, 189, 189, 0.164);
+  width: 9rem;
+  height: 2rem;
 }
 
 .navMenu .expanded ul {
