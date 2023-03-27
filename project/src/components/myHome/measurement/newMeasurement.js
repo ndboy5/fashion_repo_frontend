@@ -75,9 +75,9 @@ function NewMeasurement() {
     })
     .then((response) => {
       //TODO: Determine where to store token recieved from server securely
-      const { name, success } = response.data;
+      const { success } = response.data;
       if (success) {
-        console.log(response.data);
+        console.log(`new measurements added`);
         //After login, navigate to the myHome page
         navigate("/myhome");
       }
@@ -89,39 +89,38 @@ function NewMeasurement() {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={measurement.name}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Description:
-          <input
-            type="text"
-            name="description"
-            value={measurement.description}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Gender:
-          <input
-            type="text"
-            name="gender"
-            value={measurement.gender}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-
-        <br />
         <div className={styles.upperBody}>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={measurement.name}
+              onChange={handleInputChange}
+            />
+          </label>
+          <br />
+          <label>
+            Description:
+            <input
+              type="text"
+              name="description"
+              value={measurement.description}
+              onChange={handleInputChange}
+            />
+          </label>
+          <br />
+          <label>
+            Gender:
+            <input
+              type="text"
+              name="gender"
+              value={measurement.gender}
+              onChange={handleInputChange}
+            />
+          </label>
+          <br />
+          <br />
           UPPER BODY
           <br />
           <label>
@@ -163,63 +162,63 @@ function NewMeasurement() {
               onChange={handleUpperBodyInputChange}
             />
           </label>
+          <div className={styles.upperBody}>
+            <br />
+            LOWER BODY
+            <br />
+            <label>
+              Shoulder Width:
+              <input
+                type="number"
+                name="Shoulder Width"
+                value={measurement.lowerBodyMeasure["Shoulder Width"]}
+                onChange={handleLowerBodyInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Chest:
+              <input
+                type="number"
+                name="Chest"
+                value={measurement.lowerBodyMeasure.Chest}
+                onChange={handleLowerBodyInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Waist:
+              <input
+                type="number"
+                name="Waist"
+                value={measurement.lowerBodyMeasure.Waist}
+                onChange={handleLowerBodyInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Hip:
+              <input
+                type="number"
+                name="Hip"
+                value={measurement.lowerBodyMeasure.Hip}
+                onChange={handleLowerBodyInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              BackLength:
+              <input
+                type="number"
+                name="BackLength"
+                value={measurement.lowerBodyMeasure.BackLength}
+                onChange={handleLowerBodyInputChange}
+              />
+            </label>
+            <br />
+            <button type="submit">Submit</button>
+          </div>
         </div>
-        <br />
-
-        <div className={styles.upperBody}>
-          LOWER BODY
-          <br />
-          <label>
-            Shoulder Width:
-            <input
-              type="number"
-              name="Shoulder Width"
-              value={measurement.lowerBodyMeasure["Shoulder Width"]}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Chest:
-            <input
-              type="number"
-              name="Chest"
-              value={measurement.lowerBodyMeasure.Chest}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Waist:
-            <input
-              type="number"
-              name="Waist"
-              value={measurement.lowerBodyMeasure.Waist}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Hip:
-            <input
-              type="number"
-              name="Hip"
-              value={measurement.lowerBodyMeasure.Hip}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            BackLength:
-            <input
-              type="number"
-              name="BackLength"
-              value={measurement.lowerBodyMeasure.BackLength}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-        </div>
-        <button type="submit">Submit</button>
       </form>
     </div>
   );
