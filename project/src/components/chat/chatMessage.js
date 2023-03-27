@@ -1,6 +1,7 @@
 import styles from "./chatMessage.module.css";
 import { IoIosAddCircle, IoMdAddCircleOutline, IoMdSend } from "react-icons/io";
 import { GrAttachment, GrEmoji } from "react-icons/gr";
+import { GoThumbsdown, GoThumbsup } from "react-icons/go";
 import { BiMicrophone } from "react-icons/bi";
 import { useEffect, useState } from "react";
 /**
@@ -42,18 +43,28 @@ function ChatMessage(props) {
           <IoMdSend />
         </i>
       </div>
+
       <div className={styles.icons}>
         <button className={styles.btn}>
           <i>
-            <IoIosAddCircle />
+            <GoThumbsup />
           </i>
         </button>
-
+        <button className={styles.btn}>
+          <i>
+            <GoThumbsdown />
+          </i>
+        </button>
         <button className={styles.btn}>
           <i>
             <GrEmoji />
           </i>
         </button>
+        {/* <button className={styles.btn}>
+          <i>
+            <IoIosAddCircle />
+          </i>
+        </button> */}
 
         <button className={styles.btn}>
           <i>

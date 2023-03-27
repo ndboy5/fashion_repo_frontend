@@ -12,6 +12,10 @@
   box-shadow: 0.5px 2px 5px #aaaaa7;
 }
 
+.icons {
+  margin-left: 2rem;
+}
+
 .icons .btn {
   background: none;
   border: none;
