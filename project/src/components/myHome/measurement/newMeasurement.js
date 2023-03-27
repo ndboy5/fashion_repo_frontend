@@ -67,13 +67,13 @@ function NewMeasurement() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Code to send `measurement` to server
-    const { name, value } = event.target;
-    setMeasurement({ ...measurement, [name]: value });
+    // const { name, value } = event.target;
+    // setMeasurement({ ...measurement, [name]: value });
     console.log(measurement);
     axios
-      .post("http://localhost:5000/api/v1/measurements", {
+      .post("http://localhost:5000/api/v1/measurements", 
         measurement,
-      })
+      )
       .then((response) => {
         //TODO: Determine where to store token recieved from server securely
         const { name, success } = response.data;
