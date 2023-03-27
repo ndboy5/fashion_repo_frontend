@@ -1,10 +1,37 @@
 // import trending_topics_data from "../../data/trend_topic_data";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./topic.module.css";
+import axios from "axios";
 
 function Topic(props) {
-  // const topics = trending_topics_data;
-  const topics = props.data;
+  const [topics, setTopics] = useState([]);
+  useEffect(() => {
+    //setup config for http header to server
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem(
+          "online-couturier-user"
+        )}`,
+      },
+    };
+    //Get trending topics from the server
+    //TODO: filter on server side to receive only the top 50 trending topics
+    axios
+      .get("http://localhost:5000/api/v1/topics", config)
+      .then((response) => {
+        const { success, data } = response.data;
+
+        if (success) {
+          // load topics received from server
+          setTopics(data);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <div className={styles.topic}>
       <div class="rows">
@@ -12,7 +39,7 @@ function Topic(props) {
 
         {topics.map((tp) => (
           <Link to={"/topic/" + tp.id} className={styles.rows}>
-            {tp.topic}
+            {tp.title}
           </Link>
         ))}
       </div>

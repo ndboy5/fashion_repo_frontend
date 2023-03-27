@@ -45,8 +45,9 @@ function SignIn() {
             `welcome ${name}! Glad to have you here :). Your have an ${role} role and and your ID is ${id}`
           );
 
-          //Save token to local storage
-          localStorage.setItem("online-couturier-user", token); //TODO: Encrypt the token for security reasons
+          //Save token and user id to local storage
+          localStorage.setItem("online-couturier-user-tk", token); //TODO: Encrypt the token for security reasons
+          localStorage.setItem("online-couturier-user", id);
 
           //After login, navigate to the myHome page
           navigate("/myhome");

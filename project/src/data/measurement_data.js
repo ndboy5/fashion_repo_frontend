@@ -1,6 +1,5 @@
 const measurement_data = [
   {
-    id: 1,
     name: "Sample Measurement 1",
     description: "for trad wear",
     gender: "M",

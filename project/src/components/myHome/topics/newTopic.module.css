@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #fff;
+  height: 500px;
+  margin: auto;
+  margin-top: 8rem;
+  padding-top: 2px;
+  width: 25rem;
+}
+
+.btn {
+  margin-left: 3rem;
+  font-weight: 500;
+}
+
+.container h3 {
+  color: rgb(128, 51, 64);
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  margin-left: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.title,
+.detail {
+  margin-top: 0.5rem;
+  margin-left: 2.8rem;
+}
+
+input,
+.btn {
+  height: 2rem;
+  border: 1px solid rgb(209, 206, 206);
+  border-radius: 8px;
+  width: 20rem;
+}
+
+.title input {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 2.8rem;
+  border: none;
+  box-shadow: 0.5px 2px 5px #aaaaa7;
+}
+
+input:focus {
+  outline-color: rgba(184, 125, 91, 0.342);
+}
+
+.checkbox {
+  display: flex;
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox p {
+  font-size: 12px;
+  margin-left: -5px;
+  margin-top: -8px;
+}
+
+.checkbox input {
+  accent-color: rgb(182, 31, 56);
+  border: none;
+  height: 15px;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
+  width: 15px;
+}
+
+.fp p {
+  float: right;
+  font-size: 14px;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background-color: rgb(252, 47, 81);
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0.5px 2px 5px #8b8b8a;
+}
+
+.btn:hover {
+  transform: scale(1.02, 1.01);
+  color: #fff;
+}

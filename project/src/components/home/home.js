@@ -5,9 +5,6 @@ import trending_topics_data from "../../data/trend_topic_data";
 import Carousel from "./carousel";
 import Layout from "../layouts/layout";
 function Home() {
-  //Get data for home page
-  const topics = trending_topics_data;
-
   const slides = [
     { url: "/images/trend_style/pic_a.jpg" },
     { url: "/images/trend_style/pic_b.jpg" },
@@ -22,12 +19,11 @@ function Home() {
     { url: "/images/trend_style/pic_k.jpg" },
   ];
 
-  const message = "Hi chima, welcome to Lagos";
   return (
     <>
       <div className={styles.main}>
         <Carousel />
-        <Topic data={topics} message={message} />
+        <Topic />
         <Slides slides={slides} />
       </div>
     </>

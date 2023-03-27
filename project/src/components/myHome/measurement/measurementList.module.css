@@ -68,9 +68,9 @@ tbody tr:hover {
 }
 
 @media screen and (max-width: 600px) {
-  table {
+  /* table {
     border: none;
-  }
+  } */
 
   thead {
     display: none;
@@ -88,7 +88,7 @@ tbody tr:hover {
   tbody tr {
     border: none;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
