@@ -31,7 +31,7 @@ function NewMeasurement() {
   });
 
   const handleInputChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const { name, value } = e.target;
     setMeasurement((prevState) => ({
       ...prevState,
@@ -40,7 +40,7 @@ function NewMeasurement() {
   };
 
   const handleUpperBodyInputChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const { name, value } = e.target;
     setMeasurement((prevState) => ({
       ...prevState,
@@ -53,7 +53,7 @@ function NewMeasurement() {
 
   // setMeasurement({ ...measurement, [name]: value })
   const handleLowerBodyInputChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const { name, value } = e.target;
     setMeasurement((prevState) => ({
       ...prevState,
@@ -65,10 +65,10 @@ function NewMeasurement() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     // Code to send `measurement` to server
-    // const { name, value } = event.target;
-    // setMeasurement({ ...measurement, [name]: value });
+    const { name, value } = event.target;
+    setMeasurement({ ...measurement, [name]: value });
     console.log(measurement);
     axios
       .post("http://localhost:5000/api/v1/measurements", {
@@ -91,9 +91,6 @@ function NewMeasurement() {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}>
-  return (
-    <div className={styles.container}>
-      <form onSubmit={handleSubmit}>
         <label>
           Name:
           <input
@@ -109,7 +106,7 @@ function NewMeasurement() {
           <input
             type="text"
             name="description"
-            placeholder="purpose of measurement"
+            // placeholder="purpose of measurement"
             value={measurement.description}
             onChange={handleInputChange}
           />
@@ -125,140 +122,109 @@ function NewMeasurement() {
           />
         </label>
         <br />
-
         <br />
-        <div className={styles.upperBody}>
-          UPPER BODY
-          <br />
-          <label>
-            Shoulder Width:
-            <input
-              type="number"
-              name="Shoulder Width"
-              value={measurement.upperBodyMeasure["Shoulder Width"]}
-              onChange={handleUpperBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Chest:
-            <input
-              type="number"
-              name="Chest"
-              value={measurement.upperBodyMeasure.Chest}
-              onChange={handleUpperBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Waist:
-            <input
-              type="number"
-              name="Waist"
-              value={measurement.upperBodyMeasure.Waist}
-              onChange={handleUpperBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Hip:
-            <input
-              type="number"
-              name="Hip"
-              value={measurement.upperBodyMeasure.Hip}
-              onChange={handleUpperBodyInputChange}
-            />
-          </label>
-          <div className={styles.upperBody}>
-            <br />
-            LOWER BODY
-            <br />
-            <label>
-              Shoulder Width:
-              <input
-                type="number"
-                name="Shoulder Width"
-                value={measurement.lowerBodyMeasure["Shoulder Width"]}
-                onChange={handleLowerBodyInputChange}
-              />
-            </label>
-            <br />
-            <label>
-              Chest:
-              <input
-                type="number"
-                name="Chest"
-                value={measurement.lowerBodyMeasure.Chest}
-                onChange={handleLowerBodyInputChange}
-              />
-            </label>
-            <br />
-            <label>
-              Waist:
-              <input
-                type="number"
-                name="Waist"
-                value={measurement.lowerBodyMeasure.Waist}
-                onChange={handleLowerBodyInputChange}
-              />
-            </label>
-            <br />
-            <label>
-              Hip:
-              <input
-                type="number"
-                name="Hip"
-                value={measurement.lowerBodyMeasure.Hip}
-                onChange={handleLowerBodyInputChange}
-              />
-            </label>
-            <br />
-            <label>
-              BackLength:
-              <input
-                type="number"
-                name="BackLength"
-                value={measurement.lowerBodyMeasure.BackLength}
-                onChange={handleLowerBodyInputChange}
-              />
-            </label>
-            <br />
-            <button type="submit">Submit</button>
-          </div>
-        </div>
+        {/* <div className={styles.upperBody}> */}
+        UPPER BODY
+        <br />
+        <label>
+          Shoulder Width:
+          <input
+            type="number"
+            name="Shoulder Width"
+            value={measurement.upperBodyMeasure["Shoulder Width"]}
+            onChange={handleUpperBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          Chest:
+          <input
+            type="number"
+            name="Chest"
+            value={measurement.upperBodyMeasure.Chest}
+            onChange={handleUpperBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          Waist:
+          <input
+            type="number"
+            name="Waist"
+            value={measurement.upperBodyMeasure.Waist}
+            onChange={handleUpperBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          Hip:
+          <input
+            type="number"
+            name="Hip"
+            value={measurement.upperBodyMeasure.Hip}
+            onChange={handleUpperBodyInputChange}
+          />
+        </label>
+        {/* <div className={styles.upperBody}> */}
+        <br />
+        LOWER BODY
+        <br />
+        <label>
+          Shoulder Width:
+          <input
+            type="number"
+            name="Shoulder Width"
+            value={measurement.lowerBodyMeasure["Shoulder Width"]}
+            onChange={handleLowerBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          Chest:
+          <input
+            type="number"
+            name="Chest"
+            value={measurement.lowerBodyMeasure.Chest}
+            onChange={handleLowerBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          Waist:
+          <input
+            type="number"
+            name="Waist"
+            value={measurement.lowerBodyMeasure.Waist}
+            onChange={handleLowerBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          Hip:
+          <input
+            type="number"
+            name="Hip"
+            value={measurement.lowerBodyMeasure.Hip}
+            onChange={handleLowerBodyInputChange}
+          />
+        </label>
+        <br />
+        <label>
+          BackLength:
+          <input
+            type="number"
+            name="BackLength"
+            value={measurement.lowerBodyMeasure.BackLength}
+            onChange={handleLowerBodyInputChange}
+          />
+        </label>
+        <br />
+        <button type="submit">Submit</button>
+        {/* </div> */}
+        {/* </div> */}
       </form>
     </div>
   );
 }
 
 export default NewMeasurement;
-
-//   const handleChange = (event) => {
-//     event.preventDefault();
-//     const { name, value } = event.target;
-//     setMeasurement({ ...measurement, [name]: value });
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     console.log(measurement);
-//     //Validate form entries before posting to server
-//     // if (true) {
-//     axios
-//       .post("http://localhost:5000/api/v1/measurements", {
-//         ...measurement,
-//         // testMeasurements,
-//       })
-//       .then((response) => {
-//         //TODO: Determine where to store token recieved from server securely
-//         const { name, success } = response.data;
-//         if (success) {
-//           console.log("done");
-//           //After login, navigate to the myHome page
-//           navigate("/myhome");
-//         }
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//       });
-//   };
