@@ -65,7 +65,7 @@ function NewMeasurement() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     // Code to send `measurement` to server
     const { name, value } = event.target;
     setMeasurement({ ...measurement, [name]: value });
@@ -78,7 +78,7 @@ function NewMeasurement() {
         //TODO: Determine where to store token recieved from server securely
         const { name, success } = response.data;
         if (success) {
-          console.log(response.data);
+          // console.log(response.data);
           //After login, navigate to the myHome page
           navigate("/myhome");
         }
