@@ -15,7 +15,7 @@ import ProfileComponent from "./components/profile/profileComponent";
 import BuyNowModal from "./components/market/buyNowModal";
 import CartModal from "./components/market/cartModal";
 import EditDetails from "./components/profile/editDetails";
-import ChatMessage from "./components/chat/chatMessage";
+import SingleTopic from "./components/topics/singleTopic";
 
 import MessageContainer from "./components/chat/messageContainer";
 import ChatLog from "./components/chat/chatLog";
@@ -31,7 +31,7 @@ function App() {
           <Route path="/myhome" element={<MyHome />} />
           <Route path="/chatContainer" element={<ChatContainer />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/topic/:id" element={<ChatContainer />} />
+          <Route path="/topics/:id" element={<SingleTopic />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/order" element={<OrderForm />} />
           <Route path="/signin" element={<SignIn />} />

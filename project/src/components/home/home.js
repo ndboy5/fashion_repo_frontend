@@ -1,5 +1,5 @@
 import styles from "./home.module.css";
-import Topic from "./topic";
+import TrendingTopics from "./trendingTopics";
 import Slides from "./slides";
 import trending_topics_data from "../../data/trend_topic_data";
 import Carousel from "./carousel";
@@ -23,7 +23,7 @@ function Home() {
     <>
       <div className={styles.main}>
         <Carousel />
-        <Topic />
+        <TrendingTopics />
         <Slides slides={slides} />
       </div>
     </>

@@ -1,10 +1,10 @@
 // import trending_topics_data from "../../data/trend_topic_data";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./topic.module.css";
+import styles from "./trendingTopics.module.css";
 import axios from "axios";
 
-function Topic(props) {
+function TrendingTopics(props) {
   const [topics, setTopics] = useState([]);
   useEffect(() => {
     //setup config for http header to server
@@ -38,7 +38,7 @@ function Topic(props) {
         <h4>TRENDING TOPICS</h4>
 
         {topics.map((tp) => (
-          <Link to={"/topic/" + tp.id} className={styles.rows}>
+          <Link to={"/topics/" + tp._id} className={styles.rows}>
             {tp.title}
           </Link>
         ))}
@@ -47,4 +47,4 @@ function Topic(props) {
   );
 }
 
-export default Topic;
+export default TrendingTopics;
