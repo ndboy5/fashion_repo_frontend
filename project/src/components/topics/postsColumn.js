@@ -1,2 +1,8 @@
+import styles from "./postsColumn.module.css";
+import TopicPost from "./topicPost";
 
-import styles from "./postsColumn.module.css"
+function PostColumn({ posts }) {
+  return <div>{posts && posts.map((p) => <TopicPost text={p.text} />)}</div>;
+}
+
+export default PostColumn;

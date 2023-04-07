@@ -1,10 +1,7 @@
-import styles from "./topicPosts.module.css"
+import styles from "./topicPost.module.css";
 
-function TopicPost() {
-
-    return (
-        <div>
-
-        </div>
-    )
+function TopicPost({ text }) {
+  return <div>{text}</div>;
 }
+
+export default TopicPost;
