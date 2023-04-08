@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+.postColumn {
+  background-color: rgba(196, 219, 188, 1);
+    width: 80vw;
+    margin: auto;
+}
+
