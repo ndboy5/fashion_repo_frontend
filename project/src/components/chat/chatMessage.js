@@ -16,6 +16,7 @@ function ChatMessage(props) {
   const [updatedMessage, setUpdatedMessage] = useState(message);
 
   function handleChange(event) {
+    event.preventDefault();
     setMessage(event.target.value);
   }
 
