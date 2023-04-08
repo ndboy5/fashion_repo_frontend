@@ -5,7 +5,7 @@ import { useState } from "react";
 import BuyNowModal from "../market/buyNowModal";
 import ProfilePic from "./profilePhoto";
 import CartModal from "../market/cartModal";
-function MessageHeader() {
+function MessageHeader({ username }) {
   const [showBuynowModal, setShowBuynowModal] = useState(false);
   const [showCartModal, setShowCartModal] = useState(false);
   return (
@@ -18,7 +18,7 @@ function MessageHeader() {
         </button>
         <div className={styles.sellerPhoto}>
           <ProfilePic />
-          <h3>Name of Vendor</h3>
+          <h3>{username && username}</h3>
         </div>
         <div className={styles.messageChatLog}>
           <Link to="/chatContainer">

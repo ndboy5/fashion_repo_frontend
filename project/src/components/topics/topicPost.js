@@ -22,11 +22,6 @@ function TopicPost({ text }) {
             <GrEmoji />
           </i>
         </button>
-        {/* <button className={styles.btn}>
-          <i>
-            <IoIosAddCircle />
-          </i>
-        </button> */}
       </div>
     </div>
   );

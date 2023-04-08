@@ -23,8 +23,6 @@ function ChatMessage(props) {
   function handleKeydown(event) {
     if (event.key === "Enter") {
       props.onMessageChange(message);
-      event.target.value = "";
-      console.log("Enter pressed");
     }
   }
 
@@ -38,7 +36,9 @@ function ChatMessage(props) {
           type="text"
           id="message-input"
           name="message"
+          onChange={handleChange}
           placeholder="Type your message here..."
+          onKeyDown={handleKeydown}
         />
         <i>
           <IoMdSend />
@@ -61,12 +61,6 @@ function ChatMessage(props) {
             <GrEmoji />
           </i>
         </button>
-        {/* <button className={styles.btn}>
-          <i>
-            <IoIosAddCircle />
-          </i>
-        </button> */}
-
         <button className={styles.btn}>
           <i>
             <BiMicrophone />

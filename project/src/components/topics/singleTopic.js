@@ -11,14 +11,6 @@ function SingleTopic() {
   const [topic, setTopic] = useState({});
 
   useEffect(() => {
-    //setup config for http header to server
-    const config = {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem(
-          "online-couturier-user"
-        )}`,
-      },
-    };
     //Get details from a single topic
     //TODO: optimise this get call to allow for smooth pagination. This would help for long topic threads
     axios
@@ -35,12 +27,50 @@ function SingleTopic() {
       });
   }, []);
 
+  const handleSubmitPost = (message) => {
+    console.log("It ran successfully " + message);
+
+    //setup config for http header to server
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem(
+          "online-couturier-user-tk"
+        )}`,
+      },
+    };
+    //send the chat message to the server
+    axios
+      .post(
+        "http://localhost:5000/api/v1/topics/post",
+        {
+          text: message,
+          account: localStorage.getItem("online-couturier-user"),
+          topic: topic._id,
+          likes: 0,
+          dislikes: 0,
+        },
+        config
+      )
+      .then((response) => {
+        const { success, data } = response.data;
+
+        if (success) {
+          //update the posts on the post Column
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div>
-      <MessageHeader />
+      <MessageHeader
+        username={localStorage.getItem("online-couturier-user-nm")}
+      />
 
       <PostColumn posts={topic.posts} />
-      <ChatMessage />
+      <ChatMessage onMessageChange={handleSubmitPost} />
     </div>
   );
 }
