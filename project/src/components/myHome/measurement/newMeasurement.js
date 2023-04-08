@@ -1,9 +1,7 @@
 import styles from "./newMeasurement.module.css";
-import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-// import measurements from "../../../data/measurements";
 
 function NewMeasurement() {
   const navigate = useNavigate();
@@ -13,6 +11,7 @@ function NewMeasurement() {
     gender: "",
     unit: "",
     type: "",
+    last_update_by: "",
     upperBodyMeasure: {
       "Shoulder Width": "",
       Chest: "",
@@ -20,11 +19,9 @@ function NewMeasurement() {
       Hip: "",
     },
     lowerBodyMeasure: {
-      "Shoulder Width": "",
-      Chest: "",
       Waist: "",
       Hip: "",
-      BackLength: "",
+      Inseam: "",
     },
     bodiceMeasure: {},
     skirtMeasure: {},
@@ -71,14 +68,12 @@ function NewMeasurement() {
     // setMeasurement({ ...measurement, [name]: value });
     console.log(measurement);
     axios
-      .post("http://localhost:5000/api/v1/measurements", 
-        measurement,
-      )
+      .post("http://localhost:5000/api/v1/measurements", measurement)
       .then((response) => {
         //TODO: Determine where to store token recieved from server securely
         const { name, success } = response.data;
         if (success) {
-          // console.log(response.data);
+          console.log(response.data);
           //After login, navigate to the myHome page
           navigate("/myhome");
         }
@@ -128,7 +123,7 @@ function NewMeasurement() {
             <input
               type="text"
               name="unit"
-              placeholder="CM,INCH,M,MM"
+              placeholder="cm,inch,m,mm"
               value={measurement.unit}
               onChange={handleInputChange}
             />
@@ -197,26 +192,6 @@ function NewMeasurement() {
           <br />
           <br />
           <label>
-            Shoulder Width:
-            <input
-              type="number"
-              name="Shoulder Width"
-              value={measurement.lowerBodyMeasure["Shoulder Width"]}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            Chest:
-            <input
-              type="number"
-              name="Chest"
-              value={measurement.lowerBodyMeasure.Chest}
-              onChange={handleLowerBodyInputChange}
-            />
-          </label>
-          <br />
-          <label>
             Waist:
             <input
               type="number"
@@ -237,11 +212,11 @@ function NewMeasurement() {
           </label>
           <br />
           <label>
-            BackLength:
+            Inseam:
             <input
               type="number"
-              name="BackLength"
-              value={measurement.lowerBodyMeasure.BackLength}
+              name="Inseam"
+              value={measurement.lowerBodyMeasure.Inseam}
               onChange={handleLowerBodyInputChange}
             />
           </label>

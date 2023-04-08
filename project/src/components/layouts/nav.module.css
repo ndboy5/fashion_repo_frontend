@@ -125,22 +125,12 @@
 }
 
 @media screen and (max-width: 375px) {
-  .nav a {
-    font-size: 11px;
+  .menu .nav a {
+    font-size: 10px;
     margin-left: 10px;
-  }
-
-  .nav {
-    height: 38px;
-    padding: 0.8rem 0 0.5rem 0px;
-    width: 10rem;
   }
 
   .navHolder {
     width: 100vw;
-  }
-
-  .navMenu {
-    width: 7rem;
   }
 }

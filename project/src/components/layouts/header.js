@@ -1,10 +1,5 @@
 import styles from "./header.module.css";
-import {
-  FaPortrait,
-  FaRegCalendarMinus,
-  FaRegMinusSquare,
-  FaSearch,
-} from "react-icons/fa";
+import { FaBars, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ProfileButton from "../profile/profileButton";
@@ -19,7 +14,7 @@ function Header() {
       </div>
       <button className={styles.hidden}>
         {" "}
-        <FaRegMinusSquare />
+        <FaBars />
       </button>
 
       <div className={styles.headerLeft}>

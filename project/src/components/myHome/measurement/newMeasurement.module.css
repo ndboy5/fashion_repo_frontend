@@ -16,10 +16,10 @@
 .upperBody,
 .lowerBody,
 .info {
-  background-color: rgba(241, 233, 205, 0.87);
+  background-color: rgba(54, 53, 49, 0.87);
   margin: auto;
   width: 40rem;
   height: 80vh;
   padding: 1rem;
-  /* justify-content: center; */
+  color: #fff;
 }
