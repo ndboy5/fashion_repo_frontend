@@ -48,6 +48,7 @@ function SignIn() {
           //Save token and user id to local storage
           localStorage.setItem("online-couturier-user-tk", token); //TODO: Encrypt the token for security reasons
           localStorage.setItem("online-couturier-user", id);
+          localStorage.setItem("online-couturier-user-nm", name);
 
           //After login, navigate to the myHome page
           navigate("/myhome");

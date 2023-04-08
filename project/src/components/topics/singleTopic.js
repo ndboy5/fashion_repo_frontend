@@ -38,6 +38,7 @@ function SingleTopic() {
   return (
     <div>
       <MessageHeader />
+
       <PostColumn posts={topic.posts} />
       <ChatMessage />
     </div>
