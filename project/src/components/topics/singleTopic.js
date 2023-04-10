@@ -55,7 +55,7 @@ function SingleTopic() {
         const { success, data } = response.data;
 
         if (success) {
-          //update the posts on the post Column
+          //TODO: update the posts on the post Column
         }
       })
       .catch((error) => {

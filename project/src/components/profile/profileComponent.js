@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import EditDetails from "./editDetails";
 import styles from "./profileComponent.module.css";
+import { UserContext } from "../../utils/userContext";
 
 function ProfileComponent() {
+  const { user, setUser } = useContext(UserContext);
+
   let url = null;
   const [userName, changeName] = useState("Jack John");
   const [userEmail, changeEmail] = useState("jackjohn@example.com");
@@ -32,6 +35,18 @@ function ProfileComponent() {
   function nameChange() {
     setContext("Name");
     changeShow(true);
+  }
+
+  //This function removes the login details from localstorage and react context
+  function handleLogout(event) {
+    event.preventDefault();
+    localStorage.removeItem("online-couturier-user-tk");
+    localStorage.removeItem("online-couturier-user");
+    localStorage.removeItem("online-couturier-user-nm");
+
+    setUser(null);
+    //TODO: Navigate to the login page be default
+    console.log("user logged out successfully");
   }
 
   return (
@@ -76,6 +91,7 @@ function ProfileComponent() {
           handleEdit={changeDetails}
           show={showValue}
         />
+        <button onClick={handleLogout}>LOGOUT</button>
       </div>
     </section>
   );

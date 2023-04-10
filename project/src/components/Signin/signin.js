@@ -1,10 +1,12 @@
 import styles from "./signin.module.css";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { UserContext } from "../../utils/userContext";
 
 function SignIn() {
+  const { user, setUser } = useContext(UserContext);
   // TODO: Setup toast options
   // https://www.youtube.com/watch?v=otaQKODEUFs&t=4009s
 
@@ -38,17 +40,16 @@ function SignIn() {
         password: credentials.password,
       })
       .then((response) => {
-        const { success, id, role, token, name } = response.data;
+        const { success, id, token, name } = response.data;
 
         if (success) {
-          console.log(
-            `welcome ${name}! Glad to have you here :). Your have an ${role} role and and your ID is ${id}`
-          );
-
-          //Save token and user id to local storage
+          //Save token and user id to local storage in case the browser is refreshed
           localStorage.setItem("online-couturier-user-tk", token); //TODO: Encrypt the token for security reasons
           localStorage.setItem("online-couturier-user", id);
           localStorage.setItem("online-couturier-user-nm", name);
+
+          //make the user details available to other routes by updating the user context
+          setUser(response.data);
 
           //After login, navigate to the myHome page
           navigate("/myhome");
