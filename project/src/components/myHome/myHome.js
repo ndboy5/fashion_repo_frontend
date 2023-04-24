@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import Layout from "../layouts/layout";
 import MeasurementList from "./measurement/measurementList";
 import styles from "./myHome.module.css";
+import { useContext } from "react";
+import { UserContext } from "../../utils/userContext";
 
 /**
  *
  * @returns The home page for user experience that has been customized solely for the user
  */
 function MyHome() {
+  //For delete
+  const { user, setUser } = useContext(UserContext);
+  console.log(user.chatRooms[0]);
+
   //TODO: figure out where this component would be useful else it is to be deleted
   return (
     <div className={styles.Container}>

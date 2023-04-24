@@ -17,16 +17,18 @@ function MessageContainer({ vendorID }) {
   const [chat, setChat] = useState({});
 
   useEffect(() => {
-    console.log(user.chatRooms);
     //check the user data from context to continue previous conversation with vendor or create new chat
-    if (user) setChat(user.chatRooms.filter((cr) => cr.chatWith === vendorID));
+    if (user) {
+      let existingChat = user.chatRooms.find((cr) => cr.chatWith === vendorID);
+      setChat(existingChat);
+    }
 
     //Check to see that the previous chat was obtained from the user's details
-    if (chat) {
-      console.log("I was here too");
-      console.log(chat);
+    if (chat.chatRoomId) {
+      console.log(chat.chatRoomId);
+      let id = chat.chatRoomId;
       axios
-        .get("http://localhost:5000/api/v1/chat/" + chat.chatRoomId)
+        .get("http://localhost:5000/api/v1/chat/" + id)
         .then((response) => {
           const { success, data } = response.data;
           if (success) {
