@@ -12,7 +12,7 @@ import { UserContext } from "../../utils/userContext";
 function MyHome() {
   //For delete
   const { user, setUser } = useContext(UserContext);
-  console.log(user.chatRooms[0]);
+  // console.log(user.chatRooms[0]);
 
   //TODO: figure out where this component would be useful else it is to be deleted
   return (
