@@ -5,6 +5,7 @@ import styles from "./messageContainer.module.css";
 import axios from "axios";
 import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../utils/userContext";
+import { useNavigate } from "react-router-dom";
 /**
  * This functional component is used for contacting either a vendor or another user. It handles one-on-one messaging between users;
  * typically customer to vendor relationships.
@@ -15,48 +16,54 @@ function MessageContainer({ vendorID }) {
   vendorID = "5fa6a907b66f7a1403ac547e"; //TODO: Work on receiving the vendor'd ID as useParam from any component routing to the message container
   const { user, setUser } = useContext(UserContext);
   const [chat, setChat] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(user.chatRooms);
     //check the user data from context to continue previous conversation with vendor or create new chat
-    if (user) setChat(user.chatRooms.filter((cr) => cr.chatWith === vendorID));
+    if (user) {
+      //Find details of the chat room with the vendor/user
+      let existingChat = user.chatRooms.find((cr) => cr.chatWith === vendorID);
+      setChat(existingChat);
+      //Check to see that the previous chat was obtained from the user's details
+      if (chat.chatRoomId) {
+        let id = chat.chatRoomId;
+        axios
+          .get("http://localhost:5000/api/v1/chat/" + id)
+          .then((response) => {
+            const { success, data } = response.data;
+            if (success) {
+              // load chat details received from server
+              setChat(data);
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      } else {
+        // Create a new chat room and start chat with vendor in new room
+        axios
+          .post("http://localhost:5000/api/v1/chat", {
+            from: user.id,
+            to: vendorID,
+          })
+          .then((response) => {
+            const { success, data } = response.data;
 
-    //Check to see that the previous chat was obtained from the user's details
-    if (chat) {
-      console.log("I was here too");
-      console.log(chat);
-      axios
-        .get("http://localhost:5000/api/v1/chat/" + chat.chatRoomId)
-        .then((response) => {
-          const { success, data } = response.data;
-          if (success) {
-            // load chat details received from server
-            setChat(data);
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+            if (success) {
+              setChat({
+                ...data,
+                messages: [],
+              });
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
     } else {
-      // Create a new chat room and start new chat
-      axios
-        .post("http://localhost:5000/api/v1/chat", {
-          from: user.id,
-          to: vendorID,
-        })
-        .then((response) => {
-          const { success, data } = response.data;
-
-          if (success) {
-            setChat({
-              ...data,
-              messages: [],
-            });
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      console.log("You need to login first to send messages to vendor");
+      //TODO: communicate to the user the need to login first
+      navigate("/signin");
     }
   }, []);
 
@@ -74,8 +81,9 @@ function MessageContainer({ vendorID }) {
         )}`,
       },
     };
+    console.log(chat);
 
-    console.log(chat.chatRoomId);
+    console.log("The chat room ID is " + chat._id);
     //send the chat message to the server
     axios
       .post(
@@ -83,7 +91,7 @@ function MessageContainer({ vendorID }) {
         {
           text: message,
           sender: localStorage.getItem("online-couturier-user"),
-          chatRoom: chat.chatRoomId,
+          chatRoom: chat._id ? chat._id : chat.chatRoomId,
         },
         config
       )
@@ -92,6 +100,11 @@ function MessageContainer({ vendorID }) {
 
         if (success) {
           //TODO: update the messages in message body component here
+
+          setChat(() => {
+            return { ...chat, messages: chat.messages.push(data) };
+          });
+          console.log(chat);
         }
       })
       .catch((error) => {
