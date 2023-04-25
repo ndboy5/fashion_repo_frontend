@@ -17,7 +17,7 @@ function Nav() {
               </a>
             </Link>
             <button
-              className={styles.btnI}
+              className={styles.btn1}
               onClick={() => {
                 setIsNavMenuToggle(!isNavMenuToggle);
               }}

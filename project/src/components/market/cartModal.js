@@ -1,8 +1,13 @@
 import styles from "./cartModal.module.css";
 import { TfiClose } from "react-icons/tfi";
 import { FaArrowLeft, FaMinus, FaPlus, FaTrashAlt } from "react-icons/fa";
+import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
+// import { useState } from "react";
+// import BuyNowModal from "./buyNowModal";
+
 function CartModal(props) {
+  // const [showBuynowModal, setShowBuynowModal] = useState(false);
   if (!props.show) {
     return null;
   }
@@ -14,6 +19,15 @@ function CartModal(props) {
     >
       <div className={styles.modal.body}>
         <div className={styles.cart}>
+          {/* <button
+            onClick={() => setShowBuynowModal(true)}
+            className={styles.buyArrowBack}
+          >
+            <i>
+              <BsArrowLeft />
+            </i>
+          </button> */}
+
           <button onClick={props.onClose} className={styles.btn}>
             <i className={styles.i}>
               <TfiClose />
@@ -88,6 +102,10 @@ function CartModal(props) {
           </Link>
         </div>
       </div>
+      {/* <BuyNowModal
+        onClose={() => setShowBuynowModal(false)}
+        show={showBuynowModal}
+      /> */}
     </div>
   );
 }
