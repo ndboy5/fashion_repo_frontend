@@ -91,6 +91,7 @@ function MessageContainer({ vendorID }) {
         {
           text: message,
           sender: localStorage.getItem("online-couturier-user"),
+          receiver: vendorID,
           chatRoom: chat._id ? chat._id : chat.chatRoomId,
         },
         config
